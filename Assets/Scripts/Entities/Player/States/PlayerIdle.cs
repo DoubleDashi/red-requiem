@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Entities.Player.States
+﻿namespace Entities.Player.States
 {
     public class PlayerIdle : PlayerState
     {
@@ -10,7 +8,7 @@ namespace Entities.Player.States
 
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Move, () => PlayerInput.movementDirection != Vector2.zero);
+            AddTransition(PlayerStateType.Charge, () => PlayerInput.ChargeKeyPressed || PlayerInput.ChargeKeyHold);
         }
     }
 }
