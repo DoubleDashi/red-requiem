@@ -11,6 +11,7 @@ namespace Entities.Player.States
 
         public override void Enter()
         {
+            Controller.EnableDamageHitbox();
             Controller.Body.linearVelocity = Vector2.zero;
             PlayerEventConfig.OnPlayerMove?.Invoke(Controller.Stats.Guid);
             
@@ -24,6 +25,11 @@ namespace Entities.Player.States
         {
             Decelerate();
             SetDamage();
+        }
+
+        public override void Exit()
+        {
+            Controller.DisableDamageHitbox();
         }
         
         protected override void SetTransitions()
