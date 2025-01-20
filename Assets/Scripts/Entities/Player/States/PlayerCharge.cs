@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using Configs;
+using UnityEngine;
 
 namespace Entities.Player.States
 {
     public class PlayerCharge : PlayerState
     {
+        private bool _usedSFX;
+        
         public PlayerCharge(PlayerController controller) : base(controller)
         {
         }
@@ -17,6 +20,17 @@ namespace Entities.Player.States
         {
             Accelerate();
             Rotate();
+
+            if (IsCharged() && _usedSFX == false)
+            {
+                PlayerEventConfig.OnPlayerChargeComplete?.Invoke(Controller.Stats.Guid);
+                _usedSFX = true;
+            }
+        }
+
+        public override void Exit()
+        {
+            _usedSFX = false;
         }
         
         protected override void SetTransitions()
@@ -29,6 +43,11 @@ namespace Entities.Player.States
         {
             Controller.Stats.currentSpeed += Controller.Stats.accelerationSpeed * Time.deltaTime;
             Controller.Stats.currentSpeed = Mathf.Clamp(Controller.Stats.currentSpeed, 0f, Controller.Stats.maxSpeed);
+        }
+
+        private bool IsCharged()
+        {
+            return Controller.Stats.currentSpeed == Controller.Stats.maxSpeed;
         }
 
         private void Rotate()

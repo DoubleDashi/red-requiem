@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Configs;
+using UnityEngine;
 
 namespace Entities.Player.States
 {
@@ -11,6 +12,7 @@ namespace Entities.Player.States
         public override void Enter()
         {
             Controller.Body.linearVelocity = Vector2.zero;
+            PlayerEventConfig.OnPlayerMove?.Invoke(Controller.Stats.Guid);
             
             Vector2 mousePosition = Controller.MainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - (Vector2) Controller.transform.position).normalized;
