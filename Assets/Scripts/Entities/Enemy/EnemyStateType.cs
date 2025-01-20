@@ -5,5 +5,6 @@
         Idle,
         Hurt,
         Death,
+        Move,
     }
 }
