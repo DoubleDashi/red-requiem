@@ -22,6 +22,13 @@ namespace Entities.Player
             InitializeStateMachine(new PlayerStateFactory(this), PlayerStateType.Idle);
         }
 
+        protected override void Update()
+        {
+            base.Update();
+
+            Rotate();
+        }
+
         protected override void SetGlobalTransitions()
         {
             AddGlobalTransition(PlayerStateType.Hurt, () => Input.GetKeyDown(KeyCode.Mouse1));
@@ -35,6 +42,17 @@ namespace Entities.Player
         public void DisableDamageHitbox()
         {
             damageHitbox.enabled = false;
+        }
+        
+        private void Rotate()
+        {
+            Vector2 mousePosition = MainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = (mousePosition - (Vector2)transform.position).normalized;
+            
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion target = Quaternion.Euler(0f, 0f, angle);
+            
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, target, Stats.rotationSpeed * Time.deltaTime);
         }
     }
 }

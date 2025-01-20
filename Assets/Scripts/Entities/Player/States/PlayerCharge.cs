@@ -20,7 +20,6 @@ namespace Entities.Player.States
         public override void Update()
         {
             Accelerate();
-            Rotate();
 
             if (IsCharged() && _usedSFX == false)
             {
@@ -66,17 +65,6 @@ namespace Entities.Player.States
         private bool IsCharged()
         {
             return Controller.Stats.currentChargeSpeed == Controller.Stats.maxChargeSpeed;
-        }
-
-        private void Rotate()
-        {
-            Vector2 mousePosition = Controller.MainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 direction = (mousePosition - (Vector2) Controller.transform.position).normalized;
-            
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion target = Quaternion.Euler(0f, 0f, angle);
-            
-            Controller.transform.rotation = Quaternion.RotateTowards(Controller.transform.rotation, target, Controller.Stats.rotationSpeed * Time.deltaTime);
         }
     }
 }
