@@ -1,4 +1,6 @@
-﻿using Entities.Player;
+﻿using System;
+using Configs;
+using Entities.Player;
 using FSM;
 using UnityEngine;
 using Utility;
@@ -7,7 +9,25 @@ namespace Entities.Enemy
 {
     public class EnemyController : StateMachine<EnemyStateType>
     {
+        [SerializeField] private EntityStats entityStats;
+        
         [HideInInspector] public bool isHurt;
+        
+        public EntityStats Stats => entityStats;
+        
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            
+            EnemyEventConfig.OnEnemyDeath += HandleOnEnemyDeath;
+        }
+        
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            
+            EnemyEventConfig.OnEnemyDeath -= HandleOnEnemyDeath;
+        }
         
         private void Awake()
         {
@@ -16,11 +36,27 @@ namespace Entities.Enemy
         
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag(UnityTag.PlayerDamageHitbox.ToString()))
+            if (other.CompareTag(UnityTag.PlayerDamageHitbox.ToString()) && isHurt == false)
             {
                 isHurt = true;
-                Debug.Log("Enemy got hit for: " + other.GetComponentInParent<PlayerController>().Stats.currentDamage + " damage.");
+                
+                EnemyEventConfig.OnEnemyHurt?.Invoke(Stats.Guid, other.GetComponentInParent<PlayerController>().Stats.currentDamage);
             }
+        }
+        
+        protected override void SetGlobalTransitions()
+        {
+            AddGlobalTransition(EnemyStateType.Hurt, () => isHurt);
+        }
+
+        private void HandleOnEnemyDeath(Guid guid)
+        {
+            if (Stats.Guid != guid)
+            {
+                return;
+            }
+
+            DestroyStateMachine();
         }
     }
 }

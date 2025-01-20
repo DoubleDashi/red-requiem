@@ -23,5 +23,10 @@ namespace FSM
         {
             return _states[state];
         }
+        
+        public Dictionary<TStates, BaseState<TStates>> GetStates()
+        {
+            return _states;
+        }
     }
 }

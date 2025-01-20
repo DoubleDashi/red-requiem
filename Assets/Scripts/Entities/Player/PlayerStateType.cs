@@ -5,5 +5,7 @@
         Idle,
         Move,
         Charge,
+        Attack,
+        Hurt,
     }
 }

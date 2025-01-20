@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace FSM
@@ -8,9 +9,28 @@ namespace FSM
         private StateFactory<TStates> _stateFactory;
         private BaseState<TStates> _currentState;
         
+        private readonly HashSet<StateTransition<TStates>> _globalTransitions = new();
+
+        protected virtual void OnEnable()
+        {
+            foreach (BaseState<TStates> state in _stateFactory.GetStates().Values)
+            {
+                state.Subscribe();
+            }
+        }
+        
+        protected virtual void OnDisable()
+        {
+            foreach (BaseState<TStates> state in _stateFactory.GetStates().Values)
+            {
+                state.Unsubscribe();
+            }
+        }
+
         protected virtual void Update()
         {
             _currentState.Update();
+            GlobalTransition();
             Transition();
         }
         
@@ -19,8 +39,34 @@ namespace FSM
             _stateFactory = stateFactory;
             _stateFactory.InitializeStateFactory();
             
+            SetGlobalTransitions();
+            
             _currentState = _stateFactory.GetState(initialState);
             _currentState.Enter();
+        }
+
+        protected void DestroyStateMachine()
+        {
+            Destroy(gameObject);
+        }
+
+        protected virtual void SetGlobalTransitions() { }
+
+        protected void AddGlobalTransition(TStates state, Func<bool> condition)
+        {
+            _globalTransitions.Add(new StateTransition<TStates>(state, condition));
+        }
+
+        private void GlobalTransition()
+        {
+            foreach (StateTransition<TStates> transition in _globalTransitions)
+            {
+                if (transition.condition())
+                {
+                    ChangeState(transition.to);
+                    break;
+                }
+            }
         }
 
         private void Transition()

@@ -16,6 +16,7 @@ namespace Entities
         public float currentSpeed;
         public float accelerationSpeed;
         public float decelerationSpeed;
+        public float brakeSpeed;
         public float maxSpeed;
         public float rotationSpeed;
 
@@ -23,5 +24,10 @@ namespace Entities
         public float currentDamage;
         public float minDamage;
         public float maxDamage;
+
+        [Header("Charge stats")] 
+        public float currentChargeSpeed;
+        public float chargeSpeed;
+        public float maxChargeSpeed;
     }
 }

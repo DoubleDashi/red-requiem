@@ -6,6 +6,7 @@ namespace Entities.Player.States
     public class PlayerCharge : PlayerState
     {
         private bool _usedSFX;
+        private Vector2 _linearVelocity;
         
         public PlayerCharge(PlayerController controller) : base(controller)
         {
@@ -13,7 +14,7 @@ namespace Entities.Player.States
 
         public override void Enter()
         {
-            Controller.Stats.currentSpeed = 0f;
+            Controller.Stats.currentChargeSpeed = 0f;
         }
         
         public override void Update()
@@ -26,6 +27,10 @@ namespace Entities.Player.States
                 PlayerEventConfig.OnPlayerChargeComplete?.Invoke(Controller.Stats.Guid);
                 _usedSFX = true;
             }
+            
+            Decelerate();
+            
+            Controller.Body.linearVelocity = _linearVelocity;
         }
 
         public override void Exit()
@@ -36,18 +41,31 @@ namespace Entities.Player.States
         protected override void SetTransitions()
         {
             AddTransition(PlayerStateType.Idle, () => PlayerInput.ChargeCancelKeyPressed);
-            AddTransition(PlayerStateType.Move, () => PlayerInput.ChargeKeyReleased);
+            AddTransition(PlayerStateType.Attack, () => PlayerInput.ChargeKeyReleased);
         }
         
         private void Accelerate()
         {
-            Controller.Stats.currentSpeed += Controller.Stats.accelerationSpeed * Time.deltaTime;
-            Controller.Stats.currentSpeed = Mathf.Clamp(Controller.Stats.currentSpeed, 0f, Controller.Stats.maxSpeed);
+            Controller.Stats.currentChargeSpeed += Controller.Stats.chargeSpeed * Time.deltaTime;
+            Controller.Stats.currentChargeSpeed = Mathf.Clamp(Controller.Stats.currentChargeSpeed, 0f, Controller.Stats.maxChargeSpeed);
         }
 
+        private void Decelerate()
+        {
+            if (PlayerInput.MovementDirection.x == 0)
+            {
+                _linearVelocity.x = Mathf.MoveTowards(_linearVelocity.x, 0.0f, Controller.Stats.decelerationSpeed * Time.deltaTime);  
+            }
+            
+            if (PlayerInput.MovementDirection.y == 0)
+            {
+                _linearVelocity.y = Mathf.MoveTowards(_linearVelocity.y, 0.0f, Controller.Stats.decelerationSpeed * Time.deltaTime); 
+            }
+        }
+        
         private bool IsCharged()
         {
-            return Controller.Stats.currentSpeed == Controller.Stats.maxSpeed;
+            return Controller.Stats.currentChargeSpeed == Controller.Stats.maxChargeSpeed;
         }
 
         private void Rotate()

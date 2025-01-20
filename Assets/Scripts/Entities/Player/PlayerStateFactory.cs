@@ -1,4 +1,5 @@
-﻿using FSM;
+﻿using Entities.Player.States;
+using FSM;
 
 namespace Entities.Player
 {
@@ -13,9 +14,12 @@ namespace Entities.Player
         
         protected override void SetStates()
         {
-            AddState(PlayerStateType.Idle, new States.PlayerIdle(_controller));
-            AddState(PlayerStateType.Move, new States.PlayerMove(_controller));
-            AddState(PlayerStateType.Charge, new States.PlayerCharge(_controller));
+            AddState(PlayerStateType.Idle, new PlayerIdle(_controller));
+            AddState(PlayerStateType.Move, new PlayerMove(_controller));
+            AddState(PlayerStateType.Charge, new PlayerCharge(_controller));
+            AddState(PlayerStateType.Attack, new PlayerAttack(_controller));
+            
+            AddState(PlayerStateType.Hurt, new PlayerHurt(_controller));
         }
     }
 }

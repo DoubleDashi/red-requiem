@@ -22,6 +22,11 @@ namespace Entities.Player
             InitializeStateMachine(new PlayerStateFactory(this), PlayerStateType.Idle);
         }
 
+        protected override void SetGlobalTransitions()
+        {
+            AddGlobalTransition(PlayerStateType.Hurt, () => Input.GetKeyDown(KeyCode.Mouse1));
+        }
+
         public void EnableDamageHitbox()
         {
             damageHitbox.enabled = true;

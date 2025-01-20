@@ -1,6 +1,8 @@
-﻿using Configs;
+﻿using System;
+using Configs;
 using Controllers;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Entities.Enemy
 {
@@ -19,8 +21,10 @@ namespace Entities.Enemy
             
         }
 
-        private void HandleOnEnemyHurt()
+        private void HandleOnEnemyHurt(Guid guid, float damage)
         {
+            // TODO should probably implement the GUID system here
+            
             PlayAudio(audioConfig.hurtSFX, Random.Range(0.5f, 1.5f));
         }
     }
