@@ -15,7 +15,7 @@ namespace Entities.Player
         {
             AddState(PlayerStateType.Idle, new States.PlayerIdle(_controller));
             AddState(PlayerStateType.Move, new States.PlayerMove(_controller));
-            AddState(PlayerStateType.Dash, new States.PlayerDash(_controller));
+            AddState(PlayerStateType.Charge, new States.PlayerCharge(_controller));
         }
     }
 }

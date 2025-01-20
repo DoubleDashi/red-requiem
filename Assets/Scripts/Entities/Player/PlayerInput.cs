@@ -4,9 +4,10 @@ namespace Entities.Player
 {
     public static class PlayerInput
     {
-        public static Vector2 movementDirection => new(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        public static Vector2 movementDirectionNormalized => movementDirection.normalized;
+        public static bool ChargeKeyHold => Input.GetKey(KeyCode.Mouse0);
+        public static bool ChargeKeyPressed => Input.GetKeyDown(KeyCode.Mouse0);
+        public static bool ChargeKeyReleased => Input.GetKeyUp(KeyCode.Mouse0);
         
-        public static bool dashPressed => Input.GetKeyDown(KeyCode.Space);
+        public static bool ChargeCancelKeyPressed => Input.GetKeyDown(KeyCode.Mouse1);
     }
 }

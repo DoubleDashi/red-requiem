@@ -6,15 +6,22 @@ namespace Entities
     [Serializable]
     public class EntityStats
     {
-        public Guid guid { get; private set; } = Guid.NewGuid();
+        public Guid Guid { get; private set; } = Guid.NewGuid();
 
         [Header("Life stats")]
         public float health;
         public float stamina;
 
-        [Header("Movement stats")]
+        [Header("Movement stats")] 
+        public float currentSpeed;
         public float accelerationSpeed;
         public float decelerationSpeed;
         public float maxSpeed;
+        public float rotationSpeed;
+
+        [Header("Damage stats")] 
+        public float currentDamage;
+        public float minDamage;
+        public float maxDamage;
     }
 }

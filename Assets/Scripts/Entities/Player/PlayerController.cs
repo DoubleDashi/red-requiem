@@ -7,12 +7,14 @@ namespace Entities.Player
     {
         [SerializeField] private EntityStats entityStats;
 
-        public EntityStats stats => entityStats;
-        public Rigidbody2D body { get; private set; }
+        public EntityStats Stats => entityStats;
+        public Rigidbody2D Body { get; private set; }
+        public Camera MainCamera { get; private set; }
         
         private void Awake()
         {
-            body = GetComponent<Rigidbody2D>();
+            MainCamera = Camera.main;
+            Body = GetComponent<Rigidbody2D>();
             
             InitializeStateMachine(new PlayerStateFactory(this), PlayerStateType.Idle);
         }
