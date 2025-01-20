@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Configs;
 using UnityEngine;
 
 namespace Entities.Enemy.States
@@ -14,6 +15,8 @@ namespace Entities.Enemy.States
 
         public override void Enter()
         {
+            EnemyEventConfig.OnEnemyHurt?.Invoke();
+            
             _spriteRenderer = Controller.GetComponent<SpriteRenderer>();
             _originalColor = _spriteRenderer.color;
             
