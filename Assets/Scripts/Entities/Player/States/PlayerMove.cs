@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Entities.Player.Components;
+using Entities.Player.Controllers;
+using UnityEngine;
 
 namespace Entities.Player.States
 {
@@ -18,10 +20,9 @@ namespace Entities.Player.States
 
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Idle, () => PlayerInput.movementDirection == Vector2.zero && Controller.components.Body.linearVelocity == Vector2.zero);
-            AddTransition(PlayerStateType.Charge, () => (PlayerInput.chargeKeyPressed || PlayerInput.chargeKeyHold) && Controller.components.CurrentMorph.HasCharge);
-            AddTransition(PlayerStateType.Attack, () => PlayerInput.chargeKeyPressed && Controller.components.CurrentMorph.HasCharge == false);
+            AddTransition(PlayerStateType.Idle, () => PlayerInput.movementDirection == Vector2.zero && Controller.components.body.linearVelocity == Vector2.zero);
             AddTransition(PlayerStateType.Morph, () => Input.GetKey(KeyCode.Mouse1));
+            AddTransition(PlayerStateType.Attack, () => Input.GetKeyDown(KeyCode.Mouse0));
         }
     }
 }

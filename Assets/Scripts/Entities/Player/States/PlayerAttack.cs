@@ -1,10 +1,11 @@
-﻿using Entities.Player.Morphs.Strategies;
+﻿using Entities.Player.Components;
+using Entities.Player.Controllers;
 
 namespace Entities.Player.States
 {
     public class PlayerAttack : PlayerState
     {
-        private float _decelerationSpeed;
+        private bool _isComplete;
         
         public PlayerAttack(PlayerController controller) : base(controller)
         {
@@ -12,28 +13,24 @@ namespace Entities.Player.States
 
         public override void Enter()
         {
-            Controller.components.CurrentMorph.Attack();   
-        }
-
-        public override void Update()
-        {
-            if (Controller.components.CurrentMorph is SpearMorph spearMorph)
-            {
-                spearMorph.Update();
-            }
-        }
-
-        public override void Exit()
-        {
-            if (Controller.components.CurrentMorph is SpearMorph spearMorph)
-            {
-                spearMorph.Exit();
-            }
+            _isComplete = false;
+            Controller.attack.currentMorph.Enter();
         }
         
+        public override void Update()
+        {
+            Controller.attack.currentMorph.Update();
+            _isComplete = Controller.attack.currentMorph.IsComplete();
+        }
+        
+        public override void Exit()
+        {
+            Controller.attack.currentMorph.Exit();
+        }
+
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Idle, () => Controller.components.CurrentMorph.IsFinished());
+            AddTransition(PlayerStateType.Idle, () => _isComplete);
         }
     }
 }

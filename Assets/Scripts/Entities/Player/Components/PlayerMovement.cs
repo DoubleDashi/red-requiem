@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Entities.Player.Controllers;
+using UnityEngine;
 
-namespace Entities.Player
+namespace Entities.Player.Components
 {
     public class PlayerMovement
     {
@@ -17,14 +18,14 @@ namespace Entities.Player
         {
             if (PlayerInput.movementDirection.x != 0)
             {
-                _linearVelocity.x = Mathf.Abs(_controller.components.Body.linearVelocity.x) > _controller.stats.maxSpeed
+                _linearVelocity.x = Mathf.Abs(_controller.components.body.linearVelocity.x) > _controller.stats.maxSpeed
                     ? Mathf.MoveTowards(_linearVelocity.x, 0.0f, _controller.stats.decelerationSpeed * Time.deltaTime)
                     : _linearVelocity.x + PlayerInput.normalizedMovementDirection.x * _controller.stats.accelerationSpeed * Time.deltaTime;
             }
             
             if (PlayerInput.movementDirection.y != 0)
             {
-                _linearVelocity.y = Mathf.Abs(_controller.components.Body.linearVelocity.y) > _controller.stats.maxSpeed
+                _linearVelocity.y = Mathf.Abs(_controller.components.body.linearVelocity.y) > _controller.stats.maxSpeed
                     ? Mathf.MoveTowards(_linearVelocity.y, 0.0f, _controller.stats.decelerationSpeed * Time.deltaTime)
                     : _linearVelocity.y + PlayerInput.normalizedMovementDirection.y * _controller.stats.accelerationSpeed * Time.deltaTime;
             }
@@ -64,7 +65,7 @@ namespace Entities.Player
         
         public void SetLinearVelocity()
         {
-            _controller.components.Body.linearVelocity = _linearVelocity;
+            _controller.components.body.linearVelocity = _linearVelocity;
         }
     }
 }

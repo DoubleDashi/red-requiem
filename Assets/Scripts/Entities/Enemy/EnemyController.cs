@@ -2,6 +2,7 @@
 using Configs;
 using Controllers;
 using Entities.Player;
+using Entities.Player.Controllers;
 using FSM;
 using UnityEngine;
 using Utility;
@@ -40,13 +41,13 @@ namespace Entities.Enemy
             if (other.CompareTag(UnityTag.PlayerDamageHitbox.ToString()) && isHurt == false)
             {
                 isHurt = true;
-                EnemyEventConfig.OnEnemyHurt?.Invoke(stats.Guid, other.GetComponentInParent<PlayerController>().stats.currentDamage);
+                EnemyEventConfig.OnEnemyHurt?.Invoke(stats.guid, other.GetComponentInParent<PlayerController>().stats.currentDamage);
             }
             
             if (other.CompareTag(UnityTag.PlayerProjectile.ToString()) && isHurt == false)
             {
                 isHurt = true;
-                EnemyEventConfig.OnEnemyHurt?.Invoke(stats.Guid, other.GetComponent<ProjectileController>().stats.damage);
+                EnemyEventConfig.OnEnemyHurt?.Invoke(stats.guid, other.GetComponent<ProjectileController>().stats.damage);
             }
         }
         
@@ -57,7 +58,7 @@ namespace Entities.Enemy
 
         private void HandleOnEnemyDeath(Guid guid)
         {
-            if (stats.Guid != guid)
+            if (stats.guid != guid)
             {
                 return;
             }

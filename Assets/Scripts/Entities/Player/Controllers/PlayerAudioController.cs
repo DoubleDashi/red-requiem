@@ -4,9 +4,9 @@ using Controllers;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Entities.Player
+namespace Entities.Player.Controllers
 {
-    public class PlayerAudio : AudioController
+    public class PlayerAudioController : AudioController
     {
         [SerializeField] private PlayerAudioConfig audioConfig;
         

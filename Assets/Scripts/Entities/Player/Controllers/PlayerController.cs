@@ -1,41 +1,33 @@
 using System;
-using Entities.Player.Morphs;
+using Entities.Player.Components;
 using FSM;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Entities.Player
+namespace Entities.Player.Controllers
 {
     [Serializable]
     public class PlayerComponents
     {
         public PlayerMovement Movement;
-        public MorphDTO MorphDTO;
-        public MorphFactory MorphFactory;
-        public BaseMorph CurrentMorph;
-        public Rigidbody2D Body;
-        public Camera MainCamera;
+        public Rigidbody2D body;
+        public Camera mainCamera;
     }
     
     public class PlayerController : StateMachine<PlayerStateType>
     {
         [SerializeField] private EntityStats entityStats;
-        [SerializeField] private BoxCollider2D damageHitbox;
         [SerializeField] private PlayerComponents playerComponents;
-
+        [SerializeField] private PlayerAttackController attackController;
+        
         public PlayerComponents components => playerComponents;
+        public PlayerAttackController attack => attackController;
         public EntityStats stats => entityStats;
 
         private void Awake()
         {
-            components.MainCamera = Camera.main;
-            components.Body = GetComponent<Rigidbody2D>();
-
+            components.mainCamera = Camera.main;
+            components.body = GetComponent<Rigidbody2D>();
             components.Movement = new PlayerMovement(this);
-            
-            damageHitbox.enabled = false;
-            components.MorphFactory = new MorphFactory(this, components.MorphDTO);
-            components.CurrentMorph = components.MorphFactory.GetMorph(MorphType.Shards);
             
             InitializeStateMachine(new PlayerStateFactory(this), PlayerStateType.Idle);
         }
@@ -43,7 +35,6 @@ namespace Entities.Player
         protected override void Update()
         {
             base.Update();
-
             Rotate();
         }
 
@@ -51,20 +42,15 @@ namespace Entities.Player
         {
             // AddGlobalTransition(PlayerStateType.Hurt, () => Input.GetKeyDown(KeyCode.Mouse1));
         }
-
-        public void EnableDamageHitbox()
-        {
-            damageHitbox.enabled = true;
-        }
-        
-        public void DisableDamageHitbox()
-        {
-            damageHitbox.enabled = false;
-        }
         
         private void Rotate()
         {
-            Vector2 mousePosition = components.MainCamera.ScreenToWorldPoint(Input.mousePosition);
+            if (stats.disableRotation)
+            {
+                return;
+            }
+            
+            Vector2 mousePosition = components.mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - (Vector2)transform.position).normalized;
             
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

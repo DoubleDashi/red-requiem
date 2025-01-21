@@ -1,8 +1,18 @@
-﻿using Entities.Player.States;
+﻿using Entities.Player.Controllers;
+using Entities.Player.States;
 using FSM;
 
-namespace Entities.Player
+namespace Entities.Player.Components
 {
+    public enum PlayerStateType
+    {
+        Idle,
+        Move,
+        Hurt,
+        Morph,
+        Attack,
+    }
+    
     public class PlayerStateFactory : StateFactory<PlayerStateType>
     {
         private readonly PlayerController _controller;
@@ -16,10 +26,9 @@ namespace Entities.Player
         {
             AddState(PlayerStateType.Idle, new PlayerIdle(_controller));
             AddState(PlayerStateType.Move, new PlayerMove(_controller));
-            AddState(PlayerStateType.Charge, new PlayerCharge(_controller));
-            AddState(PlayerStateType.Attack, new PlayerAttack(_controller));
             AddState(PlayerStateType.Hurt, new PlayerHurt(_controller));
             AddState(PlayerStateType.Morph, new PlayerMorph(_controller));
+            AddState(PlayerStateType.Attack, new PlayerAttack(_controller));
         }
     }
 }

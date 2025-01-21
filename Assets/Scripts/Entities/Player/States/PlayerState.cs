@@ -1,4 +1,6 @@
-﻿using FSM;
+﻿using Entities.Player.Components;
+using Entities.Player.Controllers;
+using FSM;
 
 namespace Entities.Player.States
 {

@@ -1,4 +1,7 @@
-﻿using Entities.Player.Morphs;
+﻿using System.Collections;
+using Entities.Player.Components;
+using Entities.Player.Controllers;
+using Entities.Player.Morphs;
 using UnityEngine;
 
 namespace Entities.Player.States
@@ -9,22 +12,24 @@ namespace Entities.Player.States
         {
         }
 
+        public override void Enter()
+        {
+            Controller.components.Movement.Decelerate();
+        }
+
         public override void Update()
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                Controller.components.CurrentMorph = Controller.components.MorphFactory.GetMorph(MorphType.Spear);
-                Debug.Log("Current Morph: " + Controller.components.CurrentMorph.GetType().Name);
+                Debug.Log("Morphing... Spear chosen!");
+                Controller.attack.ChangeMorph(MorphType.Spear);
             }
             
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                Controller.components.CurrentMorph = Controller.components.MorphFactory.GetMorph(MorphType.Shards);
-                Debug.Log("Current Morph: " + Controller.components.CurrentMorph.GetType().Name);
+                Debug.Log("Morphing... Shard chosen!");
+                Controller.attack.ChangeMorph(MorphType.Shard);
             }
-            
-            Controller.components.Movement.ForceDecelerate();
-            Controller.components.Movement.SetLinearVelocity();
         }
 
         protected override void SetTransitions()

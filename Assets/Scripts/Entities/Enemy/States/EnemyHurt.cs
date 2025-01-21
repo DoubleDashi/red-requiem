@@ -59,7 +59,7 @@ namespace Entities.Enemy.States
 
         private void HandleOnEnemyHurt(Guid guid, float damage)
         {
-            if (guid != Controller.stats.Guid)
+            if (guid != Controller.stats.guid)
             {
                 return;
             }

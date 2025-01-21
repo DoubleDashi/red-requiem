@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using Entities.Player.Components;
+using Entities.Player.Controllers;
 using UnityEngine;
 
 namespace Entities.Player.States
@@ -16,7 +18,7 @@ namespace Entities.Player.States
 
         public override void Enter()
         {
-            Controller.components.Body.linearVelocity = Vector2.zero;
+            Controller.components.body.linearVelocity = Vector2.zero;
             
             _spriteRenderer = Controller.GetComponentsInChildren<SpriteRenderer>();
             _originalColor = _spriteRenderer[0].color;

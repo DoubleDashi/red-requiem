@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 
 namespace Entities
@@ -6,7 +7,7 @@ namespace Entities
     [Serializable]
     public class EntityStats
     {
-        public Guid Guid { get; private set; } = Guid.NewGuid();
+        public Guid guid { get; private set; } = Guid.NewGuid();
 
         [Header("Life stats")]
         public float health;
@@ -29,5 +30,8 @@ namespace Entities
         public float currentChargeSpeed;
         public float chargeSpeed;
         public float maxChargeSpeed;
+
+        [Header("Misc options")] 
+        public bool disableRotation;
     }
 }
