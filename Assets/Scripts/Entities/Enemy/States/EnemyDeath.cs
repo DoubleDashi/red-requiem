@@ -10,7 +10,7 @@ namespace Entities.Enemy.States
 
         public override void Enter()
         {
-            EnemyEventConfig.OnEnemyDeath?.Invoke(Controller.Stats.Guid);
+            EnemyEventConfig.OnEnemyDeath?.Invoke(Controller.stats.Guid);
         }
 
         protected override void SetTransitions()

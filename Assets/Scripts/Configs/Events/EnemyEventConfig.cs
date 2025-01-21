@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Configs
 {
-    [CreateAssetMenu(fileName = "EnemyEventConfig", menuName = "Configs/EnemyEventConfig")]
+    [CreateAssetMenu(fileName = "EnemyEventConfig", menuName = "Configs/Events/EnemyEventConfig")]
     public class EnemyEventConfig : ScriptableObject
     {
         public static Action<Guid, float> OnEnemyHurt;

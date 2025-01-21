@@ -34,7 +34,7 @@ namespace Entities.Enemy.States
         
         protected override void SetTransitions()
         {
-            AddTransition(EnemyStateType.Death, () => Controller.Stats.health <= 0f);
+            AddTransition(EnemyStateType.Death, () => Controller.stats.health <= 0f);
             AddTransition(EnemyStateType.Idle, () => Controller.isHurt == false);
         }
 
@@ -59,12 +59,12 @@ namespace Entities.Enemy.States
 
         private void HandleOnEnemyHurt(Guid guid, float damage)
         {
-            if (guid != Controller.Stats.Guid)
+            if (guid != Controller.stats.Guid)
             {
                 return;
             }
             
-            Controller.Stats.health -= damage;
+            Controller.stats.health -= damage;
         }
     }
 }

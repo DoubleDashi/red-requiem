@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Configs
 {
-    [CreateAssetMenu(fileName = "PlayerEventConfig", menuName = "Configs/PlayerEventConfig")]
+    [CreateAssetMenu(fileName = "PlayerEventConfig", menuName = "Configs/Events/PlayerEventConfig")]
     public class PlayerEventConfig : ScriptableObject
     {
         public static Action<Guid> OnPlayerChargeComplete;

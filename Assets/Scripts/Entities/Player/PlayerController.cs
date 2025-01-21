@@ -1,5 +1,7 @@
+using Entities.Player.Morphs;
 using FSM;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Entities.Player
 {
@@ -8,16 +10,23 @@ namespace Entities.Player
         [SerializeField] private EntityStats entityStats;
         [SerializeField] private BoxCollider2D damageHitbox;
 
-        public EntityStats Stats => entityStats;
-        public Rigidbody2D Body { get; private set; }
-        public Camera MainCamera { get; private set; }
+        public MorphDTO morphDTO;
+        
+        public EntityStats stats => entityStats;
+        public Rigidbody2D body { get; private set; }
+        public Camera mainCamera { get; private set; }
+
+        public MorphFactory MorphFactory;
+        public BaseMorph CurrentMorph;
         
         private void Awake()
         {
-            MainCamera = Camera.main;
-            Body = GetComponent<Rigidbody2D>();
+            mainCamera = Camera.main;
+            body = GetComponent<Rigidbody2D>();
 
             damageHitbox.enabled = false;
+            MorphFactory = new MorphFactory(this, morphDTO);
+            CurrentMorph = MorphFactory.GetMorph(MorphType.Shards);
             
             InitializeStateMachine(new PlayerStateFactory(this), PlayerStateType.Idle);
         }
@@ -46,13 +55,13 @@ namespace Entities.Player
         
         private void Rotate()
         {
-            Vector2 mousePosition = MainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - (Vector2)transform.position).normalized;
             
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion target = Quaternion.Euler(0f, 0f, angle);
             
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, target, Stats.rotationSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, target, stats.rotationSpeed * Time.deltaTime);
         }
     }
 }

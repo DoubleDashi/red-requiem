@@ -1,4 +1,6 @@
 ﻿using Configs;
+using Entities.Player.Morphs;
+using Entities.Player.Morphs.Strategies;
 using UnityEngine;
 
 namespace Entities.Player.States
@@ -14,22 +16,23 @@ namespace Entities.Player.States
 
         public override void Enter()
         {
-            Controller.Stats.currentChargeSpeed = 0f;
+            Controller.stats.currentChargeSpeed = 0f;
         }
         
         public override void Update()
         {
-            Accelerate();
-
-            if (IsCharged() && _usedSFX == false)
+            if (Controller.CurrentMorph is SpearMorph spearMorph)
             {
-                PlayerEventConfig.OnPlayerChargeComplete?.Invoke(Controller.Stats.Guid);
-                _usedSFX = true;
+                spearMorph.ChargeVelocity();
+                if (spearMorph.IsCharged() && _usedSFX == false)
+                {
+                    PlayerEventConfig.OnPlayerChargeComplete?.Invoke(Controller.stats.Guid);
+                    _usedSFX = true;
+                }
             }
             
             Decelerate();
-            
-            Controller.Body.linearVelocity = _linearVelocity;
+            Controller.body.linearVelocity = _linearVelocity;
         }
 
         public override void Exit()
@@ -39,32 +42,23 @@ namespace Entities.Player.States
         
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Idle, () => PlayerInput.ChargeCancelKeyPressed);
-            AddTransition(PlayerStateType.Attack, () => PlayerInput.ChargeKeyReleased);
-        }
-        
-        private void Accelerate()
-        {
-            Controller.Stats.currentChargeSpeed += Controller.Stats.chargeSpeed * Time.deltaTime;
-            Controller.Stats.currentChargeSpeed = Mathf.Clamp(Controller.Stats.currentChargeSpeed, 0f, Controller.Stats.maxChargeSpeed);
+            AddTransition(PlayerStateType.Idle, () => PlayerInput.chargeCancelKeyPressed);
+            AddTransition(PlayerStateType.Attack, () => PlayerInput.chargeKeyReleased);
         }
 
         private void Decelerate()
         {
-            if (PlayerInput.MovementDirection.x == 0)
+            if (PlayerInput.movementDirection.x == 0)
             {
-                _linearVelocity.x = Mathf.MoveTowards(_linearVelocity.x, 0.0f, Controller.Stats.decelerationSpeed * Time.deltaTime);  
+                _linearVelocity.x = Mathf.MoveTowards(_linearVelocity.x, 0.0f, Controller.stats.decelerationSpeed * Time.deltaTime);  
             }
             
-            if (PlayerInput.MovementDirection.y == 0)
+            if (PlayerInput.movementDirection.y == 0)
             {
-                _linearVelocity.y = Mathf.MoveTowards(_linearVelocity.y, 0.0f, Controller.Stats.decelerationSpeed * Time.deltaTime); 
+                _linearVelocity.y = Mathf.MoveTowards(_linearVelocity.y, 0.0f, Controller.stats.decelerationSpeed * Time.deltaTime); 
             }
         }
         
-        private bool IsCharged()
-        {
-            return Controller.Stats.currentChargeSpeed == Controller.Stats.maxChargeSpeed;
-        }
+        
     }
 }

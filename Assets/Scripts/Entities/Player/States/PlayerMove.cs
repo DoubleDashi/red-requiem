@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Entities.Player.Morphs;
+using UnityEngine;
 
 namespace Entities.Player.States
 {
@@ -12,7 +13,7 @@ namespace Entities.Player.States
 
         public override void Enter()
         {
-            _linearVelocity = Controller.Body.linearVelocity;
+            _linearVelocity = Controller.body.linearVelocity;
         }
 
         public override void Update()
@@ -21,55 +22,56 @@ namespace Entities.Player.States
             Decelerate();
             Brake();
             
-            Controller.Body.linearVelocity = _linearVelocity;
+            Controller.body.linearVelocity = _linearVelocity;
         }
 
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Idle, () => PlayerInput.MovementDirection == Vector2.zero && Controller.Body.linearVelocity == Vector2.zero);
-            AddTransition(PlayerStateType.Charge, () => PlayerInput.ChargeKeyPressed || PlayerInput.ChargeKeyHold);
+            AddTransition(PlayerStateType.Idle, () => PlayerInput.movementDirection == Vector2.zero && Controller.body.linearVelocity == Vector2.zero);
+            AddTransition(PlayerStateType.Charge, () => (PlayerInput.chargeKeyPressed || PlayerInput.chargeKeyHold) && Controller.CurrentMorph.HasCharge);
+            AddTransition(PlayerStateType.Attack, () => PlayerInput.chargeKeyPressed && Controller.CurrentMorph.HasCharge == false);
         }
         
         private void Accelerate()
         {
-            if (PlayerInput.MovementDirection.x != 0)
+            if (PlayerInput.movementDirection.x != 0)
             {
-                _linearVelocity.x = Mathf.Abs(Controller.Body.linearVelocity.x) > Controller.Stats.maxSpeed
-                    ? Mathf.MoveTowards(_linearVelocity.x, 0.0f, Controller.Stats.decelerationSpeed * Time.deltaTime)
-                    : _linearVelocity.x + PlayerInput.NormalizedMovementDirection.x * Controller.Stats.accelerationSpeed * Time.deltaTime;
+                _linearVelocity.x = Mathf.Abs(Controller.body.linearVelocity.x) > Controller.stats.maxSpeed
+                    ? Mathf.MoveTowards(_linearVelocity.x, 0.0f, Controller.stats.decelerationSpeed * Time.deltaTime)
+                    : _linearVelocity.x + PlayerInput.normalizedMovementDirection.x * Controller.stats.accelerationSpeed * Time.deltaTime;
             }
             
-            if (PlayerInput.MovementDirection.y != 0)
+            if (PlayerInput.movementDirection.y != 0)
             {
-                _linearVelocity.y = Mathf.Abs(Controller.Body.linearVelocity.y) > Controller.Stats.maxSpeed
-                    ? Mathf.MoveTowards(_linearVelocity.y, 0.0f, Controller.Stats.decelerationSpeed * Time.deltaTime)
-                    : _linearVelocity.y + PlayerInput.NormalizedMovementDirection.y * Controller.Stats.accelerationSpeed * Time.deltaTime;
+                _linearVelocity.y = Mathf.Abs(Controller.body.linearVelocity.y) > Controller.stats.maxSpeed
+                    ? Mathf.MoveTowards(_linearVelocity.y, 0.0f, Controller.stats.decelerationSpeed * Time.deltaTime)
+                    : _linearVelocity.y + PlayerInput.normalizedMovementDirection.y * Controller.stats.accelerationSpeed * Time.deltaTime;
             }
         }
 
         private void Decelerate()
         {
-            if (PlayerInput.MovementDirection.x == 0)
+            if (PlayerInput.movementDirection.x == 0)
             {
-                _linearVelocity.x = Mathf.MoveTowards(_linearVelocity.x, 0.0f, Controller.Stats.decelerationSpeed * Time.deltaTime);  
+                _linearVelocity.x = Mathf.MoveTowards(_linearVelocity.x, 0.0f, Controller.stats.decelerationSpeed * Time.deltaTime);  
             }
             
-            if (PlayerInput.MovementDirection.y == 0)
+            if (PlayerInput.movementDirection.y == 0)
             {
-                _linearVelocity.y = Mathf.MoveTowards(_linearVelocity.y, 0.0f, Controller.Stats.decelerationSpeed * Time.deltaTime); 
+                _linearVelocity.y = Mathf.MoveTowards(_linearVelocity.y, 0.0f, Controller.stats.decelerationSpeed * Time.deltaTime); 
             }
         }
 
         private void Brake()
         {
-            if (PlayerInput.MovementDirection.x != 0 && PlayerInput.MovementDirection.x != Mathf.Sign(_linearVelocity.x))
+            if (PlayerInput.movementDirection.x != 0 && PlayerInput.movementDirection.x != Mathf.Sign(_linearVelocity.x))
             {
-                _linearVelocity.x = Mathf.MoveTowards(_linearVelocity.x, 0.0f, Controller.Stats.brakeSpeed * Time.deltaTime);  
+                _linearVelocity.x = Mathf.MoveTowards(_linearVelocity.x, 0.0f, Controller.stats.brakeSpeed * Time.deltaTime);  
             }
 
-            if (PlayerInput.MovementDirection.y != 0 && PlayerInput.MovementDirection.y != Mathf.Sign(_linearVelocity.y))
+            if (PlayerInput.movementDirection.y != 0 && PlayerInput.movementDirection.y != Mathf.Sign(_linearVelocity.y))
             {
-                _linearVelocity.y = Mathf.MoveTowards(_linearVelocity.y, 0.0f, Controller.Stats.brakeSpeed * Time.deltaTime);
+                _linearVelocity.y = Mathf.MoveTowards(_linearVelocity.y, 0.0f, Controller.stats.brakeSpeed * Time.deltaTime);
             }
         }
     }

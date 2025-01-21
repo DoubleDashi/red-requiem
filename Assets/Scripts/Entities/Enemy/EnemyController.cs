@@ -1,5 +1,6 @@
 ﻿using System;
 using Configs;
+using Controllers;
 using Entities.Player;
 using FSM;
 using UnityEngine;
@@ -13,7 +14,7 @@ namespace Entities.Enemy
         
         [HideInInspector] public bool isHurt;
         
-        public EntityStats Stats => entityStats;
+        public EntityStats stats => entityStats;
         
         protected override void OnEnable()
         {
@@ -39,8 +40,13 @@ namespace Entities.Enemy
             if (other.CompareTag(UnityTag.PlayerDamageHitbox.ToString()) && isHurt == false)
             {
                 isHurt = true;
-                
-                EnemyEventConfig.OnEnemyHurt?.Invoke(Stats.Guid, other.GetComponentInParent<PlayerController>().Stats.currentDamage);
+                EnemyEventConfig.OnEnemyHurt?.Invoke(stats.Guid, other.GetComponentInParent<PlayerController>().stats.currentDamage);
+            }
+            
+            if (other.CompareTag(UnityTag.PlayerProjectile.ToString()) && isHurt == false)
+            {
+                isHurt = true;
+                EnemyEventConfig.OnEnemyHurt?.Invoke(stats.Guid, other.GetComponent<ProjectileController>().stats.damage);
             }
         }
         
@@ -51,7 +57,7 @@ namespace Entities.Enemy
 
         private void HandleOnEnemyDeath(Guid guid)
         {
-            if (Stats.Guid != guid)
+            if (stats.Guid != guid)
             {
                 return;
             }

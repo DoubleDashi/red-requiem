@@ -2,7 +2,7 @@
 
 namespace Configs
 {
-    [CreateAssetMenu(fileName = "EnemyAudioConfig", menuName = "Configs/EnemyAudioConfig")]
+    [CreateAssetMenu(fileName = "EnemyAudioConfig", menuName = "Configs/Audios/EnemyAudioConfig")]
     public class EnemyAudioConfig : ScriptableObject
     {
 	    public AudioClip hurtSFX;

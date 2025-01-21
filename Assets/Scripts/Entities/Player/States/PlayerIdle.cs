@@ -10,8 +10,9 @@ namespace Entities.Player.States
 
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Move, () => PlayerInput.MovementDirection != Vector2.zero);
-            AddTransition(PlayerStateType.Charge, () => PlayerInput.ChargeKeyPressed || PlayerInput.ChargeKeyHold);
+            AddTransition(PlayerStateType.Move, () => PlayerInput.movementDirection != Vector2.zero);
+            AddTransition(PlayerStateType.Charge, () => (PlayerInput.chargeKeyPressed || PlayerInput.chargeKeyHold) && Controller.CurrentMorph.HasCharge);
+            AddTransition(PlayerStateType.Attack, () => PlayerInput.chargeKeyPressed && Controller.CurrentMorph.HasCharge == false);
         }
     }
 }

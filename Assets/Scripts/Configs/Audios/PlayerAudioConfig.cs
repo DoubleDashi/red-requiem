@@ -2,7 +2,7 @@
 
 namespace Configs
 {
-    [CreateAssetMenu(fileName = "PlayerAudioConfig", menuName = "Configs/PlayerAudioConfig")]
+    [CreateAssetMenu(fileName = "PlayerAudioConfig", menuName = "Configs/Audios/PlayerAudioConfig")]
     public class PlayerAudioConfig : ScriptableObject
     {
         public AudioClip[] chargeCompleteSFX;
