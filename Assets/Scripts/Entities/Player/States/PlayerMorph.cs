@@ -34,6 +34,12 @@ namespace Entities.Player.States
                 Debug.Log("Morphing... Sword chosen!");
                 Controller.currentMorph = Controller.components.MorphFactory.FindByType(MorphType.Sword);
             }
+
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                Debug.Log("Morphing... Scythe chosen!");
+                Controller.currentMorph = Controller.components.MorphFactory.FindByType(MorphType.Scythe);
+            }
         }
 
         protected override void SetTransitions()

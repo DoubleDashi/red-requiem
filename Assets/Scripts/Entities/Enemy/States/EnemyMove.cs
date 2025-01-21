@@ -25,7 +25,7 @@ namespace Entities.Enemy.States
         
         public override void Update()
         {
-            Move();
+            // Move();
         }
         
         protected override void SetTransitions()

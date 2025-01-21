@@ -8,7 +8,7 @@ namespace Entities.Player.States.Morphs
     public abstract class MorphState : PlayerState
     {
         private readonly float _detectionRadius;
-        protected readonly List<Collider2D> InteractedColliders = new();
+        private readonly List<Collider2D> _interactedColliders = new();
         
         protected MorphState(PlayerController controller) : base(controller)
         {
@@ -20,17 +20,17 @@ namespace Entities.Player.States.Morphs
             Collider2D[] others = Physics2D.OverlapCircleAll(Controller.transform.position, _detectionRadius);
             foreach (var other in others)
             {
-                if (other.CompareTag(UnityTag.Enemy.ToString()) && InteractedColliders.Contains(other) == false)
+                if (other.CompareTag(UnityTag.Enemy.ToString()) && _interactedColliders.Contains(other) == false)
                 {
                     other.GetComponent<EnemyController>().TakeDamage(Controller.stats.currentDamage);
-                    InteractedColliders.Add(other);
+                    _interactedColliders.Add(other);
                 }
             }
         }
 
         protected void CollisionClear()
         {
-            InteractedColliders.Clear();
+            _interactedColliders.Clear();
         }
     }
 }

@@ -9,6 +9,7 @@ namespace Entities.Player.Components
         Spear,
         Shard,
         Sword,
+        Scythe,
     }
     
     public enum PlayerStateType
@@ -24,6 +25,7 @@ namespace Entities.Player.Components
         SpearAttack,
         ShardAttack,
         SwordAttack,
+        ScytheAttack,
     }
     
     public class PlayerStateFactory : StateFactory<PlayerStateType>
@@ -48,6 +50,7 @@ namespace Entities.Player.Components
             AddState(PlayerStateType.SpearAttack, new PlayerSpearAttack(_controller));
             AddState(PlayerStateType.ShardAttack, new PlayerShardAttack(_controller));
             AddState(PlayerStateType.SwordAttack, new PlayerSwordAttack(_controller));
+            AddState(PlayerStateType.ScytheAttack, new PlayerScytheAttack(_controller));
         }
     }
 }

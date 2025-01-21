@@ -5,6 +5,7 @@ using Entities.Player.Components;
 using FSM;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Utility;
 
 namespace Entities.Player
 {
@@ -25,6 +26,8 @@ namespace Entities.Player
         [HideInInspector] public MorphConfig currentMorph;
 
         public PlayerComponents components { get; } = new();
+        
+        // public LineRenderer cannonLineRenderer;
 
         public EntityStats stats => entityStats;
 
@@ -44,6 +47,31 @@ namespace Entities.Player
         {
             base.Update();
             components.Movement.Rotate();
+
+            // TODO line renderer code for cannon beam
+            // if (Input.GetKey(KeyCode.Space))
+            // {
+            //     cannonLineRenderer.enabled = true;
+            //     
+            //     Vector2 mousePosition = components.mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            //     Vector2 direction = (mousePosition - (Vector2)transform.position).normalized;
+            //     
+            //     cannonLineRenderer.SetPosition(0, transform.position);
+            //     
+            //     RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 10.0f, ~LayerMask.GetMask(UnityLayerMask.Player.ToString()));
+            //     if (hit.collider && hit.collider.CompareTag(UnityTag.Player.ToString()) == false)
+            //     {
+            //         cannonLineRenderer.SetPosition(1, hit.point);
+            //     }
+            //     else
+            //     {
+            //         cannonLineRenderer.SetPosition(1, direction * 10.0f + (Vector2)transform.position);
+            //     }
+            // }
+            // else
+            // {
+            //     cannonLineRenderer.enabled = false;
+            // }
         }
 
         protected override void SetGlobalTransitions()
@@ -55,15 +83,13 @@ namespace Entities.Player
         {
             base.OnDrawGizmos();
             
-            Debug.Log("Current morph: " + currentMorph + ", collision radius: " + currentMorph?.collisionRadius);
-            
             if (currentMorph == null || currentMorph.collisionRadius == 0)
             {
                 return;
             }
             
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, currentMorph.collisionRadius);
+            Gizmos.DrawWireSphere(transform.position, currentMorph.collisionRadius / 2f);
         }
     }
 }

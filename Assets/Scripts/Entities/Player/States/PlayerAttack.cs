@@ -16,6 +16,7 @@ namespace Entities.Player.States
             AddTransition(PlayerStateType.SpearCharge, () => Controller.currentMorph.type == MorphType.Spear);
             AddTransition(PlayerStateType.ShardAttack, () => Controller.currentMorph.type == MorphType.Shard);
             AddTransition(PlayerStateType.SwordAttack, () => Controller.currentMorph.type == MorphType.Sword);
+            AddTransition(PlayerStateType.ScytheAttack, () => Controller.currentMorph.type == MorphType.Scythe);
             // AddTransition(PlayerStateType.Idle, () => Controller.morph.currentMorph.IsComplete());
         }
     }
