@@ -40,7 +40,7 @@ namespace Entities.Player
 
         protected override void SetGlobalTransitions()
         {
-            AddGlobalTransition(PlayerStateType.Hurt, () => Input.GetKeyDown(KeyCode.Mouse1));
+            // AddGlobalTransition(PlayerStateType.Hurt, () => Input.GetKeyDown(KeyCode.Mouse1));
         }
 
         public void EnableDamageHitbox()

@@ -30,6 +30,7 @@ namespace Entities.Player.States
             AddTransition(PlayerStateType.Idle, () => PlayerInput.movementDirection == Vector2.zero && Controller.body.linearVelocity == Vector2.zero);
             AddTransition(PlayerStateType.Charge, () => (PlayerInput.chargeKeyPressed || PlayerInput.chargeKeyHold) && Controller.CurrentMorph.HasCharge);
             AddTransition(PlayerStateType.Attack, () => PlayerInput.chargeKeyPressed && Controller.CurrentMorph.HasCharge == false);
+            AddTransition(PlayerStateType.Morph, () => Input.GetKey(KeyCode.Mouse1));
         }
         
         private void Accelerate()

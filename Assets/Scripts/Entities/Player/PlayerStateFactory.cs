@@ -18,8 +18,8 @@ namespace Entities.Player
             AddState(PlayerStateType.Move, new PlayerMove(_controller));
             AddState(PlayerStateType.Charge, new PlayerCharge(_controller));
             AddState(PlayerStateType.Attack, new PlayerAttack(_controller));
-            
             AddState(PlayerStateType.Hurt, new PlayerHurt(_controller));
+            AddState(PlayerStateType.Morph, new PlayerMorph(_controller));
         }
     }
 }

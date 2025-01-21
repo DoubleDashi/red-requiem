@@ -7,5 +7,7 @@
         Charge,
         Attack,
         Hurt,
+        Death,
+        Morph,
     }
 }
