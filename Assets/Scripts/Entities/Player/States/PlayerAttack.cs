@@ -1,5 +1,4 @@
-﻿using Entities.Player.Morphs;
-using Entities.Player.Morphs.Strategies;
+﻿using Entities.Player.Morphs.Strategies;
 
 namespace Entities.Player.States
 {
@@ -13,12 +12,12 @@ namespace Entities.Player.States
 
         public override void Enter()
         {
-            Controller.CurrentMorph.Attack();   
+            Controller.components.CurrentMorph.Attack();   
         }
 
         public override void Update()
         {
-            if (Controller.CurrentMorph is SpearMorph spearMorph)
+            if (Controller.components.CurrentMorph is SpearMorph spearMorph)
             {
                 spearMorph.Update();
             }
@@ -26,7 +25,7 @@ namespace Entities.Player.States
 
         public override void Exit()
         {
-            if (Controller.CurrentMorph is SpearMorph spearMorph)
+            if (Controller.components.CurrentMorph is SpearMorph spearMorph)
             {
                 spearMorph.Exit();
             }
@@ -34,7 +33,7 @@ namespace Entities.Player.States
         
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Idle, () => Controller.CurrentMorph.IsFinished());
+            AddTransition(PlayerStateType.Idle, () => Controller.components.CurrentMorph.IsFinished());
         }
     }
 }

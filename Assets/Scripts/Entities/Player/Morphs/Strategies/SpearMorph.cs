@@ -15,16 +15,16 @@ namespace Entities.Player.Morphs.Strategies
         public override void Attack()
         {
             Controller.EnableDamageHitbox();
-            Controller.body.linearVelocity = Vector2.zero;
+            Controller.components.Body.linearVelocity = Vector2.zero;
             PlayerEventConfig.OnPlayerMove?.Invoke(Controller.stats.Guid);
 
             _decelerationSpeed = Controller.stats.decelerationSpeed;
             Controller.stats.decelerationSpeed = 15f;
             
-            Vector2 mousePosition = Controller.mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition = Controller.components.MainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - (Vector2) Controller.transform.position).normalized;
             
-            Controller.body.linearVelocity = direction * Controller.stats.currentChargeSpeed;
+            Controller.components.Body.linearVelocity = direction * Controller.stats.currentChargeSpeed;
         }
 
         public void Update()
@@ -41,7 +41,7 @@ namespace Entities.Player.Morphs.Strategies
 
         public override bool IsFinished()
         {
-            return Controller.body.linearVelocity == Vector2.zero;
+            return Controller.components.Body.linearVelocity == Vector2.zero;
         }
         
         public void ChargeVelocity()
@@ -60,22 +60,22 @@ namespace Entities.Player.Morphs.Strategies
             Controller.stats.currentDamage = Mathf.Lerp(
                 Controller.stats.minDamage, 
                 Controller.stats.maxDamage, 
-                Controller.body.linearVelocity.magnitude / Controller.stats.maxChargeSpeed
+                Controller.components.Body.linearVelocity.magnitude / Controller.stats.maxChargeSpeed
             );
         }
         
         private void Decelerate()
         {
-            Vector2 velocity = Controller.body.linearVelocity;
+            Vector2 velocity = Controller.components.Body.linearVelocity;
             
             velocity.x = Mathf.Lerp(velocity.x, 0f, Controller.stats.decelerationSpeed * Time.deltaTime);
             velocity.y = Mathf.Lerp(velocity.y, 0f, Controller.stats.decelerationSpeed * Time.deltaTime);
             
-            Controller.body.linearVelocity = velocity;
+            Controller.components.Body.linearVelocity = velocity;
             
             if (velocity.magnitude < 0.1f)
             {
-                Controller.body.linearVelocity = Vector2.zero;
+                Controller.components.Body.linearVelocity = Vector2.zero;
             }
         }
     }

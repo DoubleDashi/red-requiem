@@ -1,3 +1,4 @@
+using System;
 using Entities.Player.Morphs;
 using FSM;
 using UnityEngine;
@@ -5,28 +6,36 @@ using UnityEngine.Serialization;
 
 namespace Entities.Player
 {
+    [Serializable]
+    public class PlayerComponents
+    {
+        public PlayerMovement Movement;
+        public MorphDTO MorphDTO;
+        public MorphFactory MorphFactory;
+        public BaseMorph CurrentMorph;
+        public Rigidbody2D Body;
+        public Camera MainCamera;
+    }
+    
     public class PlayerController : StateMachine<PlayerStateType>
     {
         [SerializeField] private EntityStats entityStats;
         [SerializeField] private BoxCollider2D damageHitbox;
+        [SerializeField] private PlayerComponents playerComponents;
 
-        public MorphDTO morphDTO;
-        
+        public PlayerComponents components => playerComponents;
         public EntityStats stats => entityStats;
-        public Rigidbody2D body { get; private set; }
-        public Camera mainCamera { get; private set; }
 
-        public MorphFactory MorphFactory;
-        public BaseMorph CurrentMorph;
-        
         private void Awake()
         {
-            mainCamera = Camera.main;
-            body = GetComponent<Rigidbody2D>();
+            components.MainCamera = Camera.main;
+            components.Body = GetComponent<Rigidbody2D>();
 
+            components.Movement = new PlayerMovement(this);
+            
             damageHitbox.enabled = false;
-            MorphFactory = new MorphFactory(this, morphDTO);
-            CurrentMorph = MorphFactory.GetMorph(MorphType.Shards);
+            components.MorphFactory = new MorphFactory(this, components.MorphDTO);
+            components.CurrentMorph = components.MorphFactory.GetMorph(MorphType.Shards);
             
             InitializeStateMachine(new PlayerStateFactory(this), PlayerStateType.Idle);
         }
@@ -55,7 +64,7 @@ namespace Entities.Player
         
         private void Rotate()
         {
-            Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition = components.MainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - (Vector2)transform.position).normalized;
             
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

@@ -16,7 +16,7 @@ namespace Entities.Player.States
 
         public override void Enter()
         {
-            Controller.body.linearVelocity = Vector2.zero;
+            Controller.components.Body.linearVelocity = Vector2.zero;
             
             _spriteRenderer = Controller.GetComponentsInChildren<SpriteRenderer>();
             _originalColor = _spriteRenderer[0].color;

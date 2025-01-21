@@ -1,5 +1,4 @@
 ﻿using Configs;
-using Entities.Player.Morphs;
 using Entities.Player.Morphs.Strategies;
 using UnityEngine;
 
@@ -21,7 +20,7 @@ namespace Entities.Player.States
         
         public override void Update()
         {
-            if (Controller.CurrentMorph is SpearMorph spearMorph)
+            if (Controller.components.CurrentMorph is SpearMorph spearMorph)
             {
                 spearMorph.ChargeVelocity();
                 if (spearMorph.IsCharged() && _usedSFX == false)
@@ -31,8 +30,8 @@ namespace Entities.Player.States
                 }
             }
             
-            Decelerate();
-            Controller.body.linearVelocity = _linearVelocity;
+            Controller.components.Movement.ForceDecelerate();
+            Controller.components.Movement.SetLinearVelocity();
         }
 
         public override void Exit()
@@ -45,20 +44,5 @@ namespace Entities.Player.States
             AddTransition(PlayerStateType.Idle, () => PlayerInput.chargeCancelKeyPressed);
             AddTransition(PlayerStateType.Attack, () => PlayerInput.chargeKeyReleased);
         }
-
-        private void Decelerate()
-        {
-            if (PlayerInput.movementDirection.x == 0)
-            {
-                _linearVelocity.x = Mathf.MoveTowards(_linearVelocity.x, 0.0f, Controller.stats.decelerationSpeed * Time.deltaTime);  
-            }
-            
-            if (PlayerInput.movementDirection.y == 0)
-            {
-                _linearVelocity.y = Mathf.MoveTowards(_linearVelocity.y, 0.0f, Controller.stats.decelerationSpeed * Time.deltaTime); 
-            }
-        }
-        
-        
     }
 }
