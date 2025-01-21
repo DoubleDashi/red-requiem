@@ -11,26 +11,12 @@ namespace Entities.Player.States
         {
         }
 
-        public override void Enter()
-        {
-            _isComplete = false;
-            Controller.attack.currentMorph.Enter();
-        }
-        
-        public override void Update()
-        {
-            Controller.attack.currentMorph.Update();
-            _isComplete = Controller.attack.currentMorph.IsComplete();
-        }
-        
-        public override void Exit()
-        {
-            Controller.attack.currentMorph.Exit();
-        }
-
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Idle, () => _isComplete);
+            AddTransition(PlayerStateType.SpearCharge, () => Controller.currentMorph.type == MorphType.Spear);
+            AddTransition(PlayerStateType.ShardAttack, () => Controller.currentMorph.type == MorphType.Shard);
+            AddTransition(PlayerStateType.SwordAttack, () => Controller.currentMorph.type == MorphType.Sword);
+            // AddTransition(PlayerStateType.Idle, () => Controller.morph.currentMorph.IsComplete());
         }
     }
 }

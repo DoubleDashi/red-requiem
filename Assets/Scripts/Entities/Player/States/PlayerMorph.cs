@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using Entities.Player.Components;
+﻿using Entities.Player.Components;
 using Entities.Player.Controllers;
-using Entities.Player.Morphs;
 using UnityEngine;
 
 namespace Entities.Player.States
@@ -22,13 +20,19 @@ namespace Entities.Player.States
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 Debug.Log("Morphing... Spear chosen!");
-                Controller.attack.ChangeMorph(MorphType.Spear);
+                Controller.currentMorph = Controller.components.MorphFactory.FindByType(MorphType.Spear);
             }
             
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 Debug.Log("Morphing... Shard chosen!");
-                Controller.attack.ChangeMorph(MorphType.Shard);
+                Controller.currentMorph = Controller.components.MorphFactory.FindByType(MorphType.Shard);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                Debug.Log("Morphing... Sword chosen!");
+                Controller.currentMorph = Controller.components.MorphFactory.FindByType(MorphType.Sword);
             }
         }
 

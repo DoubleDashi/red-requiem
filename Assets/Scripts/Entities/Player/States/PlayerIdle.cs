@@ -10,6 +10,11 @@ namespace Entities.Player.States
         {
         }
 
+        public override void Update()
+        {
+            Controller.components.Movement.ForceDecelerate();
+        }
+
         protected override void SetTransitions()
         {
             AddTransition(PlayerStateType.Move, () => PlayerInput.movementDirection != Vector2.zero);

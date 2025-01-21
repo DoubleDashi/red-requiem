@@ -1,13 +1,17 @@
 using System;
+using System.Collections.Generic;
+using Configs;
 using Entities.Player.Components;
 using FSM;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Entities.Player.Controllers
+namespace Entities.Player
 {
     [Serializable]
     public class PlayerComponents
     {
+        public PlayerMorphFactory MorphFactory;
         public PlayerMovement Movement;
         public Rigidbody2D body;
         public Camera mainCamera;
@@ -16,11 +20,12 @@ namespace Entities.Player.Controllers
     public class PlayerController : StateMachine<PlayerStateType>
     {
         [SerializeField] private EntityStats entityStats;
-        [SerializeField] private PlayerComponents playerComponents;
-        [SerializeField] private PlayerAttackController attackController;
-        
-        public PlayerComponents components => playerComponents;
-        public PlayerAttackController attack => attackController;
+        [SerializeField] private List<MorphConfig> morphConfigs;
+
+        [HideInInspector] public MorphConfig currentMorph;
+
+        public PlayerComponents components { get; } = new();
+
         public EntityStats stats => entityStats;
 
         private void Awake()
@@ -28,6 +33,9 @@ namespace Entities.Player.Controllers
             components.mainCamera = Camera.main;
             components.body = GetComponent<Rigidbody2D>();
             components.Movement = new PlayerMovement(this);
+            components.MorphFactory = new PlayerMorphFactory(morphConfigs);
+
+            currentMorph = components.MorphFactory.FindByType(MorphType.Spear);
             
             InitializeStateMachine(new PlayerStateFactory(this), PlayerStateType.Idle);
         }
@@ -35,7 +43,7 @@ namespace Entities.Player.Controllers
         protected override void Update()
         {
             base.Update();
-            Rotate();
+            components.Movement.Rotate();
         }
 
         protected override void SetGlobalTransitions()
@@ -43,20 +51,19 @@ namespace Entities.Player.Controllers
             // AddGlobalTransition(PlayerStateType.Hurt, () => Input.GetKeyDown(KeyCode.Mouse1));
         }
         
-        private void Rotate()
+        protected override void OnDrawGizmos()
         {
-            if (stats.disableRotation)
+            base.OnDrawGizmos();
+            
+            Debug.Log("Current morph: " + currentMorph + ", collision radius: " + currentMorph?.collisionRadius);
+            
+            if (currentMorph == null || currentMorph.collisionRadius == 0)
             {
                 return;
             }
             
-            Vector2 mousePosition = components.mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 direction = (mousePosition - (Vector2)transform.position).normalized;
-            
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion target = Quaternion.Euler(0f, 0f, angle);
-            
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, target, stats.rotationSpeed * Time.deltaTime);
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, currentMorph.collisionRadius);
         }
     }
 }

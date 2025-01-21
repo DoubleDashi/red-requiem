@@ -18,8 +18,6 @@ namespace Entities.Player.States
 
         public override void Enter()
         {
-            Controller.components.body.linearVelocity = Vector2.zero;
-            
             _spriteRenderer = Controller.GetComponentsInChildren<SpriteRenderer>();
             _originalColor = _spriteRenderer[0].color;
             foreach (var spriteRenderer in _spriteRenderer)
@@ -28,6 +26,11 @@ namespace Entities.Player.States
             }
             
             Controller.StartCoroutine(HurtRoutine());
+        }
+        
+        public override void Update()
+        {
+            Controller.components.Movement.ForceDecelerate();
         }
 
         public override void Exit()

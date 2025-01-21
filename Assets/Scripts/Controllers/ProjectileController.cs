@@ -39,6 +39,6 @@ namespace Controllers
         }
         
         protected abstract void Move();
-        protected abstract void OnOutbound();        
+        protected abstract void OnOutbound();
     }
 }

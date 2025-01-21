@@ -88,7 +88,7 @@ namespace FSM
             _currentState.Enter();
         }
         
-        private void OnDrawGizmos()
+        protected virtual void OnDrawGizmos()
         {
             #if UNITY_EDITOR
             if (Application.isPlaying)

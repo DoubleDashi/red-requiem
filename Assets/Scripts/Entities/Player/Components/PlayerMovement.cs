@@ -67,5 +67,21 @@ namespace Entities.Player.Components
         {
             _controller.components.body.linearVelocity = _linearVelocity;
         }
+        
+        public void Rotate()
+        {
+            if (_controller.stats.disableRotation)
+            {
+                return;
+            }
+            
+            Vector2 mousePosition = _controller.components.mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 direction = (mousePosition - (Vector2)_controller.transform.position).normalized;
+            
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            Quaternion target = Quaternion.Euler(0f, 0f, angle);
+            
+            _controller.transform.rotation = Quaternion.RotateTowards(_controller.transform.rotation, target, _controller.stats.rotationSpeed * Time.deltaTime);
+        }
     }
 }

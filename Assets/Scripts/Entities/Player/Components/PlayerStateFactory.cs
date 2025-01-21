@@ -1,9 +1,16 @@
-﻿using Entities.Player.Controllers;
-using Entities.Player.States;
+﻿using Entities.Player.States;
+using Entities.Player.States.Morphs;
 using FSM;
 
 namespace Entities.Player.Components
 {
+    public enum MorphType
+    {
+        Spear,
+        Shard,
+        Sword,
+    }
+    
     public enum PlayerStateType
     {
         Idle,
@@ -11,6 +18,12 @@ namespace Entities.Player.Components
         Hurt,
         Morph,
         Attack,
+        
+        // Morph states
+        SpearCharge,
+        SpearAttack,
+        ShardAttack,
+        SwordAttack,
     }
     
     public class PlayerStateFactory : StateFactory<PlayerStateType>
@@ -29,6 +42,12 @@ namespace Entities.Player.Components
             AddState(PlayerStateType.Hurt, new PlayerHurt(_controller));
             AddState(PlayerStateType.Morph, new PlayerMorph(_controller));
             AddState(PlayerStateType.Attack, new PlayerAttack(_controller));
+            
+            // Morph states
+            AddState(PlayerStateType.SpearCharge, new PlayerSpearCharge(_controller));
+            AddState(PlayerStateType.SpearAttack, new PlayerSpearAttack(_controller));
+            AddState(PlayerStateType.ShardAttack, new PlayerShardAttack(_controller));
+            AddState(PlayerStateType.SwordAttack, new PlayerSwordAttack(_controller));
         }
     }
 }

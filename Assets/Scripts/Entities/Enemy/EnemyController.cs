@@ -38,12 +38,6 @@ namespace Entities.Enemy
         
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag(UnityTag.PlayerDamageHitbox.ToString()) && isHurt == false)
-            {
-                isHurt = true;
-                EnemyEventConfig.OnEnemyHurt?.Invoke(stats.guid, other.GetComponentInParent<PlayerController>().stats.currentDamage);
-            }
-            
             if (other.CompareTag(UnityTag.PlayerProjectile.ToString()) && isHurt == false)
             {
                 isHurt = true;
@@ -54,6 +48,12 @@ namespace Entities.Enemy
         protected override void SetGlobalTransitions()
         {
             AddGlobalTransition(EnemyStateType.Hurt, () => isHurt);
+        }
+
+        public void TakeDamage(float damage)
+        {
+            isHurt = true;
+            EnemyEventConfig.OnEnemyHurt?.Invoke(stats.guid, damage);
         }
 
         private void HandleOnEnemyDeath(Guid guid)
