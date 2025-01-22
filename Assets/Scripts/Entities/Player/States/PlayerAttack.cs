@@ -1,5 +1,4 @@
 ﻿using Entities.Player.Components;
-using Entities.Player.Controllers;
 
 namespace Entities.Player.States
 {
@@ -17,7 +16,7 @@ namespace Entities.Player.States
             AddTransition(PlayerStateType.ShardAttack, () => Controller.currentMorph.type == MorphType.Shard);
             AddTransition(PlayerStateType.SwordAttack, () => Controller.currentMorph.type == MorphType.Sword);
             AddTransition(PlayerStateType.ScytheAttack, () => Controller.currentMorph.type == MorphType.Scythe);
-            // AddTransition(PlayerStateType.Idle, () => Controller.morph.currentMorph.IsComplete());
+            AddTransition(PlayerStateType.CannonCharge, () => Controller.currentMorph.type == MorphType.Cannon);
         }
     }
 }

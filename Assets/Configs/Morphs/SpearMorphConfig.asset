@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   prefab: {fileID: 0}
-  collider: {fileID: 0}
   knockbackForce: 0
-  collisionRadius: 0.25
+  collisionPointOffset: {x: 0.1, y: 0}
+  collisionBox: {x: 0.25, y: 0.25}

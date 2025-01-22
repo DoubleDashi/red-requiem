@@ -1,4 +1,5 @@
 ﻿using Configs;
+using Configs.Events;
 
 namespace Entities.Enemy.States
 {

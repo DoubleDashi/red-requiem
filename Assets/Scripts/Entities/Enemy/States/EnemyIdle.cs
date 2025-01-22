@@ -23,7 +23,6 @@ namespace Entities.Enemy.States
 
         protected override void SetTransitions()
         {
-            AddTransition(EnemyStateType.Hurt, () => Controller.isHurt);
             AddTransition(EnemyStateType.Move, () => isWaiting == false);
         }
         

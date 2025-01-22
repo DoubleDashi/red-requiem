@@ -1,6 +1,5 @@
 ﻿using Configs;
 using Entities.Player.Components;
-using Entities.Player.Controllers;
 using UnityEngine;
 
 namespace Entities.Player.States.Morphs

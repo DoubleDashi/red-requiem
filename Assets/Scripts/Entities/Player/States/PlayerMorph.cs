@@ -10,13 +10,10 @@ namespace Entities.Player.States
         {
         }
 
-        public override void Enter()
-        {
-            Controller.components.Movement.Decelerate();
-        }
-
         public override void Update()
         {
+            Controller.components.Movement.ForceDecelerate();
+            
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 Debug.Log("Morphing... Spear chosen!");
@@ -39,6 +36,12 @@ namespace Entities.Player.States
             {
                 Debug.Log("Morphing... Scythe chosen!");
                 Controller.currentMorph = Controller.components.MorphFactory.FindByType(MorphType.Scythe);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
+                Debug.Log("Morphing... Cannon chosen!");
+                Controller.currentMorph = Controller.components.MorphFactory.FindByType(MorphType.Cannon);
             }
         }
 

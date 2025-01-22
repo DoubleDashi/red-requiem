@@ -29,8 +29,9 @@ namespace Entities.Player.States.Morphs
         public override void Update()
         {
             CollisionDetection();
-            Decelerate();
             SetDamage();
+            
+            Controller.components.Movement.ForceDecelerate();
         }
 
         public override void Exit()
@@ -42,21 +43,6 @@ namespace Entities.Player.States.Morphs
         protected override void SetTransitions()
         {
             AddTransition(PlayerStateType.Idle, () => Controller.components.body.linearVelocity == Vector2.zero);
-        }
-        
-        private void Decelerate()
-        {
-            Vector2 velocity = Controller.components.body.linearVelocity;
-            
-            velocity.x = Mathf.Lerp(velocity.x, 0f, Controller.stats.decelerationSpeed * Time.deltaTime);
-            velocity.y = Mathf.Lerp(velocity.y, 0f, Controller.stats.decelerationSpeed * Time.deltaTime);
-            
-            Controller.components.body.linearVelocity = velocity;
-            
-            if (velocity.magnitude < 0.1f)
-            {
-                Controller.components.body.linearVelocity = Vector2.zero;
-            }
         }
 
         private void SetDamage()

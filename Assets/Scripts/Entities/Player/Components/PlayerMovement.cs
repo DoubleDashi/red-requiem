@@ -46,8 +46,17 @@ namespace Entities.Player.Components
 
         public void ForceDecelerate()
         {
-            _linearVelocity.x = Mathf.MoveTowards(_linearVelocity.x, 0.0f, _controller.stats.decelerationSpeed * Time.deltaTime);
-            _linearVelocity.y = Mathf.MoveTowards(_linearVelocity.y, 0.0f, _controller.stats.decelerationSpeed * Time.deltaTime);
+            Vector2 velocity = _controller.components.body.linearVelocity;
+            
+            velocity.x = Mathf.Lerp(velocity.x, 0f, _controller.stats.decelerationSpeed * Time.deltaTime);
+            velocity.y = Mathf.Lerp(velocity.y, 0f, _controller.stats.decelerationSpeed * Time.deltaTime);
+            
+            _controller.components.body.linearVelocity = velocity;
+            
+            if (velocity.magnitude < 0.1f)
+            {
+                _controller.components.body.linearVelocity = Vector2.zero;
+            }
         }
 
         public void Brake()

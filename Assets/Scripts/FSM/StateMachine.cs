@@ -8,6 +8,8 @@ namespace FSM
     {
         private StateFactory<TStates> _stateFactory;
         private BaseState<TStates> _currentState;
+
+        public TStates currentStateType { get; private set; }
         
         private readonly HashSet<StateTransition<TStates>> _globalTransitions = new();
 
@@ -29,8 +31,8 @@ namespace FSM
 
         protected virtual void Update()
         {
-            _currentState.Update();
             GlobalTransition();
+            _currentState.Update();
             Transition();
         }
         
@@ -40,9 +42,7 @@ namespace FSM
             _stateFactory.InitializeStateFactory();
             
             SetGlobalTransitions();
-            
-            _currentState = _stateFactory.GetState(initialState);
-            _currentState.Enter();
+            ChangeState(initialState);
         }
 
         protected void DestroyStateMachine()
@@ -83,8 +83,9 @@ namespace FSM
 
         private void ChangeState(TStates state)
         {
-            _currentState.Exit();
+            _currentState?.Exit();
             _currentState = _stateFactory.GetState(state);
+            currentStateType = state;
             _currentState.Enter();
         }
         

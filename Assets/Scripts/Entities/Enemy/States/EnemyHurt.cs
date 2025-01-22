@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections;
-using Configs;
+using Configs.Events;
 using UnityEngine;
 
 namespace Entities.Enemy.States
 {
     public class EnemyHurt : EnemyState
     {
+        private const float Duration = 0.5f;
         private readonly SpriteRenderer _spriteRenderer;
         private readonly Color _originalColor;
+
+        private float _elapsedTime;
+        private Coroutine _hurtRoutine;
         
         public EnemyHurt(EnemyController controller) : base(controller)
         {
@@ -28,27 +32,35 @@ namespace Entities.Enemy.States
 
         public override void Enter()
         {
+            Controller.isHurt = false;
+            
+            _elapsedTime = 0f;
+            Debug.Log("Entered");
+            
+            if (_hurtRoutine != null)
+            {
+                Debug.Log("Stopped routine");
+                Controller.StopCoroutine(_hurtRoutine);
+            }
+            
             _spriteRenderer.color = Color.white;
-            Controller.StartCoroutine(HurtRoutine());
+            _hurtRoutine = Controller.StartCoroutine(HurtRoutine());
         }
         
         protected override void SetTransitions()
         {
             AddTransition(EnemyStateType.Death, () => Controller.stats.health <= 0f);
-            AddTransition(EnemyStateType.Idle, () => Controller.isHurt == false);
+            AddTransition(EnemyStateType.Idle, () => Controller.isHurt == false && _elapsedTime >= Duration);
         }
 
         private IEnumerator HurtRoutine()
         {
             yield return new WaitForSeconds(0.1f);
             
-            const float duration = 0.5f;
-            float elapsedTime = 0f;
-
-            while (elapsedTime < duration)
+            while (_elapsedTime < Duration)
             {
-                _spriteRenderer.color = Color.Lerp(Color.white, _originalColor, elapsedTime / duration);
-                elapsedTime += Time.deltaTime;
+                _spriteRenderer.color = Color.Lerp(_spriteRenderer.color, _originalColor, _elapsedTime / Duration);
+                _elapsedTime += Time.deltaTime;
 
                 yield return null;
             }
@@ -64,6 +76,7 @@ namespace Entities.Enemy.States
                 return;
             }
             
+            EnemyEventConfig.OnEnemyHurtSFX.Invoke(Controller.stats.guid);
             Controller.stats.health -= damage;
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using Configs;
+using Configs.Events;
 using Controllers;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -12,16 +13,16 @@ namespace Entities.Enemy
         
         private void OnEnable()
         {
-            EnemyEventConfig.OnEnemyHurt += HandleOnEnemyHurt;
+            EnemyEventConfig.OnEnemyHurtSFX += HandleOnEnemyHurt;
         }
         
         private void OnDisable()
         {
-            EnemyEventConfig.OnEnemyHurt -= HandleOnEnemyHurt;
+            EnemyEventConfig.OnEnemyHurtSFX -= HandleOnEnemyHurt;
             
         }
 
-        private void HandleOnEnemyHurt(Guid guid, float damage)
+        private void HandleOnEnemyHurt(Guid guid)
         {
             // TODO should probably implement the GUID system here
             

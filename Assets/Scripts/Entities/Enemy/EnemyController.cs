@@ -1,8 +1,6 @@
 ﻿using System;
-using Configs;
+using Configs.Events;
 using Controllers;
-using Entities.Player;
-using Entities.Player.Controllers;
 using FSM;
 using UnityEngine;
 using Utility;
@@ -12,7 +10,6 @@ namespace Entities.Enemy
     public class EnemyController : StateMachine<EnemyStateType>
     {
         [SerializeField] private EntityStats entityStats;
-        
         [HideInInspector] public bool isHurt;
         
         public EntityStats stats => entityStats;
@@ -40,8 +37,7 @@ namespace Entities.Enemy
         {
             if (other.CompareTag(UnityTag.PlayerProjectile.ToString()) && isHurt == false)
             {
-                isHurt = true;
-                EnemyEventConfig.OnEnemyHurt?.Invoke(stats.guid, other.GetComponent<ProjectileController>().stats.damage);
+                TakeDamage(other.GetComponent<ProjectileController>().stats.damage);
             }
         }
         

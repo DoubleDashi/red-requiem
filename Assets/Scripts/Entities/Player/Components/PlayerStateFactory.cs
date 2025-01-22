@@ -10,10 +10,12 @@ namespace Entities.Player.Components
         Shard,
         Sword,
         Scythe,
+        Cannon,
     }
     
     public enum PlayerStateType
     {
+        // Locomotion states
         Idle,
         Move,
         Hurt,
@@ -26,6 +28,8 @@ namespace Entities.Player.Components
         ShardAttack,
         SwordAttack,
         ScytheAttack,
+        CannonCharge,
+        CannonAttack,
     }
     
     public class PlayerStateFactory : StateFactory<PlayerStateType>
@@ -39,6 +43,7 @@ namespace Entities.Player.Components
         
         protected override void SetStates()
         {
+            // Locomotion states
             AddState(PlayerStateType.Idle, new PlayerIdle(_controller));
             AddState(PlayerStateType.Move, new PlayerMove(_controller));
             AddState(PlayerStateType.Hurt, new PlayerHurt(_controller));
@@ -51,6 +56,8 @@ namespace Entities.Player.Components
             AddState(PlayerStateType.ShardAttack, new PlayerShardAttack(_controller));
             AddState(PlayerStateType.SwordAttack, new PlayerSwordAttack(_controller));
             AddState(PlayerStateType.ScytheAttack, new PlayerScytheAttack(_controller));
+            AddState(PlayerStateType.CannonCharge, new PlayerCannonCharge(_controller));
+            AddState(PlayerStateType.CannonAttack, new PlayerCannonAttack(_controller));
         }
     }
 }

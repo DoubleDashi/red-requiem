@@ -4,8 +4,6 @@ using Configs;
 using Entities.Player.Components;
 using FSM;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Utility;
 
 namespace Entities.Player
 {
@@ -22,13 +20,17 @@ namespace Entities.Player
     {
         [SerializeField] private EntityStats entityStats;
         [SerializeField] private List<MorphConfig> morphConfigs;
-
+        [SerializeField] private Transform weaponCollisionPoint;
+        [SerializeField] private Transform weaponPivotPoint;
+        [SerializeField] private LineRenderer cannonLineRenderer;
+        
         [HideInInspector] public MorphConfig currentMorph;
 
-        public PlayerComponents components { get; } = new();
+        public Transform weaponCollision => weaponCollisionPoint;
+        public Transform weaponPivot => weaponPivotPoint;
+        public LineRenderer cannonLine => cannonLineRenderer;
         
-        // public LineRenderer cannonLineRenderer;
-
+        public PlayerComponents components { get; } = new();
         public EntityStats stats => entityStats;
 
         private void Awake()
@@ -83,13 +85,15 @@ namespace Entities.Player
         {
             base.OnDrawGizmos();
             
-            if (currentMorph == null || currentMorph.collisionRadius == 0)
+            if (currentMorph == null || currentMorph.collisionBox == Vector2.zero)
             {
                 return;
             }
-            
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, currentMorph.collisionRadius / 2f);
+
+            Gizmos.color = Color.yellow;
+            float angle = Vector2.SignedAngle(Vector2.right, transform.right);
+            Gizmos.matrix = Matrix4x4.TRS(weaponCollision.position, Quaternion.Euler(0, 0, angle), Vector3.one);;
+            Gizmos.DrawWireCube(Vector3.zero + (Vector3)currentMorph.collisionPointOffset, Vector2.one * currentMorph.collisionBox);
         }
     }
 }

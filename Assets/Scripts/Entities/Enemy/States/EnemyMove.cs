@@ -30,7 +30,6 @@ namespace Entities.Enemy.States
         
         protected override void SetTransitions()
         {
-            AddTransition(EnemyStateType.Hurt, () => Controller.isHurt);
             AddTransition(EnemyStateType.Idle, () => Vector2.Distance(Controller.transform.position, _randomPosition) < 0.1f);
         }
 
