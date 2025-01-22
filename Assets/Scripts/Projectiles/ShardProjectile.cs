@@ -12,7 +12,13 @@ namespace Projectiles
 
         protected override void OnOutbound()
         {
-            Destroy(gameObject);
+            ParticleSystem particleSystem = GetComponentInChildren<ParticleSystem>();
+            particleSystem.Stop();
+
+            if (particleSystem.IsAlive() == false)
+            {
+                Destroy(gameObject);    
+            }
         }
     }
 }
