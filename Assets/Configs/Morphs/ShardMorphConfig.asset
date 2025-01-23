@@ -14,5 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   prefab: {fileID: 5511182348872819477, guid: 7f8b82c76d330454e8e8a1d16cff90c1, type: 3}
-  collider: {fileID: 0}
-  knockbackForce: 0
+  enemyKnockbackForce: 2
+  selfKnockbackForce: 0
+  collisionPointOffset: {x: 0, y: 0}
+  collisionBox: {x: 0, y: 0}
+  damage: 0
+  speed: 20
+  count: 3
+  angle: 35
+  hasFireRate: 0
+  fireRate: 0
+  maxLength: 0

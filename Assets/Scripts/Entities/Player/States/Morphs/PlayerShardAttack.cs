@@ -7,9 +7,6 @@ namespace Entities.Player.States.Morphs
     {
         private bool _isComplete;
         
-        private const int ShardCount = 3;
-        private const float ConeAngle = 15f;
-        
         public PlayerShardAttack(PlayerController controller) : base(controller)
         {
         }
@@ -18,17 +15,18 @@ namespace Entities.Player.States.Morphs
         {
             _isComplete = false;
             
-            const float distanceBetweenProjectiles = ConeAngle / ShardCount;
-            
-            for (int i = 0; i < ShardCount; i++)
+            float distanceBetweenProjectiles = Controller.currentMorph.angle / (Controller.currentMorph.count - 1);
+            int middleIndex = Controller.currentMorph.count / 2;
+
+            for (int i = 0; i < Controller.currentMorph.count; i++)
             {
-                float angle = -ConeAngle / 2 + i * distanceBetweenProjectiles;
+                float angle = (i - middleIndex) * distanceBetweenProjectiles;
 
                 Object.Instantiate(
                     original: Controller.currentMorph.prefab,
-                    position: Controller.transform.position,
+                    position: Controller.weaponPivot.position,
                     rotation: Controller.transform.rotation * Quaternion.Euler(Vector3.forward * angle)
-                );
+                    );
             }
 
             _isComplete = true;

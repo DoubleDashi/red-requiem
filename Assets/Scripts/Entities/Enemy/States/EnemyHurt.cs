@@ -32,15 +32,14 @@ namespace Entities.Enemy.States
 
         public override void Enter()
         {
+            Controller.body.bodyType = RigidbodyType2D.Dynamic;
             Controller.isHurt = false;
-            
             _elapsedTime = 0f;
-            Debug.Log("Entered");
             
             if (_hurtRoutine != null)
             {
-                Debug.Log("Stopped routine");
                 Controller.StopCoroutine(_hurtRoutine);
+                _hurtRoutine = null;
             }
             
             _spriteRenderer.color = Color.white;

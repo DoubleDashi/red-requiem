@@ -25,12 +25,14 @@ namespace Entities.Enemy.States
         
         public override void Update()
         {
+            Move();
+            
             ForceDecelerate();
         }
         
         protected override void SetTransitions()
         {
-            AddTransition(EnemyStateType.Idle, () => Controller.body.linearVelocity == Vector2.zero);
+            AddTransition(EnemyStateType.Idle, () => Vector2.Distance(Controller.transform.position, _randomPosition) < 0.1f && Controller.body.linearVelocity == Vector2.zero);
         }
 
         private void Move()

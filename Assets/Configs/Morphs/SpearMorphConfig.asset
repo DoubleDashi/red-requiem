@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 0
   prefab: {fileID: 0}
   enemyKnockbackForce: 10
-  selfKnockbackForce: 10
+  selfKnockbackForce: 0
   collisionPointOffset: {x: 0.1, y: 0}
   collisionBox: {x: 0.5, y: 0.5}
   damage: 0

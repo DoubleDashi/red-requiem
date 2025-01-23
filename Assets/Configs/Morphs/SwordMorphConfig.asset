@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   prefab: {fileID: 0}
-  enemyKnockbackForce: 15.59
-  selfKnockbackForce: 0.95
+  enemyKnockbackForce: 6
+  selfKnockbackForce: 0
   collisionPointOffset: {x: 0.3, y: 0}
   collisionBox: {x: 0.7, y: 0.75}
   damage: 0

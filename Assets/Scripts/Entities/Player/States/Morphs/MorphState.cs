@@ -14,8 +14,9 @@ namespace Entities.Player.States.Morphs
         {
         }
         
-        protected void CollisionDetection()
+        protected bool CollisionDetection()
         {
+            bool collided = false;   
             Vector3 rotatedOffsetPosition = Quaternion.Euler(0, 0, Controller.transform.eulerAngles.z) * Controller.currentMorph.collisionPointOffset;
             Vector3 positionWithOffset = Controller.weaponCollision.position + rotatedOffsetPosition;
 
@@ -31,14 +32,16 @@ namespace Entities.Player.States.Morphs
                         (Controller.transform.position - other.transform.position).normalized
                     );
                     _interactedColliders.Add(other);
+                    collided = true;
 
                     if (Controller.currentMorph.hasFireRate)
                     {
-                        Debug.Log("Removed");
                         Controller.StartCoroutine(RemoveColliderAfterDelay(other, Controller.currentMorph.fireRate));
                     }
                 }
             }
+
+            return collided;
         }
 
         protected void CollisionClear()

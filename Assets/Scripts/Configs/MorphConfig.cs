@@ -17,6 +17,8 @@ namespace Configs
         
         [Header("Projectile specific")]
         public float speed;
+        public int count;
+        public float angle;
         
         [Header("Cannon specific")]
         public bool hasFireRate;
