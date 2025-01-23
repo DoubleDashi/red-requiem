@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Entities.Enemy;
+using Entities.StationaryEnemy;
 using UnityEngine;
 using Utility;
 
@@ -20,16 +21,15 @@ namespace Entities.Player.States.Morphs
             Vector3 positionWithOffset = Controller.weaponCollision.position + rotatedOffsetPosition;
 
             Collider2D[] others = Physics2D.OverlapBoxAll(positionWithOffset, Controller.currentMorph.collisionBox, Controller.transform.eulerAngles.z);
-            
             foreach (Collider2D other in others)
             {
                 if (other.CompareTag(UnityTag.Enemy.ToString()) && _interactedColliders.Contains(other) == false)
                 {
-                    other.GetComponent<EnemyController>().TakeDamage(
+                    other.GetComponentInParent<StationaryEnemyController>().TakeDamage(new Damageable(
                         Controller.currentMorph.damage, 
                         Controller.currentMorph.enemyKnockbackForce,
                         (Controller.transform.position - other.transform.position).normalized
-                    );
+                    ));
                     _interactedColliders.Add(other);
 
                     if (Controller.currentMorph.hasFireRate)
