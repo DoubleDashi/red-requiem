@@ -20,9 +20,13 @@ namespace Entities.Player.States.Morphs
         public override void Update()
         {
             CollisionDetection();
-            Controller.components.Movement.ForceDecelerate();
         }
 
+        public override void FixedUpdate()
+        {
+            Controller.components.Movement.ForceDecelerate();
+        }
+        
         public override void Exit()
         {
             CollisionClear();

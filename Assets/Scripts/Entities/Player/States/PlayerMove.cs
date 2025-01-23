@@ -10,7 +10,7 @@ namespace Entities.Player.States
         {
         }
 
-        public override void Update()
+        public override void FixedUpdate()
         {
             Controller.components.Movement.Accelerate();
             Controller.components.Movement.Decelerate();

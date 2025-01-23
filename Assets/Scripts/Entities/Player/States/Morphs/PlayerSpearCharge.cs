@@ -28,10 +28,11 @@ namespace Entities.Player.States.Morphs
                 PlayerEventConfig.OnPlayerChargeComplete?.Invoke(Controller.stats.guid);
                 _usedSFX = true;
             }
-            
-            Decelerate();
-            
-            Controller.components.body.linearVelocity = _linearVelocity;
+        }
+        
+        public override void FixedUpdate()
+        {
+            Controller.components.Movement.ForceDecelerate();
         }
 
         public override void Exit()
@@ -49,19 +50,6 @@ namespace Entities.Player.States.Morphs
         {
             Controller.stats.currentChargeSpeed += Controller.stats.chargeSpeed * Time.deltaTime;
             Controller.stats.currentChargeSpeed = Mathf.Clamp(Controller.stats.currentChargeSpeed, 0f, Controller.stats.maxChargeSpeed);
-        }
-
-        private void Decelerate()
-        {
-            if (PlayerInput.movementDirection.x == 0)
-            {
-                _linearVelocity.x = Mathf.MoveTowards(_linearVelocity.x, 0.0f, Controller.stats.decelerationSpeed * Time.deltaTime);  
-            }
-            
-            if (PlayerInput.movementDirection.y == 0)
-            {
-                _linearVelocity.y = Mathf.MoveTowards(_linearVelocity.y, 0.0f, Controller.stats.decelerationSpeed * Time.deltaTime); 
-            }
         }
         
         private bool IsCharged()

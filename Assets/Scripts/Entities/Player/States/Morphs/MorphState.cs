@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Entities.Enemy;
+using Entities.StationaryEnemy;
 using UnityEngine;
 using Utility;
 
@@ -14,25 +15,22 @@ namespace Entities.Player.States.Morphs
         {
         }
         
-        protected bool CollisionDetection()
+        protected void CollisionDetection()
         {
-            bool collided = false;   
             Vector3 rotatedOffsetPosition = Quaternion.Euler(0, 0, Controller.transform.eulerAngles.z) * Controller.currentMorph.collisionPointOffset;
             Vector3 positionWithOffset = Controller.weaponCollision.position + rotatedOffsetPosition;
 
             Collider2D[] others = Physics2D.OverlapBoxAll(positionWithOffset, Controller.currentMorph.collisionBox, Controller.transform.eulerAngles.z);
-            
             foreach (Collider2D other in others)
             {
                 if (other.CompareTag(UnityTag.Enemy.ToString()) && _interactedColliders.Contains(other) == false)
                 {
-                    other.GetComponent<EnemyController>().TakeDamage(
+                    other.GetComponentInParent<StationaryEnemyController>().TakeDamage(new Damageable(
                         Controller.currentMorph.damage, 
                         Controller.currentMorph.enemyKnockbackForce,
                         (Controller.transform.position - other.transform.position).normalized
-                    );
+                    ));
                     _interactedColliders.Add(other);
-                    collided = true;
 
                     if (Controller.currentMorph.hasFireRate)
                     {
@@ -40,8 +38,6 @@ namespace Entities.Player.States.Morphs
                     }
                 }
             }
-
-            return collided;
         }
 
         protected void CollisionClear()

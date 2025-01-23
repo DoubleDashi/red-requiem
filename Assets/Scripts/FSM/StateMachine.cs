@@ -15,6 +15,8 @@ namespace FSM
 
         protected virtual void OnEnable()
         {
+            Subscribe();
+            
             foreach (BaseState<TStates> state in _stateFactory.GetStates().Values)
             {
                 state.Subscribe();
@@ -23,11 +25,16 @@ namespace FSM
         
         protected virtual void OnDisable()
         {
+            Unsubscribe();
+            
             foreach (BaseState<TStates> state in _stateFactory.GetStates().Values)
             {
                 state.Unsubscribe();
             }
         }
+        
+        protected virtual void Subscribe() { }
+        protected virtual void Unsubscribe() { }
 
         protected virtual void Update()
         {
@@ -35,7 +42,12 @@ namespace FSM
             _currentState.Update();
             Transition();
         }
-        
+
+        protected virtual void FixedUpdate()
+        {
+            _currentState.FixedUpdate();
+        }
+
         protected void InitializeStateMachine(StateFactory<TStates> stateFactory, TStates initialState)
         {
             _stateFactory = stateFactory;
