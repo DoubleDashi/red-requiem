@@ -35,7 +35,12 @@ namespace FSM
             _currentState.Update();
             Transition();
         }
-        
+
+        protected virtual void FixedUpdate()
+        {
+            _currentState.FixedUpdate();
+        }
+
         protected void InitializeStateMachine(StateFactory<TStates> stateFactory, TStates initialState)
         {
             _stateFactory = stateFactory;

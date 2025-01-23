@@ -37,8 +37,12 @@ namespace Entities.Player.States.Morphs
             Controller.cannonLine.SetPosition(0, Controller.weaponPivot.position - direction * 0.15f);
             Controller.cannonLine.SetPosition(1, Controller.weaponPivot.position + direction * _length);
             
-            Controller.components.Movement.ForceDecelerate();
             CollisionDetection();
+        }
+        
+        public override void FixedUpdate()
+        {
+            Controller.components.Movement.ForceDecelerate();
             
             Vector2 knockbackDirection = -Controller.weaponPivot.right;
             Controller.components.body.AddForce(knockbackDirection.normalized * Controller.currentMorph.selfKnockbackForce, ForceMode2D.Impulse);

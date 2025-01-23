@@ -28,7 +28,7 @@ namespace Entities.Player.States
             Controller.StartCoroutine(HurtRoutine());
         }
         
-        public override void Update()
+        public override void FixedUpdate()
         {
             Controller.components.Movement.ForceDecelerate();
         }

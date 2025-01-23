@@ -9,8 +9,8 @@ namespace Entities.Player.States
         public PlayerIdle(PlayerController controller) : base(controller)
         {
         }
-
-        public override void Update()
+        
+        public override void FixedUpdate()
         {
             Controller.components.Movement.ForceDecelerate();
         }
