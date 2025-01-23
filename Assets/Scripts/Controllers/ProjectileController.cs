@@ -1,21 +1,9 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Controllers
 {
-    [Serializable]
-    public class ProjectileStats
-    {
-        public float speed;
-        public float damage;
-    }
-    
     public abstract class ProjectileController : MonoBehaviour
     {
-        [SerializeField] private ProjectileStats projectileStats;
-        
-        public ProjectileStats stats => projectileStats;
-        
         private Camera _camera;
 
         private void Awake()

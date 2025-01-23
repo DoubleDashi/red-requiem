@@ -46,6 +46,11 @@ namespace Entities.Enemy.States
             _spriteRenderer.color = Color.white;
             _hurtRoutine = Controller.StartCoroutine(HurtRoutine());
         }
+
+        public override void Exit()
+        {
+            Controller.body.bodyType = RigidbodyType2D.Kinematic;
+        }
         
         protected override void SetTransitions()
         {
@@ -69,14 +74,19 @@ namespace Entities.Enemy.States
             Controller.isHurt = false;
         }
 
-        private void HandleOnEnemyHurt(Guid guid, float damage)
+        private void HandleOnEnemyHurt(Guid guid, float damage, float knockback, Vector2 knockbackDirection)
         {
             if (guid != Controller.stats.guid)
             {
                 return;
             }
             
+            Controller.body.bodyType = RigidbodyType2D.Dynamic;
+            Controller.body.linearDamping = 8f;
+            
             EnemyEventConfig.OnEnemyHurtSFX.Invoke(Controller.stats.guid);
+            Controller.body.linearVelocity = Vector2.zero;
+            Controller.body.AddForce(-knockbackDirection.normalized * knockback, ForceMode2D.Impulse);
             Controller.stats.health -= damage;
         }
     }

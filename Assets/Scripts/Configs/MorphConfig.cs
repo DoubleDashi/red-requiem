@@ -9,9 +9,14 @@ namespace Configs
         [Header("General")]
         public MorphType type;
         public GameObject prefab;
-        public float knockbackForce;
+        public float enemyKnockbackForce;
+        public float selfKnockbackForce;
         public Vector2 collisionPointOffset;
         public Vector2 collisionBox;
+        public float damage;
+        
+        [Header("Projectile specific")]
+        public float speed;
         
         [Header("Cannon specific")]
         public bool hasFireRate;

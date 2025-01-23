@@ -1,4 +1,5 @@
-﻿using Configs;
+﻿using System.Collections;
+using Configs;
 using Entities.Player.Components;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ namespace Entities.Player.States.Morphs
     public class PlayerSpearAttack : MorphState
     {
         private float _decelerationSpeed;
+        private bool _isComplete;
+        private Coroutine _attackEndRoutine;
         
         public PlayerSpearAttack(PlayerController controller) : base(controller)
         {
@@ -14,6 +17,13 @@ namespace Entities.Player.States.Morphs
 
         public override void Enter()
         {
+            _isComplete = false;
+            if (_attackEndRoutine != null)
+            {
+                Controller.StopCoroutine(_attackEndRoutine);
+                _attackEndRoutine = null;
+            }
+            
             Controller.components.body.linearVelocity = Vector2.zero;
             PlayerEventConfig.OnPlayerMove?.Invoke(Controller.stats.guid);
 
@@ -32,6 +42,11 @@ namespace Entities.Player.States.Morphs
             SetDamage();
             
             Controller.components.Movement.ForceDecelerate();
+
+            if (Controller.components.body.linearVelocity == Vector2.zero && _attackEndRoutine == null)
+            {
+                _attackEndRoutine = Controller.StartCoroutine(AttackEndRoutine());
+            }
         }
 
         public override void Exit()
@@ -42,12 +57,19 @@ namespace Entities.Player.States.Morphs
         
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Idle, () => Controller.components.body.linearVelocity == Vector2.zero);
+            AddTransition(PlayerStateType.Idle, () => _isComplete);
         }
 
         private void SetDamage()
         {
             Controller.stats.currentDamage = Mathf.Lerp(Controller.stats.minDamage, Controller.stats.maxDamage, Controller.components.body.linearVelocity.magnitude / Controller.stats.maxChargeSpeed);
+        }
+
+        private IEnumerator AttackEndRoutine()
+        {
+            // Give the player more leeway to hit the enemy
+            yield return new WaitForSeconds(0.15f);
+            _isComplete = true;
         }
     }
 }

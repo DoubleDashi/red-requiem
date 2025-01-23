@@ -1,7 +1,7 @@
 ﻿using System;
 using Configs.Events;
-using Controllers;
 using FSM;
+using Projectiles;
 using UnityEngine;
 using Utility;
 
@@ -13,6 +13,7 @@ namespace Entities.Enemy
         [HideInInspector] public bool isHurt;
         
         public EntityStats stats => entityStats;
+        public Rigidbody2D body { get; private set; }
         
         protected override void OnEnable()
         {
@@ -30,6 +31,8 @@ namespace Entities.Enemy
         
         private void Awake()
         {
+            body = GetComponent<Rigidbody2D>();
+            
             InitializeStateMachine(new EnemyStateFactory(this), EnemyStateType.Idle);
         }
         
@@ -37,7 +40,14 @@ namespace Entities.Enemy
         {
             if (other.CompareTag(UnityTag.PlayerProjectile.ToString()) && isHurt == false)
             {
-                TakeDamage(other.GetComponent<ProjectileController>().stats.damage);
+                if (other.TryGetComponent(out ShardProjectile shardProjectile))
+                {
+                    TakeDamage(
+                        shardProjectile.config.damage, 
+                        shardProjectile.config.enemyKnockbackForce,
+                        (transform.position - other.transform.position).normalized
+                    );
+                }
             }
         }
         
@@ -46,10 +56,10 @@ namespace Entities.Enemy
             AddGlobalTransition(EnemyStateType.Hurt, () => isHurt);
         }
 
-        public void TakeDamage(float damage)
+        public void TakeDamage(float damage, float knockback, Vector2 knockbackDirection)
         {
             isHurt = true;
-            EnemyEventConfig.OnEnemyHurt?.Invoke(stats.guid, damage);
+            EnemyEventConfig.OnEnemyHurt?.Invoke(stats.guid, damage, knockback, knockbackDirection);
         }
 
         private void HandleOnEnemyDeath(Guid guid)

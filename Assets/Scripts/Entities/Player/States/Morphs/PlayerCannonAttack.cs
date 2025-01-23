@@ -9,6 +9,11 @@ namespace Entities.Player.States.Morphs
         {
         }
 
+        public override void Enter()
+        {
+            Controller.cannonLine.enabled = true;
+        }
+
         public override void Update()
         {
             Vector3 direction = Quaternion.Euler(0, 0, Controller.weaponPivot.eulerAngles.z) * Vector3.right;
@@ -17,11 +22,16 @@ namespace Entities.Player.States.Morphs
             
             Controller.components.Movement.ForceDecelerate();
             CollisionDetection();
+            
+            Vector2 knockbackDirection = -Controller.weaponPivot.right;
+            Controller.components.body.AddForce(knockbackDirection.normalized * Controller.currentMorph.selfKnockbackForce, ForceMode2D.Impulse);
         }
 
         public override void Exit()
         {
             Controller.cannonLine.enabled = false;
+            Controller.currentMorph.collisionBox.x = 0f;
+            Controller.currentMorph.collisionPointOffset.x = 0f;
         }
 
         protected override void SetTransitions()

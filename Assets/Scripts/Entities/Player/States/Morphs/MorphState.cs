@@ -25,7 +25,11 @@ namespace Entities.Player.States.Morphs
             {
                 if (other.CompareTag(UnityTag.Enemy.ToString()) && _interactedColliders.Contains(other) == false)
                 {
-                    other.GetComponent<EnemyController>().TakeDamage(Controller.stats.currentDamage);
+                    other.GetComponent<EnemyController>().TakeDamage(
+                        Controller.currentMorph.damage, 
+                        Controller.currentMorph.enemyKnockbackForce,
+                        (Controller.transform.position - other.transform.position).normalized
+                    );
                     _interactedColliders.Add(other);
 
                     if (Controller.currentMorph.hasFireRate)
