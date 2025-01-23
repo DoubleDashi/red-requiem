@@ -11,6 +11,9 @@ namespace FSM
         {
             InitializeBaseState();
         }
+
+        public virtual void Subscribe() { }
+        public virtual void Unsubscribe() { }
         
         public virtual void Enter() { }
         public virtual void Exit() { }

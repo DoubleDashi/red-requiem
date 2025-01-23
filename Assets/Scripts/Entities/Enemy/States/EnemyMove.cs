@@ -26,12 +26,13 @@ namespace Entities.Enemy.States
         public override void Update()
         {
             Move();
+            
+            ForceDecelerate();
         }
         
         protected override void SetTransitions()
         {
-            AddTransition(EnemyStateType.Hurt, () => Controller.isHurt);
-            AddTransition(EnemyStateType.Idle, () => Vector2.Distance(Controller.transform.position, _randomPosition) < 0.1f);
+            AddTransition(EnemyStateType.Idle, () => Vector2.Distance(Controller.transform.position, _randomPosition) < 0.1f && Controller.body.linearVelocity == Vector2.zero);
         }
 
         private void Move()
@@ -43,6 +44,21 @@ namespace Entities.Enemy.States
                 0.3f,
                 3.5f
             );
+        }
+
+        private void ForceDecelerate()
+        {
+            Vector2 velocity = Controller.body.linearVelocity;
+            
+            velocity.x = Mathf.Lerp(velocity.x, 0f, Controller.stats.decelerationSpeed * Time.deltaTime);
+            velocity.y = Mathf.Lerp(velocity.y, 0f, Controller.stats.decelerationSpeed * Time.deltaTime);
+            
+            Controller.body.linearVelocity = velocity;
+            
+            if (velocity.magnitude < 0.1f)
+            {
+                Controller.body.linearVelocity = Vector2.zero;
+            }
         }
     }
 }

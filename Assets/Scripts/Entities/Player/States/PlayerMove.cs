@@ -1,4 +1,5 @@
-﻿using Configs;
+﻿using Entities.Player.Components;
+using Entities.Player.Controllers;
 using UnityEngine;
 
 namespace Entities.Player.States
@@ -9,52 +10,19 @@ namespace Entities.Player.States
         {
         }
 
-        public override void Enter()
-        {
-            Controller.EnableDamageHitbox();
-            Controller.Body.linearVelocity = Vector2.zero;
-            PlayerEventConfig.OnPlayerMove?.Invoke(Controller.Stats.Guid);
-            
-            Vector2 mousePosition = Controller.MainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 direction = (mousePosition - (Vector2) Controller.transform.position).normalized;
-            
-            Controller.Body.linearVelocity = direction * Controller.Stats.currentSpeed;
-        }
-
         public override void Update()
         {
-            Decelerate();
-            SetDamage();
+            Controller.components.Movement.Accelerate();
+            Controller.components.Movement.Decelerate();
+            Controller.components.Movement.Brake();
+            Controller.components.Movement.SetLinearVelocity();
         }
 
-        public override void Exit()
-        {
-            Controller.DisableDamageHitbox();
-        }
-        
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Idle, () => Controller.Body.linearVelocity == Vector2.zero);
-        }
-        
-        private void Decelerate()
-        {
-            Vector2 velocity = Controller.Body.linearVelocity;
-            
-            velocity.x = Mathf.Lerp(velocity.x, 0f, Controller.Stats.decelerationSpeed * Time.deltaTime);
-            velocity.y = Mathf.Lerp(velocity.y, 0f, Controller.Stats.decelerationSpeed * Time.deltaTime);
-            
-            Controller.Body.linearVelocity = velocity;
-            
-            if (velocity.magnitude < 0.1f)
-            {
-                Controller.Body.linearVelocity = Vector2.zero;
-            }
-        }
-
-        private void SetDamage()
-        {
-            Controller.Stats.currentDamage = Mathf.Lerp(Controller.Stats.minDamage, Controller.Stats.maxDamage, Controller.Body.linearVelocity.magnitude / Controller.Stats.maxSpeed);
+            AddTransition(PlayerStateType.Idle, () => PlayerInput.movementDirection == Vector2.zero && Controller.components.body.linearVelocity == Vector2.zero);
+            AddTransition(PlayerStateType.Morph, () => Input.GetKey(KeyCode.Mouse1));
+            AddTransition(PlayerStateType.Attack, () => Input.GetKeyDown(KeyCode.Mouse0));
         }
     }
 }
