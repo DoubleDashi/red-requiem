@@ -2,9 +2,9 @@
 
 namespace Entities
 {
-    public struct Damageable
+    public readonly struct Damageable
     {
-        public float Damage;
+        public readonly float Damage;
         
         private readonly float _knockbackForce;
         private readonly Vector2 _knockbackDirection;

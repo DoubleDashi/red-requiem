@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSourcePrefab: {fileID: 7283139201971617710, guid: 2cf89c367bb099944832847720e53db2, type: 3}
   audioConfig: {fileID: 11400000, guid: b66548673f2bdd348814daa88f183a0e, type: 2}
+  controller: {fileID: 7430645088203290192}
 --- !u!114 &7430645088203290192
 MonoBehaviour:
   m_ObjectHideFlags: 0

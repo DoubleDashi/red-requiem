@@ -3,83 +3,74 @@ using System.Collections;
 using Configs.Events;
 using UnityEngine;
 
-namespace Entities.StationaryEnemy.States
+namespace Entities.Enemy.States
 {
-    public class StationaryEnemyHurt : StationaryEnemyState
+    public class EnemyHurt : EnemyState
     {
         private const float Duration = 0.5f;
-        
-        private Coroutine _routine;
-        private float _elapsedTime;
-        
+        private readonly SpriteRenderer _spriteRenderer;
         private readonly Color _originalColor;
+
+        private float _elapsedTime;
+        private Coroutine _hurtRoutine;
         
-        public StationaryEnemyHurt(StationaryEnemyController controller) : base(controller)
+        public EnemyHurt(EnemyController controller) : base(controller)
         {
-            _originalColor = Controller.spriteRenderer.color;
+            _spriteRenderer = Controller.GetComponent<SpriteRenderer>();
+            _originalColor = _spriteRenderer.color;
         }
 
         public override void Subscribe()
         {
-            StationaryEnemyEventConfig.OnHurt += HandleOnEnemyHurt;
+            EnemyEventConfig.OnEnemyHurt += HandleOnEnemyHurt;
         }
         
         public override void Unsubscribe()
         {
-            StationaryEnemyEventConfig.OnHurt -= HandleOnEnemyHurt;
+            EnemyEventConfig.OnEnemyHurt -= HandleOnEnemyHurt;
         }
 
         public override void Enter()
         {
             Controller.body.bodyType = RigidbodyType2D.Dynamic;
             Controller.isHurt = false;
-            
             _elapsedTime = 0f;
-
-            if (_routine != null)
+            
+            if (_hurtRoutine != null)
             {
-                Controller.StopCoroutine(_routine);
-                _routine = null;
+                Controller.StopCoroutine(_hurtRoutine);
+                _hurtRoutine = null;
             }
-
-            Controller.spriteRenderer.color = Color.white;
-            _routine = Controller.StartCoroutine(HurtRoutine());
+            
+            _spriteRenderer.color = Color.white;
+            _hurtRoutine = Controller.StartCoroutine(HurtRoutine());
         }
 
         public override void Exit()
         {
             Controller.body.bodyType = RigidbodyType2D.Kinematic;
         }
-
+        
         protected override void SetTransitions()
         {
-            AddTransition(StationaryEnemyStateType.Death, () => Controller.stats.health <= 0f);
-            AddTransition(StationaryEnemyStateType.Idle, () => AnimationComplete() && Controller.isHurt == false);
+            AddTransition(EnemyStateType.Death, () => Controller.stats.health <= 0f);
+            AddTransition(EnemyStateType.Idle, () => Controller.isHurt == false && _elapsedTime >= Duration);
         }
 
         private IEnumerator HurtRoutine()
         {
             yield return new WaitForSeconds(0.1f);
-
+            
             while (_elapsedTime < Duration)
             {
-                Controller.spriteRenderer.color = Color.Lerp(
-                    a: Controller.spriteRenderer.color,
-                    b: _originalColor,
-                    t: _elapsedTime / Duration
-                );
-
+                _spriteRenderer.color = Color.Lerp(_spriteRenderer.color, _originalColor, _elapsedTime / Duration);
                 _elapsedTime += Time.deltaTime;
+
                 yield return null;
             }
-
-            Controller.spriteRenderer.color = _originalColor;
+            
+            _spriteRenderer.color = _originalColor;
             Controller.isHurt = false;
-        }
-
-        private bool AnimationComplete()
-        {
-            return _elapsedTime >= Duration;
         }
 
         private void HandleOnEnemyHurt(Guid guid, Damageable damageable)
@@ -98,7 +89,7 @@ namespace Entities.StationaryEnemy.States
             Controller.body.AddForce(
                 damageable.knockback,
                 ForceMode2D.Impulse
-            );
+                );
             
             Controller.stats.health -= damageable.Damage;
         }
