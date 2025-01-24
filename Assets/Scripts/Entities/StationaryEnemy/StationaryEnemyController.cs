@@ -1,5 +1,6 @@
 ﻿using System;
 using Configs.Events;
+using Data;
 using FSM;
 using UnityEngine;
 

@@ -1,4 +1,5 @@
-﻿using Entities.Player.Components;
+﻿using Entities.Player;
+using Entities.Player.Factories;
 using UnityEngine;
 
 namespace Configs
