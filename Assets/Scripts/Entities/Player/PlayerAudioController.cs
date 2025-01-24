@@ -4,7 +4,7 @@ using Controllers;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Entities.Player.Controllers
+namespace Entities.Player
 {
     public class PlayerAudioController : AudioController
     {

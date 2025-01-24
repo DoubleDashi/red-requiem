@@ -1,5 +1,4 @@
-﻿using Entities.Player.Controllers;
-using Entities.Player.Factories;
+﻿using Entities.Player.Factories;
 using Entities.Player.States.PrimaryStates;
 using UnityEngine;
 
