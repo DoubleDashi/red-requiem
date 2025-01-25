@@ -2,7 +2,7 @@
 using UnityEngine;
 using Utility;
 
-namespace Entities.StationaryEnemy.States
+namespace Entities.Enemies.StationaryEnemy.States
 {
     public class StationaryEnemyAlert : StationaryEnemyState
     {

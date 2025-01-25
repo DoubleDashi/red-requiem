@@ -2,7 +2,7 @@
 using Configs.Events;
 using UnityEngine;
 
-namespace Entities.MeleeEnemy.States
+namespace Entities.Enemies.MeleeEnemy.States
 {
     public class MeleeEnemyDeath : MeleeEnemyState
     {

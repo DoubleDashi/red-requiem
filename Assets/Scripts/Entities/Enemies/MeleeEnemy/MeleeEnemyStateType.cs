@@ -1,4 +1,4 @@
-﻿namespace Entities.MeleeEnemy
+﻿namespace Entities.Enemies.MeleeEnemy
 {
     public enum MeleeEnemyStateType
     {

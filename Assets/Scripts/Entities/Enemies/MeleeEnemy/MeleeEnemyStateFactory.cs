@@ -1,7 +1,7 @@
-﻿using Entities.MeleeEnemy.States;
+﻿using Entities.Enemies.MeleeEnemy.States;
 using FSM;
 
-namespace Entities.MeleeEnemy
+namespace Entities.Enemies.MeleeEnemy
 {
     public class MeleeEnemyStateFactory : StateFactory<MeleeEnemyStateType>
     {

@@ -2,7 +2,7 @@
 using Configs.Events;
 using UnityEngine;
 
-namespace Entities.StationaryEnemy.States
+namespace Entities.Enemies.StationaryEnemy.States
 {
     public class StationaryEnemyDeath : StationaryEnemyState
     {

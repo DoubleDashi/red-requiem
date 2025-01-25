@@ -1,4 +1,4 @@
-﻿namespace Entities.StationaryEnemy
+﻿namespace Entities.Enemies.StationaryEnemy
 {
     public enum StationaryEnemyStateType
     {

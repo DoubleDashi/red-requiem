@@ -3,18 +3,18 @@ using FSM;
 using UnityEngine;
 using Utility;
 
-namespace Entities.StationaryEnemy.States
+namespace Entities.Enemies.MeleeEnemy.States
 {
-    public abstract class StationaryEnemyState : BaseState<StationaryEnemyStateType>
+    public abstract class MeleeEnemyState: BaseState<MeleeEnemyStateType>
     {
-        protected readonly StationaryEnemyController Controller;
+        protected readonly MeleeEnemyController Controller;
         
         protected Collider2D AggroTargetCollider;
         protected Collider2D AttackTargetCollider;
         
         private readonly List<Collider2D> _interactedColliders = new();
         
-        protected StationaryEnemyState(StationaryEnemyController controller)
+        protected MeleeEnemyState(MeleeEnemyController controller)
         {
             Controller = controller;
         }
@@ -44,7 +44,7 @@ namespace Entities.StationaryEnemy.States
             Collider2D[] colliders = Physics2D.OverlapCircleAll(
                 Controller.transform.position, 
                 Controller.stats.attackRadius
-                );
+            );
             
             foreach (Collider2D collider in colliders)
             {
@@ -58,23 +58,30 @@ namespace Entities.StationaryEnemy.States
             AttackTargetCollider = null;
             return false;
         }
-
-        protected bool DetectCollider(UnityTag objectWithTag)
+        
+        protected void CollisionDetection(UnityTag objectWithTag)
         {
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(
-                Controller.transform.position, 
-                Controller.stats.detectionRadius
-            );
-            
-            foreach (Collider2D collider in colliders)
+            Vector3 rotatedOffsetPosition = Quaternion.Euler(0, 0, Controller.transform.eulerAngles.z) * Controller.weapon.collisionPointOffset;
+            Vector3 positionWithOffset = Controller.weapon.collisionPoint.position + rotatedOffsetPosition;
+
+            Collider2D[] others = Physics2D.OverlapBoxAll(positionWithOffset, Controller.weapon.collisionBox, Controller.transform.eulerAngles.z);
+            foreach (Collider2D other in others)
             {
-                if (collider.CompareTag(objectWithTag.ToString()))
+                if (other.CompareTag(objectWithTag.ToString()) && _interactedColliders.Contains(other) == false)
                 {
-                    return true;
+                    other.GetComponentInParent<IEntity>().TakeDamage(new Damageable(
+                        Controller.weapon.damage, 
+                        Controller.weapon.enemyKnockbackForce,
+                        (Controller.transform.position - other.transform.position).normalized
+                    ));
+                    _interactedColliders.Add(other);
                 }
             }
+        }
 
-            return false;
+        protected void CollisionClear()
+        {
+            _interactedColliders.Clear();
         }
     }
 }

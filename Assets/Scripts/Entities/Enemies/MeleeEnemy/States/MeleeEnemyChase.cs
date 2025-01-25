@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Utility;
 
-namespace Entities.MeleeEnemy.States
+namespace Entities.Enemies.MeleeEnemy.States
 {
     public class MeleeEnemyChase : MeleeEnemyState
     {

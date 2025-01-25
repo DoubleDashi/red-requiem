@@ -1,7 +1,7 @@
-﻿using Entities.StationaryEnemy.States;
+﻿using Entities.Enemies.StationaryEnemy.States;
 using FSM;
 
-namespace Entities.StationaryEnemy
+namespace Entities.Enemies.StationaryEnemy
 {
     public class StationaryEnemyStateFactory : StateFactory<StationaryEnemyStateType>
     {

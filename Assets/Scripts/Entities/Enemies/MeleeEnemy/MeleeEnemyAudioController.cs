@@ -5,7 +5,7 @@ using Controllers;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Entities.MeleeEnemy
+namespace Entities.Enemies.MeleeEnemy
 {
     public class MeleeEnemyAudioController : AudioController
     {
