@@ -1,11 +1,14 @@
-﻿using UnityEngine;
+﻿using Entities;
+using UnityEngine;
+using Utility;
 
 namespace Controllers
 {
     public abstract class ProjectileController : MonoBehaviour
     {
         private Camera _camera;
-
+        private UnityTag _targetTag;
+        
         private void Awake()
         {
             _camera = Camera.main;
@@ -15,6 +18,7 @@ namespace Controllers
         {
             Move();
             OutboundDetection();
+            CollisionDetection();
         }
         
         private void OutboundDetection()
@@ -28,5 +32,6 @@ namespace Controllers
         
         protected abstract void Move();
         protected abstract void OnOutbound();
+        protected abstract void CollisionDetection();
     }
 }

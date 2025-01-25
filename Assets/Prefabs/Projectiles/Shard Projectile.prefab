@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 756350277079754007}
   - component: {fileID: 8169794101412830503}
   m_Layer: 0
-  m_Name: Shard
+  m_Name: Shard Projectile
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6347a1d4815c4d7db8f8089e9e21b9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _config: {fileID: 11400000, guid: 8edaa20d9d894e84f86733b31b0e1d29, type: 2}
+  config: {fileID: 11400000, guid: 8edaa20d9d894e84f86733b31b0e1d29, type: 2}
 --- !u!1 &8790966564312978036
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ namespace Entities.Player.States.MorphStates
                     original: Controller.morph.config.prefab,
                     position: Controller.morph.pivotPoint.position,
                     rotation: Controller.transform.rotation * Quaternion.Euler(Vector3.forward * angle)
-                    );
+                );
             }
 
             _isComplete = true;

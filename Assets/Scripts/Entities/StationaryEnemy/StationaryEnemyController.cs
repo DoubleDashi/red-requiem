@@ -9,6 +9,7 @@ namespace Entities.StationaryEnemy
     public class StationaryEnemyController : StateMachine<StationaryEnemyStateType>, IEntity
     {
         public EnemyStats stats;
+        public WeaponStats weapon;
         
         [HideInInspector] public SpriteRenderer spriteRenderer;
         [HideInInspector] public Rigidbody2D body;

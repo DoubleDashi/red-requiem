@@ -1,3 +1,4 @@
+using Projectiles;
 using UnityEngine;
 using Utility;
 
@@ -14,6 +15,17 @@ namespace Entities.StationaryEnemy.States
         public override void Enter()
         {
             Controller.spriteRenderer.color = Color.magenta;
+            
+            GameObject instance = Object.Instantiate(
+                original: Controller.weapon.prefab,
+                position: Controller.weapon.pivotPoint.position,
+                rotation: Controller.transform.rotation
+            );
+            
+            instance.GetComponent<StationaryEnemyProjectile>().Setup(
+                Controller.weapon.damage, 
+                Controller.weapon.enemyKnockbackForce
+            );
         }
 
         public override void Update()
