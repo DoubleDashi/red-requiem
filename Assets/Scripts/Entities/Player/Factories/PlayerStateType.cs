@@ -8,13 +8,11 @@
         Hurt,
         Morph,
         Attack,
+        Death,
         
         // Morph states
-        SpearCharge,
-        SpearAttack,
         ShardAttack,
         SwordAttack,
-        ScytheAttack,
         CannonCharge,
         CannonAttack,
     }

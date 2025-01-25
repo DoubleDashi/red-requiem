@@ -6,5 +6,6 @@ namespace Configs.Audios
     public class StationaryEnemyAudioConfig : ScriptableObject
     {
         public AudioClip hurtSFX;
+        public AudioClip deathSFX;
     }
 }

@@ -2,10 +2,8 @@
 {
     public enum MorphType
     {
-        Spear,
         Shard,
         Sword,
-        Scythe,
         Cannon,
     }
 }

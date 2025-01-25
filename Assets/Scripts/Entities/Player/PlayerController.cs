@@ -1,5 +1,8 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using Configs;
+using Configs.Events;
 using Data;
 using Entities.Player.Factories;
 using FSM;
@@ -7,7 +10,7 @@ using UnityEngine;
 
 namespace Entities.Player
 {
-    public class PlayerController : StateMachine<PlayerStateType>
+    public class PlayerController : StateMachine<PlayerStateType>, IEntity
     {
         public PlayerStats stats;
         
@@ -16,8 +19,10 @@ namespace Entities.Player
 
         [HideInInspector] public Camera mainCamera;
         [HideInInspector] public Rigidbody2D body;
+        [HideInInspector] public SpriteRenderer spriteRenderer;
         [HideInInspector] public PlayerMorphFactory MorphFactory;
         [HideInInspector] public PlayerMovement Movement;
+        [HideInInspector] public bool isHurt;
         
         public Morph morph => morphSettings;
 
@@ -28,7 +33,8 @@ namespace Entities.Player
             
             mainCamera = Camera.main;
             body = GetComponent<Rigidbody2D>();
-            morph.config = MorphFactory.FindByType(MorphType.Spear);
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            morph.config = MorphFactory.FindByType(MorphType.Sword);
             
             InitializeStateMachine(
                 new PlayerStateFactory(this), 
@@ -40,6 +46,23 @@ namespace Entities.Player
         {
             base.FixedUpdate();
             Movement.Rotate();
+        }
+        
+        protected override void SetGlobalTransitions()
+        {
+            AddGlobalTransition(PlayerStateType.Hurt, () => isHurt);
+        }
+        
+        public void TakeDamage(Damageable damageable)
+        {
+            isHurt = true;
+            
+            PlayerEventConfig.OnHurt?.Invoke(stats.guid, damageable);
+        }
+
+        public void HandleOnDeath(Guid guid)
+        {
+            throw new NotImplementedException();
         }
         
         protected override void OnDrawGizmos()

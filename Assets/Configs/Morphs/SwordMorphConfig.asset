@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2258f0fe51744f0e9e3123fcfe55348c, type: 3}
   m_Name: SwordMorphConfig
   m_EditorClassIdentifier: 
-  type: 2
+  type: 1
   prefab: {fileID: 0}
   enemyKnockbackForce: 6
   selfKnockbackForce: 0

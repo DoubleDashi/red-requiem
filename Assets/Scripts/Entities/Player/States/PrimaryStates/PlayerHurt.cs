@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using Configs.Events;
 using Entities.Player.Factories;
 using UnityEngine;
 
@@ -6,67 +8,93 @@ namespace Entities.Player.States.PrimaryStates
 {
     public class PlayerHurt : PlayerState
     {
-        private bool _isComplete;
+        private const float Duration = 0.5f;
         
-        private SpriteRenderer[] _spriteRenderer;
-        private Color _originalColor;
+        private Coroutine _routine;
+        private float _elapsedTime;
+        
+        private readonly Color _originalColor;
         
         public PlayerHurt(PlayerController controller) : base(controller)
         {
+            _originalColor = Controller.spriteRenderer.color;
+        }
+
+        public override void Subscribe()
+        {
+            PlayerEventConfig.OnHurt += HandleOnHurt;
+        }
+        
+        public override void Unsubscribe()
+        {
+            PlayerEventConfig.OnHurt -= HandleOnHurt;
         }
 
         public override void Enter()
         {
-            _spriteRenderer = Controller.GetComponentsInChildren<SpriteRenderer>();
-            _originalColor = _spriteRenderer[0].color;
-            foreach (var spriteRenderer in _spriteRenderer)
-            {
-                spriteRenderer.color = Color.white;
-            }
+            Controller.isHurt = false;
             
-            Controller.StartCoroutine(HurtRoutine());
-        }
-        
-        public override void FixedUpdate()
-        {
-            Controller.Movement.ForceDecelerate();
-        }
+            _elapsedTime = 0f;
 
-        public override void Exit()
-        {
-            _isComplete = false;
+            if (_routine != null)
+            {
+                Controller.StopCoroutine(_routine);
+                _routine = null;
+            }
+
+            Controller.spriteRenderer.color = Color.white;
+            _routine = Controller.StartCoroutine(HurtRoutine());
         }
 
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Idle, () => _isComplete);
+            AddTransition(PlayerStateType.Death, () => Controller.stats.health <= 0f);
+            AddTransition(PlayerStateType.Idle, () => AnimationComplete() && Controller.isHurt == false);
         }
 
         private IEnumerator HurtRoutine()
         {
             yield return new WaitForSeconds(0.1f);
-            
-            const float duration = 0.5f;
-            float elapsedTime = 0f;
 
-            while (elapsedTime < duration)
+            while (_elapsedTime < Duration)
             {
-                foreach (var spriteRenderer in _spriteRenderer)
-                {
-                    spriteRenderer.color = Color.Lerp(Color.white, _originalColor, elapsedTime / duration);
-                }
+                Controller.spriteRenderer.color = Color.Lerp(
+                    a: Controller.spriteRenderer.color,
+                    b: _originalColor,
+                    t: _elapsedTime / Duration
+                );
 
-                elapsedTime += Time.deltaTime;
-
+                _elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
-            foreach (var spriteRenderer in _spriteRenderer) 
+            Controller.spriteRenderer.color = _originalColor;
+            Controller.isHurt = false;
+        }
+
+        private bool AnimationComplete()
+        {
+            return _elapsedTime >= Duration;
+        }
+
+        private void HandleOnHurt(Guid guid, Damageable damageable)
+        {
+            if (guid != Controller.stats.guid)
             {
-                spriteRenderer.color = _originalColor;
+                return;
             }
 
-            _isComplete = true;
+            PlayerEventConfig.OnHurtSFX?.Invoke(guid);
+            
+            Controller.body.linearVelocity = Vector2.zero;
+            Controller.body.linearDamping = 8f;
+            
+            Controller.body.AddForce(
+                damageable.knockback,
+                ForceMode2D.Impulse
+            );
+            
+            Controller.stats.health -= damageable.Damage;
         }
     }
 }

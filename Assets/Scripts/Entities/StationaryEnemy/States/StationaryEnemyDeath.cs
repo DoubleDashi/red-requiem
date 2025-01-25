@@ -1,4 +1,6 @@
-﻿using Configs.Events;
+﻿using System.Collections;
+using Configs.Events;
+using UnityEngine;
 
 namespace Entities.StationaryEnemy.States
 {
@@ -12,11 +14,20 @@ namespace Entities.StationaryEnemy.States
 
         public override void Enter()
         {
-            StationaryEnemyEventConfig.OnDeath?.Invoke(Controller.stats.guid);
+            StationaryEnemyEventConfig.OnDeathSFX?.Invoke(Controller.stats.guid);
+            
+            Controller.StartCoroutine(DeathRoutine());
         }
 
         protected override void SetTransitions()
         {
+        }
+        
+        private IEnumerator DeathRoutine()
+        {
+            yield return new WaitForSeconds(0.2f);
+            
+            StationaryEnemyEventConfig.OnDeath?.Invoke(Controller.stats.guid);
         }
     }
 }

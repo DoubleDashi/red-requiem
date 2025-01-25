@@ -31,7 +31,6 @@ namespace Entities.StationaryEnemy.States
 
         public override void Enter()
         {
-            Controller.body.bodyType = RigidbodyType2D.Dynamic;
             Controller.isHurt = false;
             
             _elapsedTime = 0f;
@@ -44,11 +43,6 @@ namespace Entities.StationaryEnemy.States
 
             Controller.spriteRenderer.color = Color.white;
             _routine = Controller.StartCoroutine(HurtRoutine());
-        }
-
-        public override void Exit()
-        {
-            Controller.body.bodyType = RigidbodyType2D.Kinematic;
         }
 
         protected override void SetTransitions()
@@ -91,7 +85,6 @@ namespace Entities.StationaryEnemy.States
 
             StationaryEnemyEventConfig.OnHurtSFX?.Invoke(guid);
             
-            Controller.body.bodyType = RigidbodyType2D.Dynamic;
             Controller.body.linearVelocity = Vector2.zero;
             Controller.body.linearDamping = 8f;
             

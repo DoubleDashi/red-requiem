@@ -15,29 +15,17 @@ namespace Entities.Player.States.PrimaryStates
             
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                Debug.Log("Morphing... Spear chosen!");
-                Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Spear);
-            }
-            
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
                 Debug.Log("Morphing... Shard chosen!");
                 Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Shard);
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 Debug.Log("Morphing... Sword chosen!");
                 Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Sword);
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                Debug.Log("Morphing... Scythe chosen!");
-                Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Scythe);
-            }
-
-            if (Input.GetKeyDown(KeyCode.Alpha5))
+            if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 Debug.Log("Morphing... Cannon chosen!");
                 Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Cannon);

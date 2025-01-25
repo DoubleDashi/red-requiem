@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df588f39b9e44ef995279ca6ef48cb2, type: 3}
   m_Name: PlayerAudioConfig
   m_EditorClassIdentifier: 
-  chargeCompleteSFX:
-  - {fileID: 8300000, guid: 8e3da4c09db2761458a1c6d31f4e9980, type: 3}
-  moveSFX:
-  - {fileID: 8300000, guid: cd1b0c27c02f9064f98394afbd842c8b, type: 3}
+  hurtSFX: {fileID: 8300000, guid: c7fe2cf9c071ef745a526932f8bea6bc, type: 3}
+  deathSFX: {fileID: 8300000, guid: 736db1fecd74be74fb9db0d131f12bc6, type: 3}

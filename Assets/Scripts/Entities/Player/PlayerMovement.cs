@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using Utility;
 
 namespace Entities.Player
 {
     public class PlayerMovement
     {
         private Vector2 _linearVelocity;
+        private Vector2 _previousPosition;
         
         private readonly PlayerController _controller;
         
@@ -45,14 +47,12 @@ namespace Entities.Player
 
         public void ForceDecelerate()
         {
-            Vector2 velocity = _controller.body.linearVelocity;
+            _linearVelocity.x = Mathf.Lerp(_linearVelocity.x, 0f, _controller.stats.decelerationSpeed * Time.deltaTime);
+            _linearVelocity.y = Mathf.Lerp(_linearVelocity.y, 0f, _controller.stats.decelerationSpeed * Time.deltaTime);
             
-            velocity.x = Mathf.Lerp(velocity.x, 0f, _controller.stats.decelerationSpeed * Time.deltaTime);
-            velocity.y = Mathf.Lerp(velocity.y, 0f, _controller.stats.decelerationSpeed * Time.deltaTime);
+            _controller.body.linearVelocity = _linearVelocity;
             
-            _controller.body.linearVelocity = velocity;
-            
-            if (velocity.magnitude < 0.1f)
+            if (_linearVelocity.magnitude < 0.1f)
             {
                 _controller.body.linearVelocity = Vector2.zero;
             }
@@ -73,7 +73,25 @@ namespace Entities.Player
         
         public void SetLinearVelocity()
         {
+            _linearVelocity = new Vector2(
+                Mathf.Clamp(_linearVelocity.x, -_controller.stats.maxSpeed, _controller.stats.maxSpeed),
+                Mathf.Clamp(_linearVelocity.y, -_controller.stats.maxSpeed, _controller.stats.maxSpeed)
+            );
+            
             _controller.body.linearVelocity = _linearVelocity;
+        }
+        
+        private bool IsColliding()
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(_controller.transform.position, 0.1f);
+            foreach (var collider in colliders)
+            {
+                if (collider.gameObject != _controller.gameObject)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         
         public void Rotate()

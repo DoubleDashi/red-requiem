@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
-namespace Configs
+namespace Configs.Audios
 {
     [CreateAssetMenu(fileName = "PlayerAudioConfig", menuName = "Configs/Audios/PlayerAudioConfig")]
     public class PlayerAudioConfig : ScriptableObject
     {
-        public AudioClip[] chargeCompleteSFX;
-        public AudioClip[] moveSFX;
+        public AudioClip hurtSFX;
+        public AudioClip deathSFX;
     }
 }

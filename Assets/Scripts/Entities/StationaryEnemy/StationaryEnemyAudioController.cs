@@ -15,11 +15,13 @@ namespace Entities.StationaryEnemy
         private void OnEnable()
         {
             StationaryEnemyEventConfig.OnHurtSFX += HandleOnHurtSFX;
+            StationaryEnemyEventConfig.OnDeathSFX += HandleOnDeathSFX;
         }
 
         private void OnDisable()
         {
             StationaryEnemyEventConfig.OnHurtSFX -= HandleOnHurtSFX;
+            StationaryEnemyEventConfig.OnDeathSFX -= HandleOnDeathSFX;
         }
         
         private void HandleOnHurtSFX(Guid guid)
@@ -27,6 +29,14 @@ namespace Entities.StationaryEnemy
             if (guid == controller.stats.guid)
             {
                 PlayAudio(audioConfig.hurtSFX, Random.Range(0.9f, 1.1f));    
+            }
+        }
+
+        private void HandleOnDeathSFX(Guid guid)
+        {
+            if (guid == controller.stats.guid)
+            {
+                PlayAudio(audioConfig.deathSFX, Random.Range(0.9f, 1.1f));
             }
         }
     }

@@ -1,5 +1,7 @@
 ﻿using System;
 using Configs;
+using Configs.Audios;
+using Configs.Events;
 using Controllers;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -12,24 +14,24 @@ namespace Entities.Player
         
         private void OnEnable()
         {
-            PlayerEventConfig.OnPlayerChargeComplete += HandleOnPlayerChargeComplete;
-            PlayerEventConfig.OnPlayerMove += HandleOnPlayerMove;
+            PlayerEventConfig.OnHurtSFX += HandleOnHurtSFX;
+            PlayerEventConfig.OnDeathSFX += HandleOnDeathSFX;
         }
         
         private void OnDisable()
         {
-            PlayerEventConfig.OnPlayerChargeComplete -= HandleOnPlayerChargeComplete;
-            PlayerEventConfig.OnPlayerMove -= HandleOnPlayerMove;
+            PlayerEventConfig.OnHurtSFX -= HandleOnHurtSFX;
+            PlayerEventConfig.OnDeathSFX -= HandleOnDeathSFX;
         }
         
-        private void HandleOnPlayerChargeComplete(Guid playerId)
+        private void HandleOnHurtSFX(Guid guid)
         {
-            PlayAudio(audioConfig.chargeCompleteSFX, Random.Range(0.7f, 1.3f));
+            PlayAudio(audioConfig.hurtSFX, Random.Range(0.5f, 0.75f));
         }
-        
-        private void HandleOnPlayerMove(Guid playerId)
+
+        private void HandleOnDeathSFX(Guid guid)
         {
-            PlayAudio(audioConfig.moveSFX, Random.Range(0.7f, 1.3f));
+            PlayAudio(audioConfig.deathSFX, Random.Range(0.5f, 0.75f));
         }
     }
 }

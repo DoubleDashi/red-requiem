@@ -1,8 +1,7 @@
 ﻿using Entities.Player.Factories;
-using Entities.Player.States.PrimaryStates;
 using UnityEngine;
 
-namespace Entities.Player.States
+namespace Entities.Player.States.PrimaryStates
 {
     public class PlayerMove : PlayerState
     {
