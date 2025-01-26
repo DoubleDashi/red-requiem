@@ -16,5 +16,6 @@ namespace Data
         [Header("Collision detection")]
         public float detectionRadius;
         public float attackRadius;
+        public float runAwayRadius;
     }
 }

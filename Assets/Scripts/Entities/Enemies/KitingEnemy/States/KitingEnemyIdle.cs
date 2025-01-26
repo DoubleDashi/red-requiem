@@ -2,24 +2,23 @@
 using UnityEngine;
 using Utility;
 
-namespace Entities.Enemies.MeleeEnemy.States
+namespace Entities.Enemies.KitingEnemy.States
 {
-    public class MeleeEnemyIdle : MeleeEnemyState
+    public class KitingEnemyIdle : KitingEnemyState
     {
         private bool _isComplete;
         private bool _inAggroRange;
         private bool _inAttackRange;
         
-        public MeleeEnemyIdle(MeleeEnemyController controller) : base(controller)
+        public KitingEnemyIdle(KitingEnemyController controller) : base(controller)
         {
         }
-        
+
         public override void Enter()
         {
             _isComplete = false;
             
             Controller.body.linearVelocity = Vector2.zero;
-            Controller.spriteRenderer.color = Color.yellow;
             
             Controller.StartCoroutine(IdleRoutine());
         }
@@ -32,8 +31,8 @@ namespace Entities.Enemies.MeleeEnemy.States
         
         protected override void SetTransitions()
         {
-            AddTransition(MeleeEnemyStateType.Alert, () => _inAggroRange || _inAttackRange);
-            AddTransition(MeleeEnemyStateType.Patrol, () => _isComplete && _inAggroRange == false);
+            AddTransition(KitingEnemyStateType.Alert, () => _inAggroRange || _inAttackRange);
+            AddTransition(KitingEnemyStateType.Patrol, () => _isComplete && _inAggroRange == false);
         }
         
         private IEnumerator IdleRoutine()

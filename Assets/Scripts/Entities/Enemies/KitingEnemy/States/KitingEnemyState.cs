@@ -3,18 +3,19 @@ using FSM;
 using UnityEngine;
 using Utility;
 
-namespace Entities.Enemies.StationaryEnemy.States
+namespace Entities.Enemies.KitingEnemy.States
 {
-    public abstract class StationaryEnemyState : BaseState<StationaryEnemyStateType>
+    public abstract class KitingEnemyState : BaseState<KitingEnemyStateType>
     {
-        protected readonly StationaryEnemyController Controller;
+        protected readonly KitingEnemyController Controller;
         
         protected Collider2D AggroTargetCollider;
         protected Collider2D AttackTargetCollider;
+        protected Collider2D RunAwayTargetCollider;
         
         private readonly List<Collider2D> _interactedColliders = new();
         
-        protected StationaryEnemyState(StationaryEnemyController controller)
+        protected KitingEnemyState(KitingEnemyController controller)
         {
             Controller = controller;
         }
@@ -44,7 +45,7 @@ namespace Entities.Enemies.StationaryEnemy.States
             Collider2D[] colliders = Physics2D.OverlapCircleAll(
                 Controller.transform.position, 
                 Controller.stats.attackRadius
-                );
+            );
             
             foreach (Collider2D collider in colliders)
             {
@@ -58,23 +59,24 @@ namespace Entities.Enemies.StationaryEnemy.States
             AttackTargetCollider = null;
             return false;
         }
-
-        // TODO - refactor this with aggro range
-        protected bool DetectCollider(UnityTag objectWithTag)
+        
+        protected bool CollidersInRunAwayRange(UnityTag objectWithTag)
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(
                 Controller.transform.position, 
-                Controller.stats.detectionRadius
-            );
+                Controller.stats.runAwayRadius
+                );
             
             foreach (Collider2D collider in colliders)
             {
                 if (collider.CompareTag(objectWithTag.ToString()))
                 {
+                    AttackTargetCollider = collider;
                     return true;
                 }
             }
 
+            AttackTargetCollider = null;
             return false;
         }
     }

@@ -1,14 +1,16 @@
 ﻿using System.Collections;
+using Entities.Enemies.MeleeEnemy;
 using UnityEngine;
 using Utility;
 
-namespace Entities.Enemies.MeleeEnemy.States
+namespace Entities.Enemies.KitingEnemy.States
 {
-    public class MeleeEnemyAttackWait : MeleeEnemyState
+    public class KitingEnemyAttackWait : KitingEnemyState
     {
         private bool _inAttackRange;
+        private bool _inRunAwayRange;
         
-        public MeleeEnemyAttackWait(MeleeEnemyController controller) : base(controller)
+        public KitingEnemyAttackWait(KitingEnemyController controller) : base(controller)
         {
         }
 
@@ -22,14 +24,16 @@ namespace Entities.Enemies.MeleeEnemy.States
         {
             CollidersInAggroRange(UnityTag.Player);
             _inAttackRange = CollidersInAttackRange(UnityTag.Player);
+            _inRunAwayRange = CollidersInRunAwayRange(UnityTag.Player);
             
             RotateTowardsTarget();
         }
 
         protected override void SetTransitions()
         {
-            AddTransition(MeleeEnemyStateType.Chase, () => Controller.weapon.onCooldown == false && _inAttackRange == false);
-            AddTransition(MeleeEnemyStateType.Attack, () => Controller.weapon.onCooldown == false && _inAttackRange);
+            AddTransition(KitingEnemyStateType.RunAway, () => _inRunAwayRange);
+            AddTransition(KitingEnemyStateType.Chase, () => Controller.weapon.onCooldown == false && _inAttackRange == false);
+            AddTransition(KitingEnemyStateType.Attack, () => Controller.weapon.onCooldown == false && _inAttackRange);
         }
 
         private IEnumerator CooldownRoutine()

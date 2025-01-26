@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections;
 using Configs.Events;
-using Entities.Player.Factories;
 using UnityEngine;
 
-namespace Entities.Player.States.PrimaryStates
+namespace Entities.Enemies.KitingEnemy.States
 {
-    public class PlayerHurt : PlayerState
+    public class KitingEnemyHurt : KitingEnemyState
     {
         private const float Duration = 0.5f;
         
@@ -15,19 +14,19 @@ namespace Entities.Player.States.PrimaryStates
         
         private readonly Color _originalColor;
         
-        public PlayerHurt(PlayerController controller) : base(controller)
+        public KitingEnemyHurt(KitingEnemyController controller) : base(controller)
         {
             _originalColor = Controller.spriteRenderer.color;
         }
 
         public override void Subscribe()
         {
-            PlayerEventConfig.OnHurt += HandleOnHurt;
+            KitingEnemyEventConfig.OnHurt += HandleOnEnemyHurt;
         }
         
         public override void Unsubscribe()
         {
-            PlayerEventConfig.OnHurt -= HandleOnHurt;
+            KitingEnemyEventConfig.OnHurt -= HandleOnEnemyHurt;
         }
 
         public override void Enter()
@@ -48,8 +47,8 @@ namespace Entities.Player.States.PrimaryStates
 
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Death, () => Controller.stats.health <= 0f);
-            AddTransition(PlayerStateType.Idle, () => AnimationComplete() && Controller.isHurt == false);
+            AddTransition(KitingEnemyStateType.Death, () => Controller.stats.health <= 0f);
+            AddTransition(KitingEnemyStateType.Idle, () => AnimationComplete() && Controller.isHurt == false);
         }
 
         private IEnumerator HurtRoutine()
@@ -77,7 +76,7 @@ namespace Entities.Player.States.PrimaryStates
             return _elapsedTime >= Duration;
         }
 
-        private void HandleOnHurt(Guid guid, Damageable damageable)
+        private void HandleOnEnemyHurt(Guid guid, Damageable damageable)
         {
             if (guid != Controller.stats.guid)
             {
@@ -85,7 +84,7 @@ namespace Entities.Player.States.PrimaryStates
             }
 
             CameraEventConfig.OnShake?.Invoke(damageable.ShakeIntensity);
-            PlayerEventConfig.OnHurtSFX?.Invoke(guid);
+            KitingEnemyEventConfig.OnHurtSFX?.Invoke(guid);
             
             Controller.body.linearVelocity = Vector2.zero;
             Controller.body.linearDamping = 8f;
