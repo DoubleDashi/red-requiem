@@ -47,7 +47,7 @@ namespace Entities.Enemies.KitingEnemy.States
                 return;
             }
 
-            Vector2 direction = ((Vector3)PredictPlayerPosition() - Controller.transform.position).normalized;
+            Vector2 direction = (AggroTargetCollider.transform.position - Controller.transform.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion target = Quaternion.Euler(0f, 0f, angle);
 
