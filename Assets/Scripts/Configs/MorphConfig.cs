@@ -12,6 +12,7 @@ namespace Configs
         public GameObject prefab;
         public float enemyKnockbackForce;
         public float selfKnockbackForce;
+        public float armorPenetration;
         public Vector2 collisionPointOffset;
         public Vector2 collisionBox;
         public float damage;

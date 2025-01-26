@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using Entities;
 using Entities.Player.Factories;
 using UnityEngine;
 
 namespace FSM
 {
-    public abstract class StateMachine<TStates> : MonoBehaviour where TStates : Enum
+    public abstract class StateMachine<TStates> : EntityController where TStates : Enum
     {
         private StateFactory<TStates> _stateFactory;
         private BaseState<TStates> _currentState;
@@ -96,11 +97,6 @@ namespace FSM
 
         private void ChangeState(TStates state)
         {
-            if (_stateFactory.GetType() != typeof(PlayerStateFactory))
-            {
-                Debug.Log($"Changing state to {state}");
-            }
-            
             _currentState?.Exit();
             _currentState = _stateFactory.GetState(state);
             currentStateType = state;

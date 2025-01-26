@@ -11,6 +11,7 @@ namespace Data
         [Header("Life stats")]
         public float health;
         public float stamina;
+        public float armor;
 
         [Header("Movement stats")] 
         public float knockbackResistance;

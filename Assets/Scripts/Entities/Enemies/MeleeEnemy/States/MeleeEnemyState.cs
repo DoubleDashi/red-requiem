@@ -73,7 +73,8 @@ namespace Entities.Enemies.MeleeEnemy.States
                         Controller.weapon.damage, 
                         Controller.weapon.enemyKnockbackForce,
                         (Controller.transform.position - other.transform.position).normalized,
-                        Controller.weapon.shakeIntensity
+                        Controller.weapon.shakeIntensity,
+                        Controller.weapon.armorPenetration
                     ));
                     _interactedColliders.Add(other);
                 }

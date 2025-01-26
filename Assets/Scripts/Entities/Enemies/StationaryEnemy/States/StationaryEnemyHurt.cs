@@ -94,7 +94,13 @@ namespace Entities.Enemies.StationaryEnemy.States
                 ForceMode2D.Impulse
             );
             
-            Controller.stats.health -= damageable.Damage;
+            float remainingArmor = Controller.stats.armor - damageable.ArmorPenetration;
+            float penetration = remainingArmor == 0 && Controller.stats.armor == 0
+                ? 1f
+                : Mathf.Clamp01(1 - remainingArmor / Controller.stats.armor);
+            
+            FloatingCombatTextEventConfig.OnHurt?.Invoke(Controller, damageable.Damage * penetration);
+            Controller.stats.health -= damageable.Damage * penetration;
         }
     }
 }

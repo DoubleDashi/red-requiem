@@ -28,7 +28,8 @@ namespace Entities.Player.States.MorphStates
                         Controller.morph.config.damage, 
                         Controller.morph.config.enemyKnockbackForce,
                         (Controller.transform.position - other.transform.position).normalized,
-                        Controller.morph.config.shakeIntensity
+                        Controller.morph.config.shakeIntensity,
+                        Controller.morph.config.armorPenetration
                     ));
                     _interactedColliders.Add(other);
 

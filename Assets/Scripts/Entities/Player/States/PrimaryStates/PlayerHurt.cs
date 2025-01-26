@@ -94,8 +94,13 @@ namespace Entities.Player.States.PrimaryStates
                 damageable.knockback,
                 ForceMode2D.Impulse
             );
+
             
-            Controller.stats.health -= damageable.Damage;
+            float remainingArmor = Controller.stats.armor - damageable.ArmorPenetration;
+            float penetration = remainingArmor == 0 && Controller.stats.armor == 0
+                ? 1f
+                : Mathf.Clamp01(1 - remainingArmor / Controller.stats.armor);
+            Controller.stats.health -= damageable.Damage * penetration;
         }
     }
 }

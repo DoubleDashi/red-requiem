@@ -79,7 +79,8 @@ namespace Entities.Enemies.KitingEnemy.States
             instance.GetComponent<KitingEnemyProjectile>().Setup(
                 Controller.weapon.damage,
                 Controller.weapon.enemyKnockbackForce,
-                Controller.weapon.shakeIntensity
+                Controller.weapon.shakeIntensity,
+                Controller.weapon.armorPenetration
             );
         }
     }

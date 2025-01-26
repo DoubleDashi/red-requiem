@@ -11,12 +11,14 @@ namespace Projectiles
         [HideInInspector] public float damage;
         [HideInInspector] public float knockbackForce;
         [HideInInspector] public float shakeIntensity;
+        [HideInInspector] public float armorPenetration;
         
-        public void Setup(float parentDamage, float parentKnockbackForce, float parentShakeIntensity)
+        public void Setup(float parentDamage, float parentKnockbackForce, float parentShakeIntensity, float parentArmorPenetration)
         {
             damage = parentDamage;
             knockbackForce = parentKnockbackForce;
             shakeIntensity = parentShakeIntensity;
+            armorPenetration = parentArmorPenetration;
         }
         
         protected override void Move()
@@ -44,7 +46,8 @@ namespace Projectiles
                         damage, 
                         knockbackForce,
                         (transform.position - other.transform.position).normalized,
-                        shakeIntensity
+                        shakeIntensity,
+                        armorPenetration
                     ));
                     Destroy(gameObject);
                 }

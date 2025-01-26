@@ -41,7 +41,8 @@ namespace Projectiles
                         config.damage, 
                         config.enemyKnockbackForce,
                         (transform.position - other.transform.position).normalized,
-                        config.shakeIntensity
+                        config.shakeIntensity,
+                        config.armorPenetration
                     ));
                     Destroy(gameObject);
                 }

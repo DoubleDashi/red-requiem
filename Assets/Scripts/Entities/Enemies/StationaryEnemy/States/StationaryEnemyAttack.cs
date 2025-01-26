@@ -79,7 +79,8 @@ namespace Entities.Enemies.StationaryEnemy.States
             instance.GetComponent<StationaryEnemyProjectile>().Setup(
                 Controller.weapon.damage,
                 Controller.weapon.enemyKnockbackForce,
-                Controller.weapon.shakeIntensity
+                Controller.weapon.shakeIntensity,
+                Controller.weapon.armorPenetration
             );
         }
     }

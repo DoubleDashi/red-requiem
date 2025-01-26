@@ -15,6 +15,7 @@ namespace Data
         public float damage;
         public float enemyKnockbackForce;
         public float selfKnockbackForce;
+        public float armorPenetration;
         [Range(0f, 1f)] public float shakeIntensity;
         
         [Header("Collisions")]
