@@ -40,8 +40,9 @@ namespace Projectiles
                     other.GetComponentInParent<IEntity>().TakeDamage(new Damageable(
                         config.damage, 
                         config.enemyKnockbackForce,
-                        (transform.position - other.transform.position).normalized
-                        ));
+                        (transform.position - other.transform.position).normalized,
+                        config.shakeIntensity
+                    ));
                     Destroy(gameObject);
                 }
             }

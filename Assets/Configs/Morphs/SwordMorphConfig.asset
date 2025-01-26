@@ -19,6 +19,7 @@ MonoBehaviour:
   collisionPointOffset: {x: 0.3, y: 0}
   collisionBox: {x: 0.7, y: 0.75}
   damage: 10
+  shakeIntensity: 0.35
   speed: 0
   count: 0
   angle: 0

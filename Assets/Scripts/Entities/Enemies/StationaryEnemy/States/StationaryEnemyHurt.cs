@@ -83,6 +83,7 @@ namespace Entities.Enemies.StationaryEnemy.States
                 return;
             }
 
+            CameraEventConfig.OnShake?.Invoke(damageable.ShakeIntensity);
             StationaryEnemyEventConfig.OnHurtSFX?.Invoke(guid);
             
             Controller.body.linearVelocity = Vector2.zero;

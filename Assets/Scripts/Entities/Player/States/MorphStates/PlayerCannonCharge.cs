@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Configs.Events;
 using Entities.Player.Factories;
 using UnityEngine;
 
@@ -28,6 +29,8 @@ namespace Entities.Player.States.MorphStates
             _isComplete = false;
             _length = 0f;
             
+            CameraEventConfig.OnConsistentShakeStart?.Invoke(0.25f);
+            
             _chargeUpRoutine = Controller.StartCoroutine(ChargeUpRoutine());
         }
 
@@ -37,6 +40,10 @@ namespace Entities.Player.States.MorphStates
             Controller.morph.lineRenderer.SetPosition(0, Controller.morph.pivotPoint.position - direction * 0.15f);
             Controller.morph.lineRenderer.SetPosition(1, Controller.morph.pivotPoint.position + direction * _length);
             
+            Controller.morph.config.collisionPointOffset = new Vector2(_length / 2f, Controller.morph.config.collisionPointOffset.y);
+            Controller.morph.config.collisionBox = new Vector2(_length, Controller.morph.config.collisionBox.y);
+            
+            LineRendererCollisionDetection(direction);
             CollisionDetection();
         }
         
@@ -52,6 +59,8 @@ namespace Entities.Player.States.MorphStates
         {
             _length = 0f;
             Controller.morph.lineRenderer.enabled = false;
+            
+            CameraEventConfig.OnConsistentShakeStop?.Invoke();
         }
 
         protected override void SetTransitions()
@@ -69,14 +78,28 @@ namespace Entities.Player.States.MorphStates
             {
                 elapsed += Time.deltaTime;
                 _length = Mathf.Lerp(0f, Controller.morph.config.maxLength, elapsed / duration);
-                Controller.morph.config.collisionPointOffset = new Vector2(_length / 2f, Controller.morph.config.collisionPointOffset.y);
-                Controller.morph.config.collisionBox = new Vector2(_length, Controller.morph.config.collisionBox.y);
                 
                 yield return null;
             }
             
             _length = Controller.morph.config.maxLength;
             _isComplete = true;
+        }
+
+        private void LineRendererCollisionDetection(Vector3 direction)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(
+                Controller.morph.pivotPoint.position, 
+                direction.normalized,
+                _length
+            );
+
+            if (hit)
+            {
+                Controller.morph.lineRenderer.SetPosition(1, hit.point);
+                Controller.morph.config.collisionPointOffset = new Vector2(hit.distance / 2f, Controller.morph.config.collisionPointOffset.y);
+                Controller.morph.config.collisionBox = new Vector2(hit.distance, Controller.morph.config.collisionBox.y);
+            }
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Entities.Player.Factories
             AddState(PlayerStateType.SwordAttack, new PlayerSwordAttack(_controller));
             AddState(PlayerStateType.CannonCharge, new PlayerCannonCharge(_controller));
             AddState(PlayerStateType.CannonAttack, new PlayerCannonAttack(_controller));
+            AddState(PlayerStateType.HammerAttack, new PlayerHammerAttack(_controller));
         }
     }
 }

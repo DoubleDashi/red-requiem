@@ -27,7 +27,8 @@ namespace Entities.Player.States.MorphStates
                     other.GetComponentInParent<IEntity>().TakeDamage(new Damageable(
                         Controller.morph.config.damage, 
                         Controller.morph.config.enemyKnockbackForce,
-                        (Controller.transform.position - other.transform.position).normalized
+                        (Controller.transform.position - other.transform.position).normalized,
+                        Controller.morph.config.shakeIntensity
                     ));
                     _interactedColliders.Add(other);
 

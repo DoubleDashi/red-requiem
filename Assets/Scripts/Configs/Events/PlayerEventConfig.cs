@@ -12,5 +12,7 @@ namespace Configs.Events
         
         public static Action<Guid> OnDeath;
         public static Action<Guid> OnDeathSFX;
+
+        public static Action<Guid> OnHammerDownSFX;
     }
 }

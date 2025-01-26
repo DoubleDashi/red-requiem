@@ -1,5 +1,4 @@
 ﻿using System;
-using Configs;
 using Configs.Audios;
 using Configs.Events;
 using Controllers;
@@ -16,12 +15,14 @@ namespace Entities.Player
         {
             PlayerEventConfig.OnHurtSFX += HandleOnHurtSFX;
             PlayerEventConfig.OnDeathSFX += HandleOnDeathSFX;
+            PlayerEventConfig.OnHammerDownSFX += HandleOnHammerDownSFX;
         }
         
         private void OnDisable()
         {
             PlayerEventConfig.OnHurtSFX -= HandleOnHurtSFX;
             PlayerEventConfig.OnDeathSFX -= HandleOnDeathSFX;
+            PlayerEventConfig.OnHammerDownSFX -= HandleOnHammerDownSFX;
         }
         
         private void HandleOnHurtSFX(Guid guid)
@@ -32,6 +33,11 @@ namespace Entities.Player
         private void HandleOnDeathSFX(Guid guid)
         {
             PlayAudio(audioConfig.deathSFX, Random.Range(0.5f, 0.75f));
+        }
+
+        private void HandleOnHammerDownSFX(Guid guid)
+        {
+            PlayAudio(audioConfig.hammerDownSFX, Random.Range(0.8f, 1.2f));
         }
     }
 }

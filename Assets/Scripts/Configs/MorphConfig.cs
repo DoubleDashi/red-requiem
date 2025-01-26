@@ -15,6 +15,7 @@ namespace Configs
         public Vector2 collisionPointOffset;
         public Vector2 collisionBox;
         public float damage;
+        [Range(0f, 1f)] public float shakeIntensity;
         
         [Header("Projectile specific")]
         public float speed;

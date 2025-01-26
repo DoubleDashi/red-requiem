@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &44177333256129958
 Transform:
   m_ObjectHideFlags: 0
@@ -107,6 +107,7 @@ MonoBehaviour:
     damage: 10
     enemyKnockbackForce: 6
     selfKnockbackForce: 0
+    shakeIntensity: 0.6
     collisionPointOffset: {x: 0.93, y: 0}
     collisionBox: {x: 0.96, y: 0.94}
     cooldownTime: 1.5

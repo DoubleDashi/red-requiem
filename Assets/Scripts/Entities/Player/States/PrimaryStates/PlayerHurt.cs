@@ -84,6 +84,9 @@ namespace Entities.Player.States.PrimaryStates
                 return;
             }
 
+            Debug.Log($"Damage: {damageable.Damage}, Knockback: {damageable.knockback}, Shake: {damageable.ShakeIntensity}");
+            
+            CameraEventConfig.OnShake?.Invoke(damageable.ShakeIntensity);
             PlayerEventConfig.OnHurtSFX?.Invoke(guid);
             
             Controller.body.linearVelocity = Vector2.zero;

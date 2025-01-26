@@ -30,6 +30,12 @@ namespace Entities.Player.States.PrimaryStates
                 Debug.Log("Morphing... Cannon chosen!");
                 Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Cannon);
             }
+            
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                Debug.Log("Morphing... Hammer chosen!");
+                Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Hammer);
+            }
         }
 
         protected override void SetTransitions()

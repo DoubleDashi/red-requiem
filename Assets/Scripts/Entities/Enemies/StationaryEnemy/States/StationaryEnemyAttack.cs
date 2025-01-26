@@ -24,8 +24,11 @@ namespace Entities.Enemies.StationaryEnemy.States
             
             instance.GetComponent<StationaryEnemyProjectile>().Setup(
                 Controller.weapon.damage, 
-                Controller.weapon.enemyKnockbackForce
+                Controller.weapon.enemyKnockbackForce,
+                Controller.weapon.shakeIntensity
             );
+            
+            Controller.weapon.onCooldown = true;
         }
 
         public override void Update()
@@ -38,6 +41,7 @@ namespace Entities.Enemies.StationaryEnemy.States
 
         protected override void SetTransitions()
         {
+            AddTransition(StationaryEnemyStateType.AttackWait, () => Controller.weapon.onCooldown);
             AddTransition(StationaryEnemyStateType.Idle, () => _hasDetectedPlayer == false);
         }
         

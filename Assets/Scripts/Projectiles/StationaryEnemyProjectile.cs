@@ -8,13 +8,15 @@ namespace Projectiles
     public class StationaryEnemyProjectile : ProjectileController
     {
         public float speed;
-        public float damage;
-        public float knockbackForce;
+        [HideInInspector] public float damage;
+        [HideInInspector] public float knockbackForce;
+        [HideInInspector] public float shakeIntensity;
         
-        public void Setup(float parentDamage, float parentKnockbackForce)
+        public void Setup(float parentDamage, float parentKnockbackForce, float parentShakeIntensity)
         {
             damage = parentDamage;
             knockbackForce = parentKnockbackForce;
+            shakeIntensity = parentShakeIntensity;
         }
         
         protected override void Move()
@@ -41,7 +43,8 @@ namespace Projectiles
                     other.GetComponentInParent<IEntity>().TakeDamage(new Damageable(
                         damage, 
                         knockbackForce,
-                        (transform.position - other.transform.position).normalized
+                        (transform.position - other.transform.position).normalized,
+                        shakeIntensity
                     ));
                     Destroy(gameObject);
                 }

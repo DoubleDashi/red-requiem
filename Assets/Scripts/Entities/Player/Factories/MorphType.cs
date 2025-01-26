@@ -5,5 +5,6 @@
         Shard,
         Sword,
         Cannon,
+        Hammer
     }
 }

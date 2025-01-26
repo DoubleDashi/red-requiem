@@ -101,3 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  damage: 0
+  knockbackForce: 0
+  shakeIntensity: 0.35

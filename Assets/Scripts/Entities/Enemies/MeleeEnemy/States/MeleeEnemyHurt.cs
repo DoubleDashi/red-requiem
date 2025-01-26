@@ -83,6 +83,7 @@ namespace Entities.Enemies.MeleeEnemy.States
                 return;
             }
 
+            CameraEventConfig.OnShake?.Invoke(damageable.ShakeIntensity);
             MeleeEnemyEventConfig.OnHurtSFX?.Invoke(guid);
             
             Controller.body.linearVelocity = Vector2.zero;

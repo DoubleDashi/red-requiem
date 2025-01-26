@@ -382,9 +382,10 @@ MonoBehaviour:
     damage: 10
     enemyKnockbackForce: 6
     selfKnockbackForce: 0
+    shakeIntensity: 0.35
     collisionPointOffset: {x: 0, y: 0}
     collisionBox: {x: 0, y: 0}
-    cooldownTime: 0
+    cooldownTime: 1
     onCooldown: 0
   spriteRenderer: {fileID: 3987722999894000981}
   body: {fileID: 0}

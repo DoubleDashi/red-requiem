@@ -17,6 +17,7 @@ namespace Entities.Enemies.StationaryEnemy
             AddState(StationaryEnemyStateType.Idle, new StationaryEnemyIdle(_controller));
             AddState(StationaryEnemyStateType.Alert, new StationaryEnemyAlert(_controller));
             AddState(StationaryEnemyStateType.Attack, new StationaryEnemyAttack(_controller));
+            AddState(StationaryEnemyStateType.AttackWait, new StationaryEnemyAttackWait(_controller));
             
             AddState(StationaryEnemyStateType.Hurt, new StationaryEnemyHurt(_controller));
             AddState(StationaryEnemyStateType.Death, new StationaryEnemyDeath(_controller));

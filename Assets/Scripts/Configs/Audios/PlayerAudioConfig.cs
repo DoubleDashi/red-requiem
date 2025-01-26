@@ -7,5 +7,6 @@ namespace Configs.Audios
     {
         public AudioClip hurtSFX;
         public AudioClip deathSFX;
+        public AudioClip hammerDownSFX;
     }
 }

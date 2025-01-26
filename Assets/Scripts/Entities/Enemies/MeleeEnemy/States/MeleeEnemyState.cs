@@ -72,7 +72,8 @@ namespace Entities.Enemies.MeleeEnemy.States
                     other.GetComponentInParent<IEntity>().TakeDamage(new Damageable(
                         Controller.weapon.damage, 
                         Controller.weapon.enemyKnockbackForce,
-                        (Controller.transform.position - other.transform.position).normalized
+                        (Controller.transform.position - other.transform.position).normalized,
+                        Controller.weapon.shakeIntensity
                     ));
                     _interactedColliders.Add(other);
                 }

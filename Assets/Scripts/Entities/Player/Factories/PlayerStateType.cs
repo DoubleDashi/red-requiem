@@ -15,5 +15,6 @@
         SwordAttack,
         CannonCharge,
         CannonAttack,
+        HammerAttack,
     }
 }

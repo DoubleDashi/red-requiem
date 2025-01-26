@@ -7,5 +7,6 @@
         Attack,
         Hurt,
         Death,
+        AttackWait,
     }
 }
