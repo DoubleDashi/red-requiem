@@ -6,6 +6,7 @@ namespace Controllers
     {
         public GameObject stationaryEnemyPrefab;
         public GameObject meleeEnemyPrefab;
+        public GameObject kitingEnemyPrefab;
         
         private void Update()
         {
@@ -19,6 +20,11 @@ namespace Controllers
                 if (Input.GetKeyDown(KeyCode.Alpha2))
                 {
                     Instantiate(meleeEnemyPrefab, transform.position, Quaternion.identity);
+                }
+                
+                if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    Instantiate(kitingEnemyPrefab, transform.position, Quaternion.identity);
                 }
             }
         }

@@ -53,7 +53,7 @@ Rigidbody2D:
   m_LinearDamping: 8
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e65941584685785479348e9e674a1a8f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -94,12 +94,14 @@ MonoBehaviour:
   stats:
     health: 100
     stamina: 50
+    armor: 0
     knockbackResistance: 0
     movementSpeed: 4
     rotationSpeed: 1000
     damage: 10
     detectionRadius: 4
     attackRadius: 1
+    runAwayRadius: 0
   weapon:
     prefab: {fileID: 0}
     pivotPoint: {fileID: 8870767164365590794}
@@ -107,6 +109,7 @@ MonoBehaviour:
     damage: 10
     enemyKnockbackForce: 6
     selfKnockbackForce: 0
+    armorPenetration: 0
     shakeIntensity: 0.6
     collisionPointOffset: {x: 0.93, y: 0}
     collisionBox: {x: 0.96, y: 0.94}

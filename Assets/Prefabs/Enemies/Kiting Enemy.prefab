@@ -282,7 +282,7 @@ Rigidbody2D:
   m_LinearDamping: 8
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e65941584685785479348e9e674a1a8f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -325,11 +325,11 @@ MonoBehaviour:
     stamina: 50
     armor: 0
     knockbackResistance: 0
-    movementSpeed: 4
+    movementSpeed: 6.5
     rotationSpeed: 1000
     damage: 10
-    detectionRadius: 5
-    attackRadius: 4
+    detectionRadius: 7.5
+    attackRadius: 6
     runAwayRadius: 2
   weapon:
     prefab: {fileID: 7957196971646256981, guid: 685bb7fc886152445bcb771bc922f1fb, type: 3}
