@@ -15,6 +15,21 @@ namespace Entities.Player
             _controller = controller;
         }
         
+        public void Flip()
+        {
+            Vector3 localScale = _controller.transform.localScale;
+
+            localScale.x = _controller.body.linearVelocity.x switch
+            {
+                > 0.0f => Mathf.Abs(localScale.x),
+                < 0.0f => -Mathf.Abs(localScale.x),
+                _ => localScale.x
+                };
+
+            _controller.transform.localScale = localScale;
+        }
+
+        
         public void Accelerate()
         {
             if (PlayerInput.movementDirection.x != 0)
@@ -96,18 +111,26 @@ namespace Entities.Player
         
         public void Rotate()
         {
+            
             if (_controller.stats.disableRotation)
             {
                 return;
             }
-            
+
             Vector2 mousePosition = _controller.mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - (Vector2)_controller.transform.position).normalized;
-            
+
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion target = Quaternion.Euler(0f, 0f, angle);
-            
-            _controller.transform.rotation = Quaternion.RotateTowards(_controller.transform.rotation, target, _controller.stats.rotationSpeed * Time.deltaTime);
+            Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle);
+
+            // Rotate the parent object
+            _controller.transform.rotation = Quaternion.RotateTowards(_controller.transform.rotation, targetRotation, _controller.stats.rotationSpeed * Time.deltaTime);
+
+            // Counter-rotate the child object with the SpriteRenderer
+            if (_controller.spriteRenderer)
+            {
+                _controller.spriteRenderer.transform.rotation = Quaternion.identity;
+            }
         }
     }
 }

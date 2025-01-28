@@ -16,15 +16,19 @@ namespace Entities.Player
         
         [SerializeField] private Morph morphSettings;
         [SerializeField] private List<MorphConfig> morphConfigs;
+        
 
         [HideInInspector] public Camera mainCamera;
         [HideInInspector] public Rigidbody2D body;
         [HideInInspector] public SpriteRenderer spriteRenderer;
         [HideInInspector] public PlayerMorphFactory MorphFactory;
         [HideInInspector] public PlayerMovement Movement;
+        [HideInInspector] public PlayerAnimator Animator;
         [HideInInspector] public bool isHurt;
         
         public Morph morph => morphSettings;
+        
+        private Coroutine _combatRoutine;
 
         private void Awake()
         {
@@ -34,12 +38,20 @@ namespace Entities.Player
             mainCamera = Camera.main;
             body = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            Animator = new PlayerAnimator(GetComponentInChildren<Animator>());
             morph.config = MorphFactory.FindByType(MorphType.Sword);
             
             InitializeStateMachine(
                 new PlayerStateFactory(this), 
                 PlayerStateType.Idle
             );
+        }
+
+        protected override void Update()
+        {
+            base.Update();
+            Animator.UpdateBlendTree();
+            Movement.Flip();
         }
 
         protected override void FixedUpdate()
@@ -63,6 +75,32 @@ namespace Entities.Player
         public void HandleOnDeath(Guid guid)
         {
             throw new NotImplementedException();
+        }
+
+        public void EnableInCombat()
+        {
+            if (_combatRoutine != null)
+            {
+                StopCoroutine(_combatRoutine);
+                _combatRoutine = null;
+            }
+            
+            _combatRoutine = StartCoroutine(CombatRoutine());
+        }
+
+        private void RegenerateBlood()
+        {
+            if (stats.bloodResource < stats.maxBloodResource)
+            {
+                stats.bloodResource += stats.bloodResourceRegenSpeed * Time.deltaTime;
+            }
+        }
+        
+        private IEnumerator CombatRoutine()
+        {
+            stats.inCombat = true;
+            yield return new WaitForSeconds(stats.outOfCombatDuration);
+            stats.inCombat = false;
         }
         
         protected override void OnDrawGizmos()

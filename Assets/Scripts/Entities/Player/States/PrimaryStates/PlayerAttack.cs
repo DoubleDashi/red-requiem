@@ -10,6 +10,11 @@ namespace Entities.Player.States.PrimaryStates
         {
         }
 
+        public override void Enter()
+        {
+            Controller.stats.inCombat = true;
+        }
+
         protected override void SetTransitions()
         {
             AddTransition(PlayerStateType.ShardAttack, () => Controller.morph.config.type == MorphType.Shard);

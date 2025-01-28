@@ -1,5 +1,6 @@
 ﻿using Entities.Player.Factories;
 using UnityEngine;
+using Utility;
 
 namespace Entities.Player.States.PrimaryStates
 {
@@ -7,6 +8,11 @@ namespace Entities.Player.States.PrimaryStates
     {
         public PlayerMove(PlayerController controller) : base(controller)
         {
+        }
+
+        public override void Enter()
+        {
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Run);
         }
 
         public override void FixedUpdate()

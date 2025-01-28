@@ -1,13 +1,18 @@
 ﻿using Entities.Player.Factories;
-using Entities.Player.States.PrimaryStates;
 using UnityEngine;
+using Utility;
 
-namespace Entities.Player.States
+namespace Entities.Player.States.PrimaryStates
 {
     public class PlayerIdle : PlayerState
     {
         public PlayerIdle(PlayerController controller) : base(controller)
         {
+        }
+
+        public override void Enter()
+        {
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
         }
         
         public override void FixedUpdate()

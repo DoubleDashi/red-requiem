@@ -1,6 +1,7 @@
-﻿using System.Collections;
+﻿using Animations;
 using Entities.Player.Factories;
 using UnityEngine;
+using Utility;
 
 namespace Entities.Player.States.MorphStates
 {
@@ -12,9 +13,19 @@ namespace Entities.Player.States.MorphStates
         {
         }
 
+        public override void Subscribe()
+        {
+            SimpleAnimationStateBehaviour.OnAnimationCompleted += HandleOnAnimationCompleted;
+        }
+        
+        public override void Unsubscribe()
+        {
+            SimpleAnimationStateBehaviour.OnAnimationCompleted -= HandleOnAnimationCompleted;
+        }
+        
         public override void Enter()
         {
-            Controller.StartCoroutine(AttackRoutine());
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Attack);
         }
 
         public override void Update()
@@ -39,11 +50,12 @@ namespace Entities.Player.States.MorphStates
             AddTransition(PlayerStateType.Move, () => _isComplete && Controller.body.linearVelocity != Vector2.zero);
         }
 
-        private IEnumerator AttackRoutine()
+        private void HandleOnAnimationCompleted(int shortNameHash)
         {
-            yield return new WaitForSeconds(0.15f);
-
-            _isComplete = true;
+            if (shortNameHash == Animator.StringToHash(PlayerAnimationName.Attack.ToString()))
+            {
+                _isComplete = true;
+            }
         }
     }
 }

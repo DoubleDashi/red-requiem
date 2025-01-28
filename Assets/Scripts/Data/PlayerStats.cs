@@ -26,5 +26,14 @@ namespace Data
 
         [Header("Misc options")] 
         public bool disableRotation;
+
+        [Header("Blood resource")]
+        public float maxBloodResource;
+        public float bloodResource;
+        public float bloodResourceRegenSpeed;
+        
+        [Header("Combat options")]
+        public bool inCombat;
+        public float outOfCombatDuration;
     }
 }

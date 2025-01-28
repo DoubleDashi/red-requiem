@@ -1,0 +1,2171 @@
+fileFormatVersion: 2
+guid: 51118dd8ca716984d8ae135af6ef6a16
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6652170988643086569
+    second: blood_sword_character_0
+  - first:
+      213: 4802549198770337499
+    second: blood_sword_character_1
+  - first:
+      213: 7268460651850615000
+    second: blood_sword_character_2
+  - first:
+      213: 8770181305732838163
+    second: blood_sword_character_3
+  - first:
+      213: 3050077857247900970
+    second: blood_sword_character_4
+  - first:
+      213: -6676538122327139390
+    second: blood_sword_character_5
+  - first:
+      213: 4984782694318419926
+    second: blood_sword_character_6
+  - first:
+      213: 6788819143433671565
+    second: blood_sword_character_7
+  - first:
+      213: 2039232382201557388
+    second: blood_sword_character_8
+  - first:
+      213: 21713082551806929
+    second: blood_sword_character_9
+  - first:
+      213: 9163049270469755080
+    second: blood_sword_character_10
+  - first:
+      213: 6408037754290687699
+    second: blood_sword_character_11
+  - first:
+      213: 1066235339994977559
+    second: blood_sword_character_12
+  - first:
+      213: 5014013239854617469
+    second: blood_sword_character_13
+  - first:
+      213: -4868697545570389611
+    second: blood_sword_character_14
+  - first:
+      213: 3912763903796669406
+    second: blood_sword_character_15
+  - first:
+      213: -1918810104762969482
+    second: blood_sword_character_16
+  - first:
+      213: 7402757338291301685
+    second: blood_sword_character_17
+  - first:
+      213: 7592720230423420923
+    second: blood_sword_character_18
+  - first:
+      213: 7499332192544425126
+    second: blood_sword_character_19
+  - first:
+      213: -5003325266177593854
+    second: blood_sword_character_20
+  - first:
+      213: -7942670222056604089
+    second: blood_sword_character_21
+  - first:
+      213: -8863136551950558106
+    second: blood_sword_character_22
+  - first:
+      213: 5391295786803933849
+    second: blood_sword_character_23
+  - first:
+      213: -3226162434374780663
+    second: blood_sword_character_24
+  - first:
+      213: 6893766763727122115
+    second: blood_sword_character_25
+  - first:
+      213: -5876050308453222923
+    second: blood_sword_character_26
+  - first:
+      213: 924480820206320947
+    second: blood_sword_character_27
+  - first:
+      213: -391662338011471822
+    second: blood_sword_character_28
+  - first:
+      213: -8822051377691681322
+    second: blood_sword_character_29
+  - first:
+      213: 6453321138657990648
+    second: blood_sword_character_30
+  - first:
+      213: 5190458599064423834
+    second: blood_sword_character_31
+  - first:
+      213: -7544920743305848300
+    second: blood_sword_character_32
+  - first:
+      213: 499659652805546177
+    second: blood_sword_character_33
+  - first:
+      213: -3810184315108935943
+    second: blood_sword_character_34
+  - first:
+      213: -6858252352884733236
+    second: blood_sword_character_35
+  - first:
+      213: -5188515121638935008
+    second: blood_sword_character_36
+  - first:
+      213: -3246217565742764724
+    second: blood_sword_character_37
+  - first:
+      213: 4827297148795100892
+    second: blood_sword_character_38
+  - first:
+      213: -2291369144066251056
+    second: blood_sword_character_39
+  - first:
+      213: 2526495398222350358
+    second: blood_sword_character_40
+  - first:
+      213: 7314762088493230551
+    second: blood_sword_character_41
+  - first:
+      213: -6535399656162054205
+    second: blood_sword_character_42
+  - first:
+      213: 5958266937222874528
+    second: blood_sword_character_43
+  - first:
+      213: -2448388677668640321
+    second: blood_sword_character_44
+  - first:
+      213: -882373043214616091
+    second: blood_sword_character_45
+  - first:
+      213: -8991972566371838083
+    second: blood_sword_character_46
+  - first:
+      213: -1979615123162447521
+    second: blood_sword_character_47
+  - first:
+      213: 9195411091184387813
+    second: blood_sword_character_48
+  - first:
+      213: -3481587357431983020
+    second: blood_sword_character_49
+  - first:
+      213: -611072663119773529
+    second: blood_sword_character_50
+  - first:
+      213: 6466142507764513224
+    second: blood_sword_character_51
+  - first:
+      213: 8592075533783219938
+    second: blood_sword_character_52
+  - first:
+      213: 4847367362413084995
+    second: blood_sword_character_53
+  - first:
+      213: -1998392920962811223
+    second: blood_sword_character_54
+  - first:
+      213: -6493805075678232561
+    second: blood_sword_character_55
+  - first:
+      213: 8132348696085518588
+    second: blood_sword_character_56
+  - first:
+      213: 8280302062500101047
+    second: blood_sword_character_57
+  - first:
+      213: -9218684652332079390
+    second: blood_sword_character_58
+  - first:
+      213: 1439660184814562916
+    second: blood_sword_character_59
+  - first:
+      213: -1321669306054171691
+    second: blood_sword_character_60
+  - first:
+      213: -4081562537670672830
+    second: blood_sword_character_61
+  - first:
+      213: -4863499011404291879
+    second: blood_sword_character_62
+  - first:
+      213: 3928272407626120087
+    second: blood_sword_character_63
+  - first:
+      213: 2421757591229469946
+    second: blood_sword_character_64
+  - first:
+      213: 9137776403650454297
+    second: blood_sword_character_65
+  - first:
+      213: 7406618799404768598
+    second: blood_sword_character_66
+  - first:
+      213: -4402106763661975292
+    second: blood_sword_character_67
+  - first:
+      213: 8401835970162726514
+    second: blood_sword_character_68
+  - first:
+      213: -5256363628172947049
+    second: blood_sword_character_69
+  - first:
+      213: 2183053285720555692
+    second: blood_sword_character_70
+  - first:
+      213: -7295178251617428248
+    second: blood_sword_character_71
+  - first:
+      213: 5262551113229654443
+    second: blood_sword_character_72
+  - first:
+      213: -7998448980721698020
+    second: blood_sword_character_73
+  - first:
+      213: -5119849567353712029
+    second: blood_sword_character_74
+  - first:
+      213: 2915972726212897772
+    second: blood_sword_character_75
+  - first:
+      213: 4920031460345814291
+    second: blood_sword_character_76
+  - first:
+      213: 421127475358206818
+    second: blood_sword_character_77
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blood_sword_character_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1055
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0fa3bf442415c50800000000000000
+      internalID: 6652170988643086569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1055
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6fa012d0516a240800000000000000
+      internalID: 4802549198770337499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_2
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 1055
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8c571f372ced460800000000000000
+      internalID: 7268460651850615000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_3
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1055
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3133aff5e61f5b970800000000000000
+      internalID: 8770181305732838163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_4
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1055
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a25bb82b6ad045a20800000000000000
+      internalID: 3050077857247900970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_5
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 1055
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb565993fb2853a0800000000000000
+      internalID: -6676538122327139390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_6
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1055
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df2d5133718d2540800000000000000
+      internalID: 4984782694318419926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_7
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 1055
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d835cb0da0bb63e50800000000000000
+      internalID: 6788819143433671565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_8
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 1055
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c81f89b1c0fcc4c10800000000000000
+      internalID: 2039232382201557388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_9
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 1055
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dbaa7cfee32d4000800000000000000
+      internalID: 21713082551806929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_10
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 1055
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c080c973c0b92f70800000000000000
+      internalID: 9163049270469755080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_11
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 1055
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dec9c3e26cede850800000000000000
+      internalID: 6408037754290687699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_12
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 927
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7155e5f74670cce00800000000000000
+      internalID: 1066235339994977559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_13
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 928
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d73d3ace97a559540800000000000000
+      internalID: 5014013239854617469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_14
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 929
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 591f575b069ee6cb0800000000000000
+      internalID: -4868697545570389611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_15
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 924
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edb65cf2a0eec4630800000000000000
+      internalID: 3912763903796669406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_16
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 928
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6725c2240640f55e0800000000000000
+      internalID: -1918810104762969482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_17
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 929
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53de443e390ebb660800000000000000
+      internalID: 7402757338291301685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_18
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 927
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff5f4552d2ce5960800000000000000
+      internalID: 7592720230423420923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_19
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 923
+        width: 45
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a4034d55eaf21860800000000000000
+      internalID: 7499332192544425126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_20
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 799
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e6fbddd2e909ab0800000000000000
+      internalID: -5003325266177593854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_21
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 800
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e3e3ed387f5c190800000000000000
+      internalID: -7942670222056604089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_22
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 787
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66cd431d340dff480800000000000000
+      internalID: -8863136551950558106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_23
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 795
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 992328b24fab1da40800000000000000
+      internalID: 5391295786803933849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_24
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 795
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909b16fdb5e5a33d0800000000000000
+      internalID: -3226162434374780663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_25
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 795
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce695cc8549baf50800000000000000
+      internalID: 6893766763727122115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_26
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 672
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5325a8063147ea0800000000000000
+      internalID: -5876050308453222923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_27
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 672
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d3f0a686a64dc00800000000000000
+      internalID: 924480820206320947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_28
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 672
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2306deebd29809af0800000000000000
+      internalID: -391662338011471822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_29
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 672
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd11726307c19580800000000000000
+      internalID: -8822051377691681322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_30
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 672
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f79a3b626dce8950800000000000000
+      internalID: 6453321138657990648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_31
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 672
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d4b9a7896380840800000000000000
+      internalID: 5190458599064423834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_32
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 672
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a57c40f8e0b4790800000000000000
+      internalID: -7544920743305848300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_33
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 672
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0d1129ec52fe600800000000000000
+      internalID: 499659652805546177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_34
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 672
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6ba297d818f1bc0800000000000000
+      internalID: -3810184315108935943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_35
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 672
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca815652d792d0a0800000000000000
+      internalID: -6858252352884733236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_36
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 672
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 026f7fe9cf0bef7b0800000000000000
+      internalID: -5188515121638935008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_37
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 672
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4de44ab25e13f2d0800000000000000
+      internalID: -3246217565742764724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_38
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 545
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde10334e210ef240800000000000000
+      internalID: 4827297148795100892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_39
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 545
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6e3a657eb6330e0800000000000000
+      internalID: -2291369144066251056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_40
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 545
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 618c3b1cd2aef0320800000000000000
+      internalID: 2526495398222350358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_41
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 546
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9222d3d51438560800000000000000
+      internalID: 7314762088493230551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_42
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 544
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf204583a89d45a0800000000000000
+      internalID: -6535399656162054205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_43
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 544
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5cf1e063400b250800000000000000
+      internalID: 5958266937222874528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_44
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 544
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9e8734873950ed0800000000000000
+      internalID: -2448388677668640321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_45
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 547
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e9ffc7646e21c3f0800000000000000
+      internalID: -882373043214616091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_46
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 416
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d775957a798163380800000000000000
+      internalID: -8991972566371838083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_47
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 416
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5149efa88ef684e0800000000000000
+      internalID: -1979615123162447521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_48
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 416
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e68bb50ba9ac9f70800000000000000
+      internalID: 9195411091184387813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_49
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 416
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45496c1aebaeeafc0800000000000000
+      internalID: -3481587357431983020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_50
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 416
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a04bc686a80587f0800000000000000
+      internalID: -611072663119773529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_51
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 416
+        width: 37
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c97b5a0a5a5cb950800000000000000
+      internalID: 6466142507764513224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_52
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 287
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee397adc2f2d3770800000000000000
+      internalID: 8592075533783219938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_53
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 287
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34144740fee454340800000000000000
+      internalID: 4847367362413084995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_54
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 287
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa3b50f9384444e0800000000000000
+      internalID: -1998392920962811223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_55
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 287
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00029770be51e5a0800000000000000
+      internalID: -6493805075678232561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_56
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 287
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf8d9c35d08ebd070800000000000000
+      internalID: 8132348696085518588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_57
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 287
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bbb04cdada89e270800000000000000
+      internalID: 8280302062500101047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_58
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 287
+        width: 45
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e6a661c627a01080800000000000000
+      internalID: -9218684652332079390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_59
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 287
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e25297f43baf310800000000000000
+      internalID: 1439660184814562916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_60
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 287
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3aa16c4cc78ade0800000000000000
+      internalID: -1321669306054171691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_61
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 287
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ef89d3f706b57c0800000000000000
+      internalID: -4081562537670672830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_62
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 287
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0a8c3ca61618cb0800000000000000
+      internalID: -4863499011404291879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_63
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 287
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79bf58d11f6048630800000000000000
+      internalID: 3928272407626120087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_64
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 159
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4965db2bfcb9120800000000000000
+      internalID: 2421757591229469946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_65
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 160
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9132880a937efce70800000000000000
+      internalID: 9137776403650454297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_66
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 161
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d504d5e8899c660800000000000000
+      internalID: 7406618799404768598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_67
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 156
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4016598c83398e2c0800000000000000
+      internalID: -4402106763661975292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_68
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 160
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27616aecc41599470800000000000000
+      internalID: 8401835970162726514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_69
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 161
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791d77c2125ad07b0800000000000000
+      internalID: -5256363628172947049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_70
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 159
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca08f15a563cb4e10800000000000000
+      internalID: 2183053285720555692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_71
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 155
+        width: 45
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec103b180252ca90800000000000000
+      internalID: -7295178251617428248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_72
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 31
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9d364fa56580940800000000000000
+      internalID: 5262551113229654443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_73
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 32
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b7ff5970dcff090800000000000000
+      internalID: -7998448980721698020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_74
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 28
+        width: 40
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362d172d1f3a2f8b0800000000000000
+      internalID: -5119849567353712029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_75
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 28
+        width: 44
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceba5a8bebd977820800000000000000
+      internalID: 2915972726212897772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_76
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 28
+        width: 44
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d98a5bb86774440800000000000000
+      internalID: 4920031460345814291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_sword_character_77
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 28
+        width: 44
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b02e5253528d500800000000000000
+      internalID: 421127475358206818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      blood_sword_character_0: 6652170988643086569
+      blood_sword_character_1: 4802549198770337499
+      blood_sword_character_10: 9163049270469755080
+      blood_sword_character_11: 6408037754290687699
+      blood_sword_character_12: 1066235339994977559
+      blood_sword_character_13: 5014013239854617469
+      blood_sword_character_14: -4868697545570389611
+      blood_sword_character_15: 3912763903796669406
+      blood_sword_character_16: -1918810104762969482
+      blood_sword_character_17: 7402757338291301685
+      blood_sword_character_18: 7592720230423420923
+      blood_sword_character_19: 7499332192544425126
+      blood_sword_character_2: 7268460651850615000
+      blood_sword_character_20: -5003325266177593854
+      blood_sword_character_21: -7942670222056604089
+      blood_sword_character_22: -8863136551950558106
+      blood_sword_character_23: 5391295786803933849
+      blood_sword_character_24: -3226162434374780663
+      blood_sword_character_25: 6893766763727122115
+      blood_sword_character_26: -5876050308453222923
+      blood_sword_character_27: 924480820206320947
+      blood_sword_character_28: -391662338011471822
+      blood_sword_character_29: -8822051377691681322
+      blood_sword_character_3: 8770181305732838163
+      blood_sword_character_30: 6453321138657990648
+      blood_sword_character_31: 5190458599064423834
+      blood_sword_character_32: -7544920743305848300
+      blood_sword_character_33: 499659652805546177
+      blood_sword_character_34: -3810184315108935943
+      blood_sword_character_35: -6858252352884733236
+      blood_sword_character_36: -5188515121638935008
+      blood_sword_character_37: -3246217565742764724
+      blood_sword_character_38: 4827297148795100892
+      blood_sword_character_39: -2291369144066251056
+      blood_sword_character_4: 3050077857247900970
+      blood_sword_character_40: 2526495398222350358
+      blood_sword_character_41: 7314762088493230551
+      blood_sword_character_42: -6535399656162054205
+      blood_sword_character_43: 5958266937222874528
+      blood_sword_character_44: -2448388677668640321
+      blood_sword_character_45: -882373043214616091
+      blood_sword_character_46: -8991972566371838083
+      blood_sword_character_47: -1979615123162447521
+      blood_sword_character_48: 9195411091184387813
+      blood_sword_character_49: -3481587357431983020
+      blood_sword_character_5: -6676538122327139390
+      blood_sword_character_50: -611072663119773529
+      blood_sword_character_51: 6466142507764513224
+      blood_sword_character_52: 8592075533783219938
+      blood_sword_character_53: 4847367362413084995
+      blood_sword_character_54: -1998392920962811223
+      blood_sword_character_55: -6493805075678232561
+      blood_sword_character_56: 8132348696085518588
+      blood_sword_character_57: 8280302062500101047
+      blood_sword_character_58: -9218684652332079390
+      blood_sword_character_59: 1439660184814562916
+      blood_sword_character_6: 4984782694318419926
+      blood_sword_character_60: -1321669306054171691
+      blood_sword_character_61: -4081562537670672830
+      blood_sword_character_62: -4863499011404291879
+      blood_sword_character_63: 3928272407626120087
+      blood_sword_character_64: 2421757591229469946
+      blood_sword_character_65: 9137776403650454297
+      blood_sword_character_66: 7406618799404768598
+      blood_sword_character_67: -4402106763661975292
+      blood_sword_character_68: 8401835970162726514
+      blood_sword_character_69: -5256363628172947049
+      blood_sword_character_7: 6788819143433671565
+      blood_sword_character_70: 2183053285720555692
+      blood_sword_character_71: -7295178251617428248
+      blood_sword_character_72: 5262551113229654443
+      blood_sword_character_73: -7998448980721698020
+      blood_sword_character_74: -5119849567353712029
+      blood_sword_character_75: 2915972726212897772
+      blood_sword_character_76: 4920031460345814291
+      blood_sword_character_77: 421127475358206818
+      blood_sword_character_8: 2039232382201557388
+      blood_sword_character_9: 21713082551806929
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
