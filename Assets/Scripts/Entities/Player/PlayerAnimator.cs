@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Entities.Player.Factories;
+using UnityEngine;
 using Utility;
 
 namespace Entities.Player
@@ -7,6 +8,7 @@ namespace Entities.Player
     {
         AnimMoveX,
         AnimMoveY,
+        MorphType,
     }
     
     public class PlayerAnimator
@@ -28,10 +30,11 @@ namespace Entities.Player
             }
         }
 
-        public void UpdateBlendTree()
+        public void UpdateBlendTree(MorphType currentMorph)
         {
             animator.SetFloat(AnimationParameterName.AnimMoveX.ToString(), PlayerInput.movementDirection.x);
             animator.SetFloat(AnimationParameterName.AnimMoveY.ToString(), PlayerInput.movementDirection.y);
+            animator.SetFloat(AnimationParameterName.MorphType.ToString(), (float)currentMorph);
         }
     }
 }

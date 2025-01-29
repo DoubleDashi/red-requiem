@@ -50,7 +50,7 @@ namespace Entities.Player
         protected override void Update()
         {
             base.Update();
-            Animator.UpdateBlendTree();
+            Animator.UpdateBlendTree(morph.config.type);
             Movement.Flip();
         }
 

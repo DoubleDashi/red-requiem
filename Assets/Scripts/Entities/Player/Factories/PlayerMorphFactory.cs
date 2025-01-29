@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Configs;
+using UnityEngine;
 
 namespace Entities.Player.Factories
 {
@@ -14,6 +15,7 @@ namespace Entities.Player.Factories
 
         public MorphConfig FindByType(MorphType type)
         {
+            Debug.Log("Finding of type: " + type);
             return _morphConfigs.Find(morphConfig => morphConfig.type == type);
         }
     }
