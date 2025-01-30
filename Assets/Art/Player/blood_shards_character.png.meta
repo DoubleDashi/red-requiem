@@ -1,196 +1,445 @@
 fileFormatVersion: 2
-guid: dee13a3441dd4ce479132affc2fda35f
+guid: 16081dae288a5714cb5edb5916c75c15
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3479630857610519022
-    second: blood_canon_character_0
+      213: 4653925190447041093
+    second: blood_shards_character_0
   - first:
-      213: -3381810037908203823
-    second: blood_canon_character_1
+      213: 2062747392856446773
+    second: blood_shards_character_1
   - first:
-      213: 7824033734507594860
-    second: blood_canon_character_2
+      213: 3275450944484425242
+    second: blood_shards_character_2
   - first:
-      213: -3653498078804942700
-    second: blood_canon_character_3
+      213: -2150564296123412654
+    second: blood_shards_character_3
   - first:
-      213: -8945608073096168848
-    second: blood_canon_character_4
+      213: -6609893046307024636
+    second: blood_shards_character_4
   - first:
-      213: -8524380532275571820
-    second: blood_canon_character_5
+      213: 8112765797122842972
+    second: blood_shards_character_5
   - first:
-      213: -5049384433226993290
-    second: blood_canon_character_6
+      213: 311645272887679200
+    second: blood_shards_character_6
   - first:
-      213: 6245171767842181319
-    second: blood_canon_character_7
+      213: -524391060667875339
+    second: blood_shards_character_7
   - first:
-      213: 7765495991225430403
-    second: blood_canon_character_8
+      213: 5013343318459605301
+    second: blood_shards_character_8
   - first:
-      213: 2801209185110086917
-    second: blood_canon_character_9
+      213: -2565863948524955816
+    second: blood_shards_character_9
   - first:
-      213: 5844932909689793085
-    second: blood_canon_character_10
+      213: -8733210781027506865
+    second: blood_shards_character_10
   - first:
-      213: -3453742284686038624
-    second: blood_canon_character_11
+      213: 663910155242342711
+    second: blood_shards_character_11
   - first:
-      213: -8908536057610089130
-    second: blood_canon_character_12
+      213: 3779673500469652785
+    second: blood_shards_character_12
   - first:
-      213: 3995170564504011980
-    second: blood_canon_character_13
+      213: 435934331484116375
+    second: blood_shards_character_13
   - first:
-      213: -2688973932401169328
-    second: blood_canon_character_14
+      213: 4401610609564895739
+    second: blood_shards_character_14
   - first:
-      213: -3310895957490413099
-    second: blood_canon_character_15
+      213: -8190676472155577559
+    second: blood_shards_character_15
   - first:
-      213: 5083273135368945051
-    second: blood_canon_character_16
+      213: -2683308741114120271
+    second: blood_shards_character_16
   - first:
-      213: 1676767249198739747
-    second: blood_canon_character_17
+      213: 5735524835570069331
+    second: blood_shards_character_17
   - first:
-      213: 3193445881637564803
-    second: blood_canon_character_18
+      213: 4272126843995431914
+    second: blood_shards_character_18
   - first:
-      213: -5592792773770837200
-    second: blood_canon_character_19
+      213: -8541085544483578610
+    second: blood_shards_character_19
   - first:
-      213: 4604476568455500175
-    second: blood_canon_character_20
+      213: -2464507379188342670
+    second: blood_shards_character_20
   - first:
-      213: 1141185723450241211
-    second: blood_canon_character_21
+      213: 4644937577244112222
+    second: blood_shards_character_21
   - first:
-      213: -4777959311059820347
-    second: blood_canon_character_22
+      213: 3479542699302750337
+    second: blood_shards_character_22
   - first:
-      213: 7178733595243033520
-    second: blood_canon_character_23
+      213: 77513421467502699
+    second: blood_shards_character_23
   - first:
-      213: -6926415336577077203
-    second: blood_canon_character_24
+      213: -7128734041508737107
+    second: blood_shards_character_24
   - first:
-      213: -3620093310535929210
-    second: blood_canon_character_25
+      213: 2239132253573506351
+    second: blood_shards_character_25
   - first:
-      213: 3298695473993100479
-    second: blood_canon_character_26
+      213: -2263867468933738213
+    second: blood_shards_character_26
   - first:
-      213: -4559317067905998769
-    second: blood_canon_character_27
+      213: -1873617728409147038
+    second: blood_shards_character_27
   - first:
-      213: -7006637563428654773
-    second: blood_canon_character_28
+      213: 4334002078320672330
+    second: blood_shards_character_28
   - first:
-      213: 2892440412733287809
-    second: blood_canon_character_29
+      213: -352702391860613489
+    second: blood_shards_character_29
   - first:
-      213: 5709827121710310109
-    second: blood_canon_character_30
+      213: 9079957771335188945
+    second: blood_shards_character_30
   - first:
-      213: 3144083205489617822
-    second: blood_canon_character_31
+      213: 3805761022600249745
+    second: blood_shards_character_31
   - first:
-      213: -4430914596925786430
-    second: blood_canon_character_32
+      213: -8912775940168996026
+    second: blood_shards_character_32
   - first:
-      213: 1348528011116649988
-    second: blood_canon_character_33
+      213: 5605253950659245951
+    second: blood_shards_character_33
   - first:
-      213: -7067307181867336393
-    second: blood_canon_character_34
+      213: -7965934925559544801
+    second: blood_shards_character_34
   - first:
-      213: -1948474053662910049
-    second: blood_canon_character_35
+      213: -7588639781692684702
+    second: blood_shards_character_35
   - first:
-      213: 5442744084899448484
-    second: blood_canon_character_36
+      213: -7737340942038109703
+    second: blood_shards_character_36
   - first:
-      213: -1535745089501183788
-    second: blood_canon_character_37
+      213: -4642095393186815541
+    second: blood_shards_character_37
   - first:
-      213: 5037863017128761232
-    second: blood_canon_character_38
+      213: -1983498909907100101
+    second: blood_shards_character_38
   - first:
-      213: -7338992362141448252
-    second: blood_canon_character_39
+      213: 1522361267453672633
+    second: blood_shards_character_39
   - first:
-      213: 690150331829145319
-    second: blood_canon_character_40
+      213: 1863521061343369044
+    second: blood_shards_character_40
   - first:
-      213: -4445785741769472883
-    second: blood_canon_character_41
+      213: 7411464104952572535
+    second: blood_shards_character_41
   - first:
-      213: -1300886810603413242
-    second: blood_canon_character_42
+      213: 4611439930944146752
+    second: blood_shards_character_42
   - first:
-      213: 7132310044980436587
-    second: blood_canon_character_43
+      213: 6369467881942110605
+    second: blood_shards_character_43
   - first:
-      213: 7439593391749478877
-    second: blood_canon_character_44
+      213: -911486407865144026
+    second: blood_shards_character_44
   - first:
-      213: -8589733301901391198
-    second: blood_canon_character_45
+      213: 1927308116731216744
+    second: blood_shards_character_45
   - first:
-      213: 4719766773784190629
-    second: blood_canon_character_46
+      213: -8829824804628111596
+    second: blood_shards_character_46
   - first:
-      213: -7585819577523437396
-    second: blood_canon_character_47
+      213: 6067346714088730251
+    second: blood_shards_character_47
   - first:
-      213: -4240560343353088453
-    second: blood_canon_character_48
+      213: 7194987236602092155
+    second: blood_shards_character_48
   - first:
-      213: 1891309736057183045
-    second: blood_canon_character_49
+      213: -3999787129640104170
+    second: blood_shards_character_49
   - first:
-      213: 1205652946691566122
-    second: blood_canon_character_50
+      213: -1531637526094368277
+    second: blood_shards_character_50
   - first:
-      213: 8864266500588232377
-    second: blood_canon_character_51
+      213: -7356320614957173904
+    second: blood_shards_character_51
   - first:
-      213: 6120598941717128041
-    second: blood_canon_character_52
+      213: 3813585099976588177
+    second: blood_shards_character_52
   - first:
-      213: -949489851418280877
-    second: blood_canon_character_53
+      213: -1816049395162167412
+    second: blood_shards_character_53
   - first:
-      213: 619822636221034057
-    second: blood_canon_character_54
+      213: -8837050992384085233
+    second: blood_shards_character_54
   - first:
-      213: -3028141341220432965
-    second: blood_canon_character_55
+      213: 2933985997113255364
+    second: blood_shards_character_55
   - first:
-      213: 6722276212134971936
-    second: blood_canon_character_56
+      213: 1022064196554243454
+    second: blood_shards_character_56
   - first:
-      213: -8137748737666124598
-    second: blood_canon_character_57
+      213: 3431887970632547955
+    second: blood_shards_character_57
   - first:
-      213: 4416243749874134141
-    second: blood_canon_character_58
+      213: -1332072284507148241
+    second: blood_shards_character_58
   - first:
-      213: 7657372764960410941
-    second: blood_canon_character_59
+      213: -5286587518433282209
+    second: blood_shards_character_59
   - first:
-      213: -7355614946055153628
-    second: blood_canon_character_60
+      213: -8454829399001494564
+    second: blood_shards_character_60
   - first:
-      213: 3004710019907803916
-    second: blood_canon_character_61
+      213: -8592162133521596924
+    second: blood_shards_character_61
   - first:
-      213: -4910194869921133269
-    second: blood_canon_character_62
+      213: -8435068504957074551
+    second: blood_shards_character_62
+  - first:
+      213: 5085815982850001164
+    second: blood_shards_character_63
+  - first:
+      213: -3139894023943462134
+    second: blood_shards_character_64
+  - first:
+      213: -2965171209869610073
+    second: blood_shards_character_65
+  - first:
+      213: -8694212585843755031
+    second: blood_shards_character_66
+  - first:
+      213: -6664594860465577933
+    second: blood_shards_character_67
+  - first:
+      213: -3607016388218582764
+    second: blood_shards_character_68
+  - first:
+      213: 6222209822749670453
+    second: blood_shards_character_69
+  - first:
+      213: -8499380485297973274
+    second: blood_shards_character_70
+  - first:
+      213: -3013485888624844269
+    second: blood_shards_character_71
+  - first:
+      213: -3684235785880071000
+    second: blood_shards_character_72
+  - first:
+      213: 2177509349439357675
+    second: blood_shards_character_73
+  - first:
+      213: 3466678600712848436
+    second: blood_shards_character_74
+  - first:
+      213: 6648133173139794300
+    second: blood_shards_character_75
+  - first:
+      213: -8399201899183663112
+    second: blood_shards_character_76
+  - first:
+      213: -1826407436294945998
+    second: blood_shards_character_77
+  - first:
+      213: 3842723183387115656
+    second: blood_shards_character_78
+  - first:
+      213: 971725813989091740
+    second: blood_shards_character_79
+  - first:
+      213: 4627233443427934188
+    second: blood_shards_character_80
+  - first:
+      213: 2798602191428232844
+    second: blood_shards_character_81
+  - first:
+      213: -1553895827005699765
+    second: blood_shards_character_82
+  - first:
+      213: -3002559272280694811
+    second: blood_shards_character_83
+  - first:
+      213: -8103280468186209012
+    second: blood_shards_character_84
+  - first:
+      213: -741135181196472603
+    second: blood_shards_character_85
+  - first:
+      213: -1286552671762017742
+    second: blood_shards_character_86
+  - first:
+      213: 7443487013686779241
+    second: blood_shards_character_87
+  - first:
+      213: 8650271214422798596
+    second: blood_shards_character_88
+  - first:
+      213: 2822353783090673444
+    second: blood_shards_character_89
+  - first:
+      213: -4268100831707039478
+    second: blood_shards_character_90
+  - first:
+      213: -8158367782078824273
+    second: blood_shards_character_91
+  - first:
+      213: 3185246334537648742
+    second: blood_shards_character_92
+  - first:
+      213: 9048440468119132514
+    second: blood_shards_character_93
+  - first:
+      213: 7255683806294567875
+    second: blood_shards_character_94
+  - first:
+      213: 8105602341704425206
+    second: blood_shards_character_95
+  - first:
+      213: -5358223856189443249
+    second: blood_shards_character_96
+  - first:
+      213: 642800086874071527
+    second: blood_shards_character_97
+  - first:
+      213: -2841667592875801302
+    second: blood_shards_character_98
+  - first:
+      213: 5177297538965465333
+    second: blood_shards_character_99
+  - first:
+      213: -8093178535778410114
+    second: blood_shards_character_100
+  - first:
+      213: -76525186759161996
+    second: blood_shards_character_101
+  - first:
+      213: 2939488474692031344
+    second: blood_shards_character_102
+  - first:
+      213: -2880886191717429374
+    second: blood_shards_character_103
+  - first:
+      213: 5029647432156079399
+    second: blood_shards_character_104
+  - first:
+      213: -3054038429015816863
+    second: blood_shards_character_105
+  - first:
+      213: -6328563564527574817
+    second: blood_shards_character_106
+  - first:
+      213: 4726892240766321450
+    second: blood_shards_character_107
+  - first:
+      213: 1840040388967384679
+    second: blood_shards_character_108
+  - first:
+      213: 3643072419399725795
+    second: blood_shards_character_109
+  - first:
+      213: -731038917431880699
+    second: blood_shards_character_110
+  - first:
+      213: 6714525322413191536
+    second: blood_shards_character_111
+  - first:
+      213: -5050254223721341268
+    second: blood_shards_character_112
+  - first:
+      213: -3647681063449491593
+    second: blood_shards_character_113
+  - first:
+      213: -34079860079520979
+    second: blood_shards_character_114
+  - first:
+      213: -1477588380654408102
+    second: blood_shards_character_115
+  - first:
+      213: 784300282849033892
+    second: blood_shards_character_116
+  - first:
+      213: -8082957220395758009
+    second: blood_shards_character_117
+  - first:
+      213: 7487343891611639288
+    second: blood_shards_character_118
+  - first:
+      213: -2487175453050737786
+    second: blood_shards_character_119
+  - first:
+      213: 7876130722071482785
+    second: blood_shards_character_120
+  - first:
+      213: 3921759353822303099
+    second: blood_shards_character_121
+  - first:
+      213: 7136444488356540301
+    second: blood_shards_character_122
+  - first:
+      213: -1930587135229270293
+    second: blood_shards_character_123
+  - first:
+      213: -6936791408856369665
+    second: blood_shards_character_124
+  - first:
+      213: 4154725922744838558
+    second: blood_shards_character_125
+  - first:
+      213: -4272172158356273141
+    second: blood_shards_character_126
+  - first:
+      213: -2675296066880668553
+    second: blood_shards_character_127
+  - first:
+      213: -8810500176926682288
+    second: blood_shards_character_128
+  - first:
+      213: -8574704640915070339
+    second: blood_shards_character_129
+  - first:
+      213: -1663818781084483164
+    second: blood_shards_character_130
+  - first:
+      213: 5100788296510127722
+    second: blood_shards_character_131
+  - first:
+      213: 6055200891749177844
+    second: blood_shards_character_132
+  - first:
+      213: -2820877000614471944
+    second: blood_shards_character_133
+  - first:
+      213: -9114021605920746476
+    second: blood_shards_character_134
+  - first:
+      213: 475998277365849557
+    second: blood_shards_character_135
+  - first:
+      213: 5050680589371315800
+    second: blood_shards_character_136
+  - first:
+      213: -78418382088541095
+    second: blood_shards_character_137
+  - first:
+      213: 6648828074387439561
+    second: blood_shards_character_138
+  - first:
+      213: -6152305847465451143
+    second: blood_shards_character_139
+  - first:
+      213: 1629131540621725933
+    second: blood_shards_character_140
+  - first:
+      213: -1473272916848994714
+    second: blood_shards_character_141
+  - first:
+      213: -3005060044374486648
+    second: blood_shards_character_142
+  - first:
+      213: -5049589540409693503
+    second: blood_shards_character_143
+  - first:
+      213: 1561131956882403243
+    second: blood_shards_character_144
+  - first:
+      213: -4400110526195789756
+    second: blood_shards_character_145
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -312,7 +561,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blood_canon_character_0
+      name: blood_shards_character_0
       rect:
         serializedVersion: 2
         x: 0
@@ -327,14 +576,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee1ec5144d12a4030800000000000000
-      internalID: 3479630857610519022
+      spriteID: 54a86db9d40169040800000000000000
+      internalID: 4653925190447041093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_1
+      name: blood_shards_character_1
       rect:
         serializedVersion: 2
         x: 128
@@ -349,14 +598,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d691a820b56111d0800000000000000
-      internalID: -3381810037908203823
+      spriteID: 537529c23d950ac10800000000000000
+      internalID: 2062747392856446773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_2
+      name: blood_shards_character_2
       rect:
         serializedVersion: 2
         x: 256
@@ -371,14 +620,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c648fff5a3d849c60800000000000000
-      internalID: 7824033734507594860
+      spriteID: a1e3639a74db47d20800000000000000
+      internalID: 3275450944484425242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_3
+      name: blood_shards_character_3
       rect:
         serializedVersion: 2
         x: 384
@@ -393,14 +642,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4906249bada2c4dc0800000000000000
-      internalID: -3653498078804942700
+      spriteID: 25f0de6ba29a722e0800000000000000
+      internalID: -2150564296123412654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_4
+      name: blood_shards_character_4
       rect:
         serializedVersion: 2
         x: 512
@@ -415,14 +664,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07a7c377ad0dad380800000000000000
-      internalID: -8945608073096168848
+      spriteID: 4019b8b8b41f444a0800000000000000
+      internalID: -6609893046307024636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_5
+      name: blood_shards_character_5
       rect:
         serializedVersion: 2
         x: 640
@@ -437,14 +686,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 493957be11153b980800000000000000
-      internalID: -8524380532275571820
+      spriteID: c51227b5285569070800000000000000
+      internalID: 8112765797122842972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_6
+      name: blood_shards_character_6
       rect:
         serializedVersion: 2
         x: 768
@@ -459,14 +708,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6713e1b5c9bfce9b0800000000000000
-      internalID: -5049384433226993290
+      spriteID: 0e8566a79bf235400800000000000000
+      internalID: 311645272887679200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_7
+      name: blood_shards_character_7
       rect:
         serializedVersion: 2
         x: 896
@@ -481,14 +730,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7c0188f62ae4ba650800000000000000
-      internalID: 6245171767842181319
+      spriteID: 5ff3081db1df8b8f0800000000000000
+      internalID: -524391060667875339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_8
+      name: blood_shards_character_8
       rect:
         serializedVersion: 2
         x: 1024
@@ -503,14 +752,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38136bde57594cb60800000000000000
-      internalID: 7765495991225430403
+      spriteID: 531ecd1bf29f29540800000000000000
+      internalID: 5013343318459605301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_9
+      name: blood_shards_character_9
       rect:
         serializedVersion: 2
         x: 1152
@@ -525,14 +774,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5055c0499e4efd620800000000000000
-      internalID: 2801209185110086917
+      spriteID: 85750365558346cd0800000000000000
+      internalID: -2565863948524955816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_10
+      name: blood_shards_character_10
       rect:
         serializedVersion: 2
         x: 1280
@@ -547,14 +796,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3aec0a738f5d1150800000000000000
-      internalID: 5844932909689793085
+      spriteID: f456e30b0176dc680800000000000000
+      internalID: -8733210781027506865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_11
+      name: blood_shards_character_11
       rect:
         serializedVersion: 2
         x: 1408
@@ -569,14 +818,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a9ea87d0b7d110d0800000000000000
-      internalID: -3453742284686038624
+      spriteID: 7398ef5c4cea63900800000000000000
+      internalID: 663910155242342711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_12
+      name: blood_shards_character_12
       rect:
         serializedVersion: 2
         x: 0
@@ -591,14 +840,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65d4461b7a58e5480800000000000000
-      internalID: -8908536057610089130
+      spriteID: 13d637ae509147430800000000000000
+      internalID: 3779673500469652785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_13
+      name: blood_shards_character_13
       rect:
         serializedVersion: 2
         x: 128
@@ -613,14 +862,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc4cb5a0672b17730800000000000000
-      internalID: 3995170564504011980
+      spriteID: 795128df6ffbc0600800000000000000
+      internalID: 435934331484116375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_14
+      name: blood_shards_character_14
       rect:
         serializedVersion: 2
         x: 256
@@ -635,14 +884,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05c61fc8478deaad0800000000000000
-      internalID: -2688973932401169328
+      spriteID: bf9c4b65789a51d30800000000000000
+      internalID: 4401610609564895739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_15
+      name: blood_shards_character_15
       rect:
         serializedVersion: 2
         x: 384
@@ -657,14 +906,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d1d1852ba55d02d0800000000000000
-      internalID: -3310895957490413099
+      spriteID: 9236407052fd45e80800000000000000
+      internalID: -8190676472155577559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_16
+      name: blood_shards_character_16
       rect:
         serializedVersion: 2
         x: 512
@@ -679,14 +928,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9db3f9fbf96b8640800000000000000
-      internalID: 5083273135368945051
+      spriteID: 1b7313faae8f2cad0800000000000000
+      internalID: -2683308741114120271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_17
+      name: blood_shards_character_17
       rect:
         serializedVersion: 2
         x: 640
@@ -701,14 +950,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 321ff73ede2154710800000000000000
-      internalID: 1676767249198739747
+      spriteID: 35fa598237da89f40800000000000000
+      internalID: 5735524835570069331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_18
+      name: blood_shards_character_18
       rect:
         serializedVersion: 2
         x: 768
@@ -723,14 +972,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 381f0781c16615c20800000000000000
-      internalID: 3193445881637564803
+      spriteID: ae322cbdab4a94b30800000000000000
+      internalID: 4272126843995431914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_19
+      name: blood_shards_character_19
       rect:
         serializedVersion: 2
         x: 896
@@ -745,14 +994,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0338409aa986262b0800000000000000
-      internalID: -5592792773770837200
+      spriteID: e0d15dc23f7f77980800000000000000
+      internalID: -8541085544483578610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_20
+      name: blood_shards_character_20
       rect:
         serializedVersion: 2
         x: 0
@@ -767,14 +1016,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f81566f1b0366ef30800000000000000
-      internalID: 4604476568455500175
+      spriteID: 270662d989f4ccdd0800000000000000
+      internalID: -2464507379188342670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_21
+      name: blood_shards_character_21
       rect:
         serializedVersion: 2
         x: 0
@@ -789,14 +1038,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb0bff48e5e46df00800000000000000
-      internalID: 1141185723450241211
+      spriteID: e55bf77dd12267040800000000000000
+      internalID: 4644937577244112222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_22
+      name: blood_shards_character_22
       rect:
         serializedVersion: 2
         x: 128
@@ -811,14 +1060,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c06201425741bdb0800000000000000
-      internalID: -4777959311059820347
+      spriteID: 1888ebc46a1d94030800000000000000
+      internalID: 3479542699302750337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_23
+      name: blood_shards_character_23
       rect:
         serializedVersion: 2
         x: 256
@@ -833,14 +1082,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b3bf999b2cff9360800000000000000
-      internalID: 7178733595243033520
+      spriteID: b6845efcb02631100800000000000000
+      internalID: 77513421467502699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_24
+      name: blood_shards_character_24
       rect:
         serializedVersion: 2
         x: 384
@@ -855,14 +1104,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d207188f2fd60ef90800000000000000
-      internalID: -6926415336577077203
+      spriteID: daf03ada826a11d90800000000000000
+      internalID: -7128734041508737107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_25
+      name: blood_shards_character_25
       rect:
         serializedVersion: 2
         x: 512
@@ -877,14 +1126,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 682fcbb6058d2cdc0800000000000000
-      internalID: -3620093310535929210
+      spriteID: f256e53dbeef21f10800000000000000
+      internalID: 2239132253573506351
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_26
+      name: blood_shards_character_26
       rect:
         serializedVersion: 2
         x: 640
@@ -899,14 +1148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbc2c8d6e0257cd20800000000000000
-      internalID: 3298695473993100479
+      spriteID: b1154af08802590e0800000000000000
+      internalID: -2263867468933738213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_27
+      name: blood_shards_character_27
       rect:
         serializedVersion: 2
         x: 768
@@ -921,14 +1170,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f406615784d0ab0c0800000000000000
-      internalID: -4559317067905998769
+      spriteID: 2696c455a929ff5e0800000000000000
+      internalID: -1873617728409147038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_28
+      name: blood_shards_character_28
       rect:
         serializedVersion: 2
         x: 896
@@ -943,14 +1192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b413de1424c63ce90800000000000000
-      internalID: -7006637563428654773
+      spriteID: a4ebb1e7de7752c30800000000000000
+      internalID: 4334002078320672330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_29
+      name: blood_shards_character_29
       rect:
         serializedVersion: 2
         x: 1024
@@ -965,14 +1214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18da3f60b33042820800000000000000
-      internalID: 2892440412733287809
+      spriteID: f8ea7b51b03fa1bf0800000000000000
+      internalID: -352702391860613489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_30
+      name: blood_shards_character_30
       rect:
         serializedVersion: 2
         x: 1152
@@ -987,14 +1236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd22f66e3816d3f40800000000000000
-      internalID: 5709827121710310109
+      spriteID: 1d14bff3c7d720e70800000000000000
+      internalID: 9079957771335188945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_31
+      name: blood_shards_character_31
       rect:
         serializedVersion: 2
         x: 1280
@@ -1009,14 +1258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e9bea7f640702ab20800000000000000
-      internalID: 3144083205489617822
+      spriteID: 1918d1c7c77c0d430800000000000000
+      internalID: 3805761022600249745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_32
+      name: blood_shards_character_32
       rect:
         serializedVersion: 2
         x: 1408
@@ -1031,14 +1280,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2c6352c66aa3282c0800000000000000
-      internalID: -4430914596925786430
+      spriteID: 64b249b11857f4480800000000000000
+      internalID: -8912775940168996026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_33
+      name: blood_shards_character_33
       rect:
         serializedVersion: 2
         x: 0
@@ -1053,14 +1302,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40e9540d41fe6b210800000000000000
-      internalID: 1348528011116649988
+      spriteID: f7736ec25ccd9cd40800000000000000
+      internalID: 5605253950659245951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_34
+      name: blood_shards_character_34
       rect:
         serializedVersion: 2
         x: 128
@@ -1075,14 +1324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73dfa32ff81ebed90800000000000000
-      internalID: -7067307181867336393
+      spriteID: f14452af360537190800000000000000
+      internalID: -7965934925559544801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_35
+      name: blood_shards_character_35
       rect:
         serializedVersion: 2
         x: 256
@@ -1097,14 +1346,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f995b51fb21a5f4e0800000000000000
-      internalID: -1948474053662910049
+      spriteID: 2664fcb235cbfa690800000000000000
+      internalID: -7588639781692684702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_36
+      name: blood_shards_character_36
       rect:
         serializedVersion: 2
         x: 384
@@ -1119,14 +1368,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a64ac788e2888b40800000000000000
-      internalID: 5442744084899448484
+      spriteID: 9f17bbb48617f9490800000000000000
+      internalID: -7737340942038109703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_37
+      name: blood_shards_character_37
       rect:
         serializedVersion: 2
         x: 512
@@ -1141,14 +1390,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d04bb25affefaae0800000000000000
-      internalID: -1535745089501183788
+      spriteID: bc16f93b5d6f39fb0800000000000000
+      internalID: -4642095393186815541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_38
+      name: blood_shards_character_38
       rect:
         serializedVersion: 2
         x: 640
@@ -1163,14 +1412,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 097990be8b51ae540800000000000000
-      internalID: 5037863017128761232
+      spriteID: b3edc9e10423974e0800000000000000
+      internalID: -1983498909907100101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_39
+      name: blood_shards_character_39
       rect:
         serializedVersion: 2
         x: 768
@@ -1185,14 +1434,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c7014d8459a62a90800000000000000
-      internalID: -7338992362141448252
+      spriteID: 9bcb366c183802510800000000000000
+      internalID: 1522361267453672633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_40
+      name: blood_shards_character_40
       rect:
         serializedVersion: 2
         x: 896
@@ -1207,14 +1456,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ee4b4af118e39900800000000000000
-      internalID: 690150331829145319
+      spriteID: 45794dc288e8cd910800000000000000
+      internalID: 1863521061343369044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_41
+      name: blood_shards_character_41
       rect:
         serializedVersion: 2
         x: 0
@@ -1229,14 +1478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8485523c656d42c0800000000000000
-      internalID: -4445785741769472883
+      spriteID: 77aa149f55fcad660800000000000000
+      internalID: 7411464104952572535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_42
+      name: blood_shards_character_42
       rect:
         serializedVersion: 2
         x: 0
@@ -1251,14 +1500,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6012ef0965252fde0800000000000000
-      internalID: -1300886810603413242
+      spriteID: 04d4afa4f202fff30800000000000000
+      internalID: 4611439930944146752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_43
+      name: blood_shards_character_43
       rect:
         serializedVersion: 2
         x: 128
@@ -1273,14 +1522,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6e5203823e0bf260800000000000000
-      internalID: 7132310044980436587
+      spriteID: d815b6faa45e46850800000000000000
+      internalID: 6369467881942110605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_44
+      name: blood_shards_character_44
       rect:
         serializedVersion: 2
         x: 256
@@ -1295,14 +1544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd9329ce5cebe3760800000000000000
-      internalID: 7439593391749478877
+      spriteID: 62de999f0ffb953f0800000000000000
+      internalID: -911486407865144026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_45
+      name: blood_shards_character_45
       rect:
         serializedVersion: 2
         x: 384
@@ -1317,14 +1566,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2aa03d082132bc880800000000000000
-      internalID: -8589733301901391198
+      spriteID: 863cd76558c2fba10800000000000000
+      internalID: 1927308116731216744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_46
+      name: blood_shards_character_46
       rect:
         serializedVersion: 2
         x: 512
@@ -1339,14 +1588,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ae1916dfdaff7140800000000000000
-      internalID: 4719766773784190629
+      spriteID: 41f55336f19267580800000000000000
+      internalID: -8829824804628111596
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_47
+      name: blood_shards_character_47
       rect:
         serializedVersion: 2
         x: 640
@@ -1361,14 +1610,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca0038f1941c9b690800000000000000
-      internalID: -7585819577523437396
+      spriteID: b8e6466b0bb833450800000000000000
+      internalID: 6067346714088730251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_48
+      name: blood_shards_character_48
       rect:
         serializedVersion: 2
         x: 768
@@ -1383,14 +1632,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b36a4ddc5d08625c0800000000000000
-      internalID: -4240560343353088453
+      spriteID: b7a132165cab9d360800000000000000
+      internalID: 7194987236602092155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_49
+      name: blood_shards_character_49
       rect:
         serializedVersion: 2
         x: 896
@@ -1405,14 +1654,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54b1de13f284f3a10800000000000000
-      internalID: 1891309736057183045
+      spriteID: 61f4f902cc6ed78c0800000000000000
+      internalID: -3999787129640104170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_50
+      name: blood_shards_character_50
       rect:
         serializedVersion: 2
         x: 1024
@@ -1427,14 +1676,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2a24f997f65bb010800000000000000
-      internalID: 1205652946691566122
+      spriteID: be1bc74f8c78ebae0800000000000000
+      internalID: -1531637526094368277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_51
+      name: blood_shards_character_51
       rect:
         serializedVersion: 2
         x: 1152
@@ -1449,14 +1698,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9bed4f9da63340b70800000000000000
-      internalID: 8864266500588232377
+      spriteID: 073389b406919e990800000000000000
+      internalID: -7356320614957173904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_52
+      name: blood_shards_character_52
       rect:
         serializedVersion: 2
         x: 1280
@@ -1471,14 +1720,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9636ea52f4cb0f450800000000000000
-      internalID: 6120598941717128041
+      spriteID: 19bb3d471739ce430800000000000000
+      internalID: 3813585099976588177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_53
+      name: blood_shards_character_53
       rect:
         serializedVersion: 2
         x: 1408
@@ -1493,14 +1742,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35cff50c20cb2d2f0800000000000000
-      internalID: -949489851418280877
+      spriteID: c87cbca62b81cc6e0800000000000000
+      internalID: -1816049395162167412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_54
+      name: blood_shards_character_54
       rect:
         serializedVersion: 2
         x: 0
@@ -1515,14 +1764,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94e63b7576d0a9800800000000000000
-      internalID: 619822636221034057
+      spriteID: f03fee071fc7c5580800000000000000
+      internalID: -8837050992384085233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_55
+      name: blood_shards_character_55
       rect:
         serializedVersion: 2
         x: 128
@@ -1537,14 +1786,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb391e27e71e9f5d0800000000000000
-      internalID: -3028141341220432965
+      spriteID: 4c5e7ed28bc97b820800000000000000
+      internalID: 2933985997113255364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_56
+      name: blood_shards_character_56
       rect:
         serializedVersion: 2
         x: 256
@@ -1559,14 +1808,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02a0d5a49925a4d50800000000000000
-      internalID: 6722276212134971936
+      spriteID: e7db24db8f91f2e00800000000000000
+      internalID: 1022064196554243454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_57
+      name: blood_shards_character_57
       rect:
         serializedVersion: 2
         x: 384
@@ -1581,14 +1830,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac4f60483a8e01f80800000000000000
-      internalID: -8137748737666124598
+      spriteID: 37e3d762de380af20800000000000000
+      internalID: 3431887970632547955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_58
+      name: blood_shards_character_58
       rect:
         serializedVersion: 2
         x: 512
@@ -1603,14 +1852,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7c69c0da46a94d30800000000000000
-      internalID: 4416243749874134141
+      spriteID: f20feca9057838de0800000000000000
+      internalID: -1332072284507148241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_59
+      name: blood_shards_character_59
       rect:
         serializedVersion: 2
         x: 640
@@ -1625,14 +1874,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d3d473095f3744a60800000000000000
-      internalID: 7657372764960410941
+      spriteID: f5735c959a442a6b0800000000000000
+      internalID: -5286587518433282209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_60
+      name: blood_shards_character_60
       rect:
         serializedVersion: 2
         x: 768
@@ -1647,14 +1896,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42814d3ad2b9be990800000000000000
-      internalID: -7355614946055153628
+      spriteID: cdb8cfb05796aaa80800000000000000
+      internalID: -8454829399001494564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_61
+      name: blood_shards_character_61
       rect:
         serializedVersion: 2
         x: 896
@@ -1669,14 +1918,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0b59ade7dfd2b920800000000000000
-      internalID: 3004710019907803916
+      spriteID: 40ef1e2101282c880800000000000000
+      internalID: -8592162133521596924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: blood_canon_character_62
+      name: blood_shards_character_62
       rect:
         serializedVersion: 2
         x: 0
@@ -1691,8 +1940,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2dc768f7cb7bdbb0800000000000000
-      internalID: -4910194869921133269
+      spriteID: 983c2f9b2ed90fa80800000000000000
+      internalID: -8435068504957074551
       vertices: []
       indices: 
       edges: []
@@ -1701,7 +1950,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d1763e9914511774688398455bc05b64
+    spriteID: 4460c0a538a4a884ba88870f358043a2
     internalID: 0
     vertices: []
     indices: 
@@ -1711,69 +1960,69 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      blood_canon_character_0: 3479630857610519022
-      blood_canon_character_1: -3381810037908203823
-      blood_canon_character_10: 5844932909689793085
-      blood_canon_character_11: -3453742284686038624
-      blood_canon_character_12: -8908536057610089130
-      blood_canon_character_13: 3995170564504011980
-      blood_canon_character_14: -2688973932401169328
-      blood_canon_character_15: -3310895957490413099
-      blood_canon_character_16: 5083273135368945051
-      blood_canon_character_17: 1676767249198739747
-      blood_canon_character_18: 3193445881637564803
-      blood_canon_character_19: -5592792773770837200
-      blood_canon_character_2: 7824033734507594860
-      blood_canon_character_20: 4604476568455500175
-      blood_canon_character_21: 1141185723450241211
-      blood_canon_character_22: -4777959311059820347
-      blood_canon_character_23: 7178733595243033520
-      blood_canon_character_24: -6926415336577077203
-      blood_canon_character_25: -3620093310535929210
-      blood_canon_character_26: 3298695473993100479
-      blood_canon_character_27: -4559317067905998769
-      blood_canon_character_28: -7006637563428654773
-      blood_canon_character_29: 2892440412733287809
-      blood_canon_character_3: -3653498078804942700
-      blood_canon_character_30: 5709827121710310109
-      blood_canon_character_31: 3144083205489617822
-      blood_canon_character_32: -4430914596925786430
-      blood_canon_character_33: 1348528011116649988
-      blood_canon_character_34: -7067307181867336393
-      blood_canon_character_35: -1948474053662910049
-      blood_canon_character_36: 5442744084899448484
-      blood_canon_character_37: -1535745089501183788
-      blood_canon_character_38: 5037863017128761232
-      blood_canon_character_39: -7338992362141448252
-      blood_canon_character_4: -8945608073096168848
-      blood_canon_character_40: 690150331829145319
-      blood_canon_character_41: -4445785741769472883
-      blood_canon_character_42: -1300886810603413242
-      blood_canon_character_43: 7132310044980436587
-      blood_canon_character_44: 7439593391749478877
-      blood_canon_character_45: -8589733301901391198
-      blood_canon_character_46: 4719766773784190629
-      blood_canon_character_47: -7585819577523437396
-      blood_canon_character_48: -4240560343353088453
-      blood_canon_character_49: 1891309736057183045
-      blood_canon_character_5: -8524380532275571820
-      blood_canon_character_50: 1205652946691566122
-      blood_canon_character_51: 8864266500588232377
-      blood_canon_character_52: 6120598941717128041
-      blood_canon_character_53: -949489851418280877
-      blood_canon_character_54: 619822636221034057
-      blood_canon_character_55: -3028141341220432965
-      blood_canon_character_56: 6722276212134971936
-      blood_canon_character_57: -8137748737666124598
-      blood_canon_character_58: 4416243749874134141
-      blood_canon_character_59: 7657372764960410941
-      blood_canon_character_6: -5049384433226993290
-      blood_canon_character_60: -7355614946055153628
-      blood_canon_character_61: 3004710019907803916
-      blood_canon_character_62: -4910194869921133269
-      blood_canon_character_7: 6245171767842181319
-      blood_canon_character_8: 7765495991225430403
-      blood_canon_character_9: 2801209185110086917
+      blood_shards_character_0: 4653925190447041093
+      blood_shards_character_1: 2062747392856446773
+      blood_shards_character_10: -8733210781027506865
+      blood_shards_character_11: 663910155242342711
+      blood_shards_character_12: 3779673500469652785
+      blood_shards_character_13: 435934331484116375
+      blood_shards_character_14: 4401610609564895739
+      blood_shards_character_15: -8190676472155577559
+      blood_shards_character_16: -2683308741114120271
+      blood_shards_character_17: 5735524835570069331
+      blood_shards_character_18: 4272126843995431914
+      blood_shards_character_19: -8541085544483578610
+      blood_shards_character_2: 3275450944484425242
+      blood_shards_character_20: -2464507379188342670
+      blood_shards_character_21: 4644937577244112222
+      blood_shards_character_22: 3479542699302750337
+      blood_shards_character_23: 77513421467502699
+      blood_shards_character_24: -7128734041508737107
+      blood_shards_character_25: 2239132253573506351
+      blood_shards_character_26: -2263867468933738213
+      blood_shards_character_27: -1873617728409147038
+      blood_shards_character_28: 4334002078320672330
+      blood_shards_character_29: -352702391860613489
+      blood_shards_character_3: -2150564296123412654
+      blood_shards_character_30: 9079957771335188945
+      blood_shards_character_31: 3805761022600249745
+      blood_shards_character_32: -8912775940168996026
+      blood_shards_character_33: 5605253950659245951
+      blood_shards_character_34: -7965934925559544801
+      blood_shards_character_35: -7588639781692684702
+      blood_shards_character_36: -7737340942038109703
+      blood_shards_character_37: -4642095393186815541
+      blood_shards_character_38: -1983498909907100101
+      blood_shards_character_39: 1522361267453672633
+      blood_shards_character_4: -6609893046307024636
+      blood_shards_character_40: 1863521061343369044
+      blood_shards_character_41: 7411464104952572535
+      blood_shards_character_42: 4611439930944146752
+      blood_shards_character_43: 6369467881942110605
+      blood_shards_character_44: -911486407865144026
+      blood_shards_character_45: 1927308116731216744
+      blood_shards_character_46: -8829824804628111596
+      blood_shards_character_47: 6067346714088730251
+      blood_shards_character_48: 7194987236602092155
+      blood_shards_character_49: -3999787129640104170
+      blood_shards_character_5: 8112765797122842972
+      blood_shards_character_50: -1531637526094368277
+      blood_shards_character_51: -7356320614957173904
+      blood_shards_character_52: 3813585099976588177
+      blood_shards_character_53: -1816049395162167412
+      blood_shards_character_54: -8837050992384085233
+      blood_shards_character_55: 2933985997113255364
+      blood_shards_character_56: 1022064196554243454
+      blood_shards_character_57: 3431887970632547955
+      blood_shards_character_58: -1332072284507148241
+      blood_shards_character_59: -5286587518433282209
+      blood_shards_character_6: 311645272887679200
+      blood_shards_character_60: -8454829399001494564
+      blood_shards_character_61: -8592162133521596924
+      blood_shards_character_62: -8435068504957074551
+      blood_shards_character_7: -524391060667875339
+      blood_shards_character_8: 5013343318459605301
+      blood_shards_character_9: -2565863948524955816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

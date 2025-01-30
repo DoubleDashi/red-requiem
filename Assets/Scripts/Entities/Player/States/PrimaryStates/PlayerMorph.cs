@@ -15,22 +15,22 @@ namespace Entities.Player.States.PrimaryStates
             
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Shard);
-            }
-
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
                 Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Sword);
             }
-
+            
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Shard);
+            }
+            
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Cannon);
+                Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Hammer);
             }
             
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
-                Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Hammer);
+                Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Cannon);
             }
         }
 

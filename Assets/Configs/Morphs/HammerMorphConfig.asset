@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2258f0fe51744f0e9e3123fcfe55348c, type: 3}
   m_Name: HammerMorphConfig
   m_EditorClassIdentifier: 
-  type: 3
+  type: 2
   prefab: {fileID: 0}
   enemyKnockbackForce: 15
   selfKnockbackForce: 0
-  collisionPointOffset: {x: 0.3, y: 0}
-  collisionBox: {x: 1.2, y: 1.2}
+  armorPenetration: 0
+  collisionPointOffset: {x: 0, y: 0}
+  collisionBox: {x: 1, y: 1.2}
   damage: 30
   shakeIntensity: 0.981
   speed: 0

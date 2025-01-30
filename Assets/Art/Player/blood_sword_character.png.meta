@@ -360,10 +360,10 @@ TextureImporter:
       name: blood_sword_character_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 1055
-        width: 42
-        height: 53
+        x: 0
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -382,10 +382,10 @@ TextureImporter:
       name: blood_sword_character_1
       rect:
         serializedVersion: 2
-        x: 171
-        y: 1055
-        width: 42
-        height: 53
+        x: 128
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,10 +404,10 @@ TextureImporter:
       name: blood_sword_character_2
       rect:
         serializedVersion: 2
-        x: 299
-        y: 1055
-        width: 42
-        height: 53
+        x: 256
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -426,10 +426,10 @@ TextureImporter:
       name: blood_sword_character_3
       rect:
         serializedVersion: 2
-        x: 427
-        y: 1055
-        width: 42
-        height: 53
+        x: 384
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,10 +448,10 @@ TextureImporter:
       name: blood_sword_character_4
       rect:
         serializedVersion: 2
-        x: 555
-        y: 1055
-        width: 42
-        height: 53
+        x: 512
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,10 +470,10 @@ TextureImporter:
       name: blood_sword_character_5
       rect:
         serializedVersion: 2
-        x: 683
-        y: 1055
-        width: 42
-        height: 53
+        x: 640
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -492,10 +492,10 @@ TextureImporter:
       name: blood_sword_character_6
       rect:
         serializedVersion: 2
-        x: 810
-        y: 1055
-        width: 45
-        height: 52
+        x: 768
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -514,10 +514,10 @@ TextureImporter:
       name: blood_sword_character_7
       rect:
         serializedVersion: 2
-        x: 938
-        y: 1055
-        width: 43
-        height: 52
+        x: 896
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -536,10 +536,10 @@ TextureImporter:
       name: blood_sword_character_8
       rect:
         serializedVersion: 2
-        x: 1067
-        y: 1055
-        width: 42
-        height: 52
+        x: 1024
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -558,10 +558,10 @@ TextureImporter:
       name: blood_sword_character_9
       rect:
         serializedVersion: 2
-        x: 1195
-        y: 1055
-        width: 42
-        height: 52
+        x: 1152
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -580,10 +580,10 @@ TextureImporter:
       name: blood_sword_character_10
       rect:
         serializedVersion: 2
-        x: 1323
-        y: 1055
-        width: 42
-        height: 52
+        x: 1280
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -602,10 +602,10 @@ TextureImporter:
       name: blood_sword_character_11
       rect:
         serializedVersion: 2
-        x: 1451
-        y: 1055
-        width: 42
-        height: 52
+        x: 1408
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -624,10 +624,10 @@ TextureImporter:
       name: blood_sword_character_12
       rect:
         serializedVersion: 2
-        x: 43
-        y: 927
-        width: 42
-        height: 51
+        x: 0
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -646,10 +646,10 @@ TextureImporter:
       name: blood_sword_character_13
       rect:
         serializedVersion: 2
-        x: 171
-        y: 928
-        width: 42
-        height: 49
+        x: 128
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -668,10 +668,10 @@ TextureImporter:
       name: blood_sword_character_14
       rect:
         serializedVersion: 2
-        x: 299
-        y: 929
-        width: 41
-        height: 51
+        x: 256
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -690,10 +690,10 @@ TextureImporter:
       name: blood_sword_character_15
       rect:
         serializedVersion: 2
-        x: 427
-        y: 924
-        width: 40
-        height: 55
+        x: 384
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -712,10 +712,10 @@ TextureImporter:
       name: blood_sword_character_16
       rect:
         serializedVersion: 2
-        x: 555
-        y: 928
-        width: 40
-        height: 50
+        x: 512
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -734,10 +734,10 @@ TextureImporter:
       name: blood_sword_character_17
       rect:
         serializedVersion: 2
-        x: 682
-        y: 929
-        width: 41
-        height: 48
+        x: 640
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -756,10 +756,10 @@ TextureImporter:
       name: blood_sword_character_18
       rect:
         serializedVersion: 2
-        x: 810
-        y: 927
-        width: 44
-        height: 53
+        x: 768
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -778,10 +778,10 @@ TextureImporter:
       name: blood_sword_character_19
       rect:
         serializedVersion: 2
-        x: 939
-        y: 923
-        width: 45
-        height: 56
+        x: 896
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -800,10 +800,10 @@ TextureImporter:
       name: blood_sword_character_20
       rect:
         serializedVersion: 2
-        x: 43
-        y: 799
-        width: 42
-        height: 53
+        x: 0
+        y: 768
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -822,10 +822,10 @@ TextureImporter:
       name: blood_sword_character_21
       rect:
         serializedVersion: 2
-        x: 171
-        y: 800
-        width: 42
-        height: 49
+        x: 128
+        y: 768
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -844,10 +844,10 @@ TextureImporter:
       name: blood_sword_character_22
       rect:
         serializedVersion: 2
-        x: 299
-        y: 787
-        width: 45
-        height: 60
+        x: 256
+        y: 768
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -866,10 +866,10 @@ TextureImporter:
       name: blood_sword_character_23
       rect:
         serializedVersion: 2
-        x: 427
-        y: 795
-        width: 45
-        height: 53
+        x: 384
+        y: 768
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -888,10 +888,10 @@ TextureImporter:
       name: blood_sword_character_24
       rect:
         serializedVersion: 2
-        x: 555
-        y: 795
-        width: 45
-        height: 53
+        x: 512
+        y: 768
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -910,10 +910,10 @@ TextureImporter:
       name: blood_sword_character_25
       rect:
         serializedVersion: 2
-        x: 683
-        y: 795
-        width: 45
-        height: 53
+        x: 640
+        y: 768
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -932,10 +932,10 @@ TextureImporter:
       name: blood_sword_character_26
       rect:
         serializedVersion: 2
-        x: 50
-        y: 672
-        width: 36
-        height: 51
+        x: 0
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -954,10 +954,10 @@ TextureImporter:
       name: blood_sword_character_27
       rect:
         serializedVersion: 2
-        x: 178
-        y: 672
-        width: 36
-        height: 51
+        x: 128
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -976,10 +976,10 @@ TextureImporter:
       name: blood_sword_character_28
       rect:
         serializedVersion: 2
-        x: 306
-        y: 672
-        width: 36
-        height: 51
+        x: 256
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -998,10 +998,10 @@ TextureImporter:
       name: blood_sword_character_29
       rect:
         serializedVersion: 2
-        x: 434
-        y: 672
-        width: 36
-        height: 51
+        x: 384
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1020,10 +1020,10 @@ TextureImporter:
       name: blood_sword_character_30
       rect:
         serializedVersion: 2
-        x: 562
-        y: 672
-        width: 36
-        height: 51
+        x: 512
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1042,10 +1042,10 @@ TextureImporter:
       name: blood_sword_character_31
       rect:
         serializedVersion: 2
-        x: 690
-        y: 672
-        width: 36
-        height: 51
+        x: 640
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1064,10 +1064,10 @@ TextureImporter:
       name: blood_sword_character_32
       rect:
         serializedVersion: 2
-        x: 818
-        y: 672
-        width: 36
-        height: 50
+        x: 768
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1086,10 +1086,10 @@ TextureImporter:
       name: blood_sword_character_33
       rect:
         serializedVersion: 2
-        x: 946
-        y: 672
-        width: 36
-        height: 50
+        x: 896
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1108,10 +1108,10 @@ TextureImporter:
       name: blood_sword_character_34
       rect:
         serializedVersion: 2
-        x: 1074
-        y: 672
-        width: 36
-        height: 50
+        x: 1024
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1130,10 +1130,10 @@ TextureImporter:
       name: blood_sword_character_35
       rect:
         serializedVersion: 2
-        x: 1202
-        y: 672
-        width: 36
-        height: 50
+        x: 1152
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1152,10 +1152,10 @@ TextureImporter:
       name: blood_sword_character_36
       rect:
         serializedVersion: 2
-        x: 1330
-        y: 672
-        width: 36
-        height: 50
+        x: 1280
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1174,10 +1174,10 @@ TextureImporter:
       name: blood_sword_character_37
       rect:
         serializedVersion: 2
-        x: 1458
-        y: 672
-        width: 36
-        height: 50
+        x: 1408
+        y: 640
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1196,10 +1196,10 @@ TextureImporter:
       name: blood_sword_character_38
       rect:
         serializedVersion: 2
-        x: 50
-        y: 545
-        width: 38
-        height: 50
+        x: 0
+        y: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1218,10 +1218,10 @@ TextureImporter:
       name: blood_sword_character_39
       rect:
         serializedVersion: 2
-        x: 178
-        y: 545
-        width: 39
-        height: 48
+        x: 128
+        y: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1240,10 +1240,10 @@ TextureImporter:
       name: blood_sword_character_40
       rect:
         serializedVersion: 2
-        x: 305
-        y: 545
-        width: 41
-        height: 53
+        x: 256
+        y: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1262,10 +1262,10 @@ TextureImporter:
       name: blood_sword_character_41
       rect:
         serializedVersion: 2
-        x: 431
-        y: 546
-        width: 45
-        height: 50
+        x: 384
+        y: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1284,10 +1284,10 @@ TextureImporter:
       name: blood_sword_character_42
       rect:
         serializedVersion: 2
-        x: 561
-        y: 544
-        width: 42
-        height: 51
+        x: 512
+        y: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1306,10 +1306,10 @@ TextureImporter:
       name: blood_sword_character_43
       rect:
         serializedVersion: 2
-        x: 689
-        y: 544
-        width: 40
-        height: 49
+        x: 640
+        y: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1328,10 +1328,10 @@ TextureImporter:
       name: blood_sword_character_44
       rect:
         serializedVersion: 2
-        x: 818
-        y: 544
-        width: 38
-        height: 54
+        x: 768
+        y: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1350,10 +1350,10 @@ TextureImporter:
       name: blood_sword_character_45
       rect:
         serializedVersion: 2
-        x: 945
-        y: 547
-        width: 38
-        height: 49
+        x: 896
+        y: 512
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1372,10 +1372,10 @@ TextureImporter:
       name: blood_sword_character_46
       rect:
         serializedVersion: 2
-        x: 50
-        y: 416
-        width: 36
-        height: 51
+        x: 0
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1394,10 +1394,10 @@ TextureImporter:
       name: blood_sword_character_47
       rect:
         serializedVersion: 2
-        x: 178
-        y: 416
-        width: 30
-        height: 51
+        x: 128
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1416,10 +1416,10 @@ TextureImporter:
       name: blood_sword_character_48
       rect:
         serializedVersion: 2
-        x: 304
-        y: 416
-        width: 64
-        height: 51
+        x: 256
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1438,10 +1438,10 @@ TextureImporter:
       name: blood_sword_character_49
       rect:
         serializedVersion: 2
-        x: 434
-        y: 416
-        width: 45
-        height: 51
+        x: 384
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1460,10 +1460,10 @@ TextureImporter:
       name: blood_sword_character_50
       rect:
         serializedVersion: 2
-        x: 562
-        y: 416
-        width: 37
-        height: 51
+        x: 512
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1482,10 +1482,10 @@ TextureImporter:
       name: blood_sword_character_51
       rect:
         serializedVersion: 2
-        x: 690
-        y: 416
-        width: 37
-        height: 51
+        x: 640
+        y: 384
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1504,10 +1504,10 @@ TextureImporter:
       name: blood_sword_character_52
       rect:
         serializedVersion: 2
-        x: 45
-        y: 287
-        width: 42
-        height: 53
+        x: 0
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1526,10 +1526,10 @@ TextureImporter:
       name: blood_sword_character_53
       rect:
         serializedVersion: 2
-        x: 173
-        y: 287
-        width: 42
-        height: 53
+        x: 128
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1548,10 +1548,10 @@ TextureImporter:
       name: blood_sword_character_54
       rect:
         serializedVersion: 2
-        x: 301
-        y: 287
-        width: 42
-        height: 53
+        x: 256
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1570,10 +1570,10 @@ TextureImporter:
       name: blood_sword_character_55
       rect:
         serializedVersion: 2
-        x: 429
-        y: 287
-        width: 42
-        height: 53
+        x: 384
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1592,10 +1592,10 @@ TextureImporter:
       name: blood_sword_character_56
       rect:
         serializedVersion: 2
-        x: 557
-        y: 287
-        width: 42
-        height: 53
+        x: 512
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1614,10 +1614,10 @@ TextureImporter:
       name: blood_sword_character_57
       rect:
         serializedVersion: 2
-        x: 685
-        y: 287
-        width: 42
-        height: 53
+        x: 640
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1636,10 +1636,10 @@ TextureImporter:
       name: blood_sword_character_58
       rect:
         serializedVersion: 2
-        x: 811
-        y: 287
-        width: 45
-        height: 52
+        x: 768
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1658,10 +1658,10 @@ TextureImporter:
       name: blood_sword_character_59
       rect:
         serializedVersion: 2
-        x: 941
-        y: 287
-        width: 43
-        height: 52
+        x: 896
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1680,10 +1680,10 @@ TextureImporter:
       name: blood_sword_character_60
       rect:
         serializedVersion: 2
-        x: 1069
-        y: 287
-        width: 42
-        height: 52
+        x: 1024
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1702,10 +1702,10 @@ TextureImporter:
       name: blood_sword_character_61
       rect:
         serializedVersion: 2
-        x: 1197
-        y: 287
-        width: 42
-        height: 52
+        x: 1152
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1724,10 +1724,10 @@ TextureImporter:
       name: blood_sword_character_62
       rect:
         serializedVersion: 2
-        x: 1325
-        y: 287
-        width: 42
-        height: 52
+        x: 1280
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1746,10 +1746,10 @@ TextureImporter:
       name: blood_sword_character_63
       rect:
         serializedVersion: 2
-        x: 1453
-        y: 287
-        width: 42
-        height: 52
+        x: 1408
+        y: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1768,10 +1768,10 @@ TextureImporter:
       name: blood_sword_character_64
       rect:
         serializedVersion: 2
-        x: 44
-        y: 159
-        width: 42
-        height: 51
+        x: 0
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1790,10 +1790,10 @@ TextureImporter:
       name: blood_sword_character_65
       rect:
         serializedVersion: 2
-        x: 172
-        y: 160
-        width: 42
-        height: 49
+        x: 128
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1812,10 +1812,10 @@ TextureImporter:
       name: blood_sword_character_66
       rect:
         serializedVersion: 2
-        x: 301
-        y: 161
-        width: 41
-        height: 51
+        x: 256
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1834,10 +1834,10 @@ TextureImporter:
       name: blood_sword_character_67
       rect:
         serializedVersion: 2
-        x: 430
-        y: 156
-        width: 40
-        height: 55
+        x: 384
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1856,10 +1856,10 @@ TextureImporter:
       name: blood_sword_character_68
       rect:
         serializedVersion: 2
-        x: 558
-        y: 160
-        width: 40
-        height: 50
+        x: 512
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1878,10 +1878,10 @@ TextureImporter:
       name: blood_sword_character_69
       rect:
         serializedVersion: 2
-        x: 686
-        y: 161
-        width: 41
-        height: 48
+        x: 640
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1900,10 +1900,10 @@ TextureImporter:
       name: blood_sword_character_70
       rect:
         serializedVersion: 2
-        x: 811
-        y: 159
-        width: 44
-        height: 53
+        x: 768
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1922,10 +1922,10 @@ TextureImporter:
       name: blood_sword_character_71
       rect:
         serializedVersion: 2
-        x: 937
-        y: 155
-        width: 45
-        height: 56
+        x: 896
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1944,10 +1944,10 @@ TextureImporter:
       name: blood_sword_character_72
       rect:
         serializedVersion: 2
-        x: 45
-        y: 31
-        width: 42
-        height: 53
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1966,10 +1966,10 @@ TextureImporter:
       name: blood_sword_character_73
       rect:
         serializedVersion: 2
-        x: 172
-        y: 32
-        width: 42
-        height: 49
+        x: 128
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1988,10 +1988,10 @@ TextureImporter:
       name: blood_sword_character_74
       rect:
         serializedVersion: 2
-        x: 302
-        y: 28
-        width: 40
-        height: 81
+        x: 256
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2010,10 +2010,10 @@ TextureImporter:
       name: blood_sword_character_75
       rect:
         serializedVersion: 2
-        x: 426
-        y: 28
-        width: 44
-        height: 72
+        x: 384
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2032,10 +2032,10 @@ TextureImporter:
       name: blood_sword_character_76
       rect:
         serializedVersion: 2
-        x: 554
-        y: 28
-        width: 44
-        height: 63
+        x: 512
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2054,10 +2054,10 @@ TextureImporter:
       name: blood_sword_character_77
       rect:
         serializedVersion: 2
-        x: 682
-        y: 28
-        width: 44
-        height: 63
+        x: 640
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2076,7 +2076,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 59761593f4aec7347960e5ae74f02343
     internalID: 0
     vertices: []
     indices: 
