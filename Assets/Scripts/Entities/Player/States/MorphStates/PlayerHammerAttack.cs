@@ -30,12 +30,6 @@ namespace Entities.Player.States.MorphStates
         public override void Enter()
         {
             Controller.Animator.PlayAnimation(PlayerAnimationName.Attack);
-            PlayerEventConfig.OnHammerSwingSFX?.Invoke(Controller.stats.guid);
-        }
-
-        public override void Update()
-        {
-            CollisionDetection();
         }
         
         public override void FixedUpdate()
@@ -69,6 +63,7 @@ namespace Entities.Player.States.MorphStates
             {
                 PlayerEventConfig.OnHammerDownSFX?.Invoke(Controller.stats.guid);
                 CameraEventConfig.OnShake?.Invoke(Controller.morph.config.shakeIntensity);
+                CollisionDetection();
             }
         }
     }

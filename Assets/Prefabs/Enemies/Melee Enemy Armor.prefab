@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2231483315548211717}
   - component: {fileID: 5744640196798932986}
   m_Layer: 0
-  m_Name: Melee Enemy
+  m_Name: Melee Enemy Armor
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   stats:
     health: 100
     stamina: 50
-    armor: 0
+    armor: 10
     knockbackResistance: 0
     movementSpeed: 2.5
     rotationSpeed: 1000

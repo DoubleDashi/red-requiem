@@ -7,6 +7,8 @@ using Data;
 using Entities.Player.Factories;
 using FSM;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Entities.Player
 {
@@ -16,10 +18,12 @@ namespace Entities.Player
         
         [SerializeField] private Morph morphSettings;
         [SerializeField] private List<MorphConfig> morphConfigs;
-
+        public Slider healthSlider;
+        public Slider bloodSlider;
 
         public Material whiteMaterial;
         public Material originalMaterial;
+        public Animator anim;
         
         [HideInInspector] public Camera mainCamera;
         [HideInInspector] public Rigidbody2D body;
@@ -34,7 +38,21 @@ namespace Entities.Player
         private Coroutine _combatRoutine;
 
         public KeyCode morphKey;
+        public float originalMaxSpeed;
 
+        private float _maxHealth;
+        private float _maxBloodResource;
+
+        protected override void Subscribe()
+        {
+            PlayerEventConfig.OnDeath += HandleOnDeath;
+        }
+        
+        protected override void Unsubscribe()
+        {
+            PlayerEventConfig.OnDeath -= HandleOnDeath;
+        }
+        
         private void Awake()
         {
             Movement = new PlayerMovement(this);
@@ -43,10 +61,13 @@ namespace Entities.Player
             mainCamera = Camera.main;
             body = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            Animator = new PlayerAnimator(GetComponentInChildren<Animator>(), MorphType.Sword);
+            Animator = new PlayerAnimator(anim, MorphType.Sword);
             morph.config = MorphFactory.FindByType(MorphType.Sword);
 
             originalMaterial = spriteRenderer.material;
+
+            _maxHealth = stats.health;
+            originalMaxSpeed = stats.maxSpeed;
             
             InitializeStateMachine(
                 new PlayerStateFactory(this), 
@@ -78,8 +99,10 @@ namespace Entities.Player
             
             base.Update();
             Animator.UpdateBlendTree(morph.config.type);
-
-           
+            Movement.Rotate();
+            UpdateHealthSlider();
+            UpdateBloodSlider();
+            RegenerateBlood();
         }
 
         protected override void FixedUpdate()
@@ -101,7 +124,7 @@ namespace Entities.Player
 
         public void HandleOnDeath(Guid guid)
         {
-            throw new NotImplementedException();
+            SceneManager.LoadScene("GameOver"); // ew
         }
 
         public void EnableInCombat()
@@ -117,9 +140,25 @@ namespace Entities.Player
 
         private void RegenerateBlood()
         {
-            if (stats.bloodResource < stats.maxBloodResource)
+            if (stats.bloodResource < stats.maxBloodResource && stats.inCombat == false)
             {
                 stats.bloodResource += stats.bloodResourceRegenSpeed * Time.deltaTime;
+            }
+        }
+        
+        private void UpdateHealthSlider()
+        {
+            if (healthSlider != null)
+            {
+                healthSlider.value = Mathf.Clamp01(stats.health / _maxHealth);
+            }
+        }
+        
+        private void UpdateBloodSlider()
+        {
+            if (bloodSlider != null)
+            {
+                bloodSlider.value = Mathf.Clamp01(stats.bloodResource / stats.maxBloodResource);
             }
         }
         
@@ -134,15 +173,24 @@ namespace Entities.Player
         {
             base.OnDrawGizmos();
             
-            if (morph.config == null || morph.config.collisionBox == Vector2.zero)
+            if (morph.pivotPoint == null)
             {
                 return;
             }
 
-            Gizmos.color = Color.yellow;
-            float angle = Vector2.SignedAngle(Vector2.right, transform.right);
-            Gizmos.matrix = Matrix4x4.TRS(morph.collisionPoint.position, Quaternion.Euler(0, 0, angle), Vector3.one);;
-            Gizmos.DrawWireCube(Vector3.zero + (Vector3)morph.config.collisionPointOffset, Vector2.one * morph.config.collisionBox);
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position, morph.pivotPoint.position);
+            // Save the current Gizmos matrix
+            Matrix4x4 oldMatrix = Gizmos.matrix;
+
+            // Set the Gizmos matrix to the desired transformation
+            Gizmos.matrix = Matrix4x4.TRS(morph.pivotPoint.position, transform.rotation, Vector3.one);
+
+            // Draw the wire cube with the new transformation
+            Gizmos.DrawWireCube(Vector3.zero, morph.config.collisionBox);
+
+            // Restore the original Gizmos matrix
+            Gizmos.matrix = oldMatrix;
         }
     }
 }

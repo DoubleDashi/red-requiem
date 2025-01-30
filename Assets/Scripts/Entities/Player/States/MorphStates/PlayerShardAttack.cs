@@ -16,6 +16,7 @@ namespace Entities.Player.States.MorphStates
         {
             _isComplete = false;
             
+            Controller.stats.bloodResource -= Controller.morph.config.bloodCost;
             PlayerEventConfig.OnShardShootSFX?.Invoke(Controller.stats.guid);
             float distanceBetweenProjectiles = Controller.morph.config.angle / (Controller.morph.config.count - 1);
             int middleIndex = Controller.morph.config.count / 2;
@@ -27,7 +28,7 @@ namespace Entities.Player.States.MorphStates
                 Object.Instantiate(
                     original: Controller.morph.config.prefab,
                     position: Controller.morph.pivotPoint.position,
-                    rotation: Controller.transform.rotation * Quaternion.Euler(Vector3.forward * angle)
+                    rotation: Controller.morph.pivotPoint.rotation * Quaternion.Euler(Vector3.forward * angle)
                 );
             }
 
@@ -36,8 +37,8 @@ namespace Entities.Player.States.MorphStates
 
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Idle, () => _isComplete && Controller.body.linearVelocity == Vector2.zero);
-            AddTransition(PlayerStateType.Move, () => _isComplete && Controller.body.linearVelocity != Vector2.zero);
+            AddTransition(PlayerStateType.Idle, () => _isComplete && Controller.body.linearVelocity == Vector2.zero || Controller.stats.bloodResource <= Controller.morph.config.bloodCost);
+            AddTransition(PlayerStateType.Move, () => _isComplete && Controller.body.linearVelocity != Vector2.zero || Controller.stats.bloodResource <= Controller.morph.config.bloodCost);
         }
     }
 }

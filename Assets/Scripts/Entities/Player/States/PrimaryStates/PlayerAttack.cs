@@ -12,7 +12,7 @@ namespace Entities.Player.States.PrimaryStates
 
         public override void Enter()
         {
-            Controller.stats.inCombat = true;
+            Controller.EnableInCombat();
         }
 
         protected override void SetTransitions()

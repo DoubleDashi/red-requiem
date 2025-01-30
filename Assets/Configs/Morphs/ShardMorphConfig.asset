@@ -19,8 +19,9 @@ MonoBehaviour:
   armorPenetration: 0
   collisionPointOffset: {x: 0, y: 0}
   collisionBox: {x: 0, y: 0}
-  damage: 10
+  damage: 25
   shakeIntensity: 0.35
+  bloodCost: 20
   speed: 20
   count: 3
   angle: 35

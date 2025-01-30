@@ -183,8 +183,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 760729269
-  m_SortingLayer: 2
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 0.4292453, g: 0.61425763, b: 1, a: 1}
@@ -325,10 +325,10 @@ MonoBehaviour:
     stamina: 50
     armor: 0
     knockbackResistance: 0
-    movementSpeed: 6.5
+    movementSpeed: 4.5
     rotationSpeed: 1000
     damage: 10
-    detectionRadius: 7.5
+    detectionRadius: 22.84
     attackRadius: 6
     runAwayRadius: 2
   weapon:
@@ -342,7 +342,7 @@ MonoBehaviour:
     shakeIntensity: 1
     collisionPointOffset: {x: 0, y: 0}
     collisionBox: {x: 0, y: 0}
-    cooldownTime: 1
+    cooldownTime: 3
     onCooldown: 0
   patrolArea: {x: 10.2, y: 10.22}
   spriteRenderer: {fileID: 0}

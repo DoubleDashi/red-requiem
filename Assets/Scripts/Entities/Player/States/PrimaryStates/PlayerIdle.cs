@@ -6,13 +6,23 @@ namespace Entities.Player.States.PrimaryStates
 {
     public class PlayerIdle : PlayerState
     {
+        private bool _forceMorph;
+        
         public PlayerIdle(PlayerController controller) : base(controller)
         {
         }
 
         public override void Enter()
         {
-            Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
+            if (Controller.stats.bloodResource < Controller.morph.config.bloodCost)
+            {
+                Controller.morphKey = KeyCode.Alpha1;
+                _forceMorph = true;
+            }
+            else
+            {
+                Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);    
+            }
         }
 
         public override void Update()
@@ -21,6 +31,11 @@ namespace Entities.Player.States.PrimaryStates
             {
                 Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
             }
+        }
+
+        public override void Exit()
+        {
+            _forceMorph = false;
         }
         
         public override void FixedUpdate()
@@ -31,8 +46,8 @@ namespace Entities.Player.States.PrimaryStates
         protected override void SetTransitions()
         {
             AddTransition(PlayerStateType.Move, () => PlayerInput.movementDirection != Vector2.zero);
-            AddTransition(PlayerStateType.Morph, () => Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4));
-            AddTransition(PlayerStateType.Attack, () => Input.GetKeyDown(KeyCode.Mouse0));
+            AddTransition(PlayerStateType.Morph, () => _forceMorph || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4));
+            AddTransition(PlayerStateType.Attack, () => Input.GetKeyDown(KeyCode.Mouse0) && Controller.stats.bloodResource >= Controller.morph.config.bloodCost);
         }
     }
 }

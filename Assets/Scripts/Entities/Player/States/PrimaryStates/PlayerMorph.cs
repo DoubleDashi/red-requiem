@@ -7,6 +7,7 @@ namespace Entities.Player.States.PrimaryStates
     public class PlayerMorph : PlayerState
     {
         private bool _completed = false;
+        private float _maxSpeed;
         
         public PlayerMorph(PlayerController controller) : base(controller)
         {
@@ -24,6 +25,11 @@ namespace Entities.Player.States.PrimaryStates
 
         public override void Enter()
         {
+            if (Controller.morphKey != KeyCode.Alpha3)
+            {
+                Controller.stats.maxSpeed = Controller.originalMaxSpeed;
+            }
+            
             if (Controller.morphKey == KeyCode.Alpha1)
             {
                 Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Sword);
@@ -38,6 +44,7 @@ namespace Entities.Player.States.PrimaryStates
             
             if (Controller.morphKey == KeyCode.Alpha3)
             {
+                Controller.stats.maxSpeed = Controller.originalMaxSpeed * 0.6f;
                 Controller.morph.config = Controller.MorphFactory.FindByType(MorphType.Hammer);
                 Controller.Animator.PlayMorphAnimation(MorphType.Hammer);
             }

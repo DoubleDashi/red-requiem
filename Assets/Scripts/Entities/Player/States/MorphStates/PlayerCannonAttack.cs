@@ -27,8 +27,10 @@ namespace Entities.Player.States.MorphStates
                 PlayerEventConfig.OnCannonShootSFX?.Invoke(Controller.stats.guid, 0.35f);
                 _playShoot = false;
                 Controller.StartCoroutine(EnableShootSFX());
+                Controller.stats.bloodResource -= Controller.morph.config.bloodCost;
             }
             
+            Controller.stats.bloodResource -= Controller.morph.config.bloodCost;
             Vector3 direction = Quaternion.Euler(0, 0, Controller.morph.pivotPoint.eulerAngles.z) * Vector3.right;
             Controller.morph.lineRenderer.SetPosition(0, Controller.morph.pivotPoint.position - direction * 0.15f);
             Controller.morph.lineRenderer.SetPosition(1, Controller.morph.pivotPoint.position + direction * Controller.morph.config.maxLength);
@@ -58,7 +60,7 @@ namespace Entities.Player.States.MorphStates
 
         protected override void SetTransitions()
         {
-            AddTransition(PlayerStateType.Idle, () => Input.GetKey(KeyCode.Mouse0) == false);
+            AddTransition(PlayerStateType.Idle, () => Input.GetKey(KeyCode.Mouse0) == false || Controller.stats.bloodResource < Controller.morph.config.bloodCost);
         }
         
         private void LineRendererCollisionDetection(Vector3 direction)

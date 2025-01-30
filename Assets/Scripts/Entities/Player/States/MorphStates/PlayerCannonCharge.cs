@@ -43,6 +43,7 @@ namespace Entities.Player.States.MorphStates
                 PlayerEventConfig.OnCannonShootSFX?.Invoke(Controller.stats.guid, _volume);
                 _playShoot = false;
                 Controller.StartCoroutine(EnableShootSFX());
+                Controller.stats.bloodResource -= Controller.morph.config.bloodCost;
             }
 
             Vector3 direction = Quaternion.Euler(0, 0, Controller.morph.pivotPoint.eulerAngles.z) * Vector3.right;
@@ -75,7 +76,7 @@ namespace Entities.Player.States.MorphStates
         protected override void SetTransitions()
         {
             AddTransition(PlayerStateType.CannonAttack, () => _isComplete);
-            AddTransition(PlayerStateType.Idle, () => Input.GetKey(KeyCode.Mouse0) == false);
+            AddTransition(PlayerStateType.Idle, () => Input.GetKey(KeyCode.Mouse0) == false || Controller.stats.bloodResource < Controller.morph.config.bloodCost);
         }
 
         private IEnumerator ChargeUpRoutine()

@@ -16,10 +16,10 @@ MonoBehaviour:
   prefab: {fileID: 0}
   enemyKnockbackForce: 15
   selfKnockbackForce: 0
-  armorPenetration: 0
+  armorPenetration: 10
   collisionPointOffset: {x: 0, y: 0}
   collisionBox: {x: 1, y: 1.2}
-  damage: 30
+  damage: 40
   shakeIntensity: 0.981
   speed: 0
   count: 0

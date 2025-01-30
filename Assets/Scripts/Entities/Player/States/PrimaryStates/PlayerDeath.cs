@@ -27,7 +27,7 @@ namespace Entities.Player.States.PrimaryStates
         {
             yield return new WaitForSeconds(0.2f);
             
-            MeleeEnemyEventConfig.OnDeath?.Invoke(Controller.stats.guid);
+            PlayerEventConfig.OnDeath?.Invoke(Controller.stats.guid);
         }
     }
 }

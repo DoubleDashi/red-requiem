@@ -8,16 +8,11 @@ namespace Entities.Player.States.PrimaryStates
 {
     public class PlayerHurt : PlayerState
     {
-        private const float Duration = 0.5f;
         
         private Coroutine _routine;
-        private float _elapsedTime;
-        
-        private readonly Color _originalColor;
         
         public PlayerHurt(PlayerController controller) : base(controller)
         {
-            _originalColor = Controller.spriteRenderer.color;
         }
 
         public override void Subscribe()
@@ -33,8 +28,6 @@ namespace Entities.Player.States.PrimaryStates
         public override void Enter()
         {
             Controller.isHurt = false;
-            
-            _elapsedTime = 0f;
 
             if (_routine != null)
             {
@@ -49,22 +42,17 @@ namespace Entities.Player.States.PrimaryStates
         protected override void SetTransitions()
         {
             AddTransition(PlayerStateType.Death, () => Controller.stats.health <= 0f);
-            AddTransition(PlayerStateType.Idle, () => AnimationComplete() && Controller.isHurt == false);
+            AddTransition(PlayerStateType.Idle, () => Controller.isHurt == false);
         }
 
         private IEnumerator HurtRoutine()
         {
-            Controller.spriteRenderer.material = Controller.originalMaterial;
+            Controller.spriteRenderer.material = Controller.whiteMaterial;
             
             yield return new WaitForSeconds(0.1f);
 
-            Controller.spriteRenderer.material = Controller.whiteMaterial;
+            Controller.spriteRenderer.material = Controller.originalMaterial;
             Controller.isHurt = false;
-        }
-
-        private bool AnimationComplete()
-        {
-            return _elapsedTime >= Duration;
         }
 
         private void HandleOnHurt(Guid guid, Damageable damageable)
@@ -74,6 +62,8 @@ namespace Entities.Player.States.PrimaryStates
                 return;
             }
 
+            Controller.EnableInCombat();
+            
             CameraEventConfig.OnShake?.Invoke(damageable.ShakeIntensity);
             PlayerEventConfig.OnHurtSFX?.Invoke(guid);
             
