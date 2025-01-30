@@ -1,4 +1,5 @@
-﻿using Entities.Player.Factories;
+﻿using Configs.Events;
+using Entities.Player.Factories;
 using UnityEngine;
 
 namespace Entities.Player.States.MorphStates
@@ -15,6 +16,7 @@ namespace Entities.Player.States.MorphStates
         {
             _isComplete = false;
             
+            PlayerEventConfig.OnShardShootSFX?.Invoke(Controller.stats.guid);
             float distanceBetweenProjectiles = Controller.morph.config.angle / (Controller.morph.config.count - 1);
             int middleIndex = Controller.morph.config.count / 2;
 

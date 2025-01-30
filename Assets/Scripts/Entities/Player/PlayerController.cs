@@ -16,8 +16,11 @@ namespace Entities.Player
         
         [SerializeField] private Morph morphSettings;
         [SerializeField] private List<MorphConfig> morphConfigs;
-        
 
+
+        public Material whiteMaterial;
+        public Material originalMaterial;
+        
         [HideInInspector] public Camera mainCamera;
         [HideInInspector] public Rigidbody2D body;
         [HideInInspector] public SpriteRenderer spriteRenderer;
@@ -30,6 +33,8 @@ namespace Entities.Player
         
         private Coroutine _combatRoutine;
 
+        public KeyCode morphKey;
+
         private void Awake()
         {
             Movement = new PlayerMovement(this);
@@ -38,8 +43,10 @@ namespace Entities.Player
             mainCamera = Camera.main;
             body = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            Animator = new PlayerAnimator(GetComponentInChildren<Animator>());
+            Animator = new PlayerAnimator(GetComponentInChildren<Animator>(), MorphType.Sword);
             morph.config = MorphFactory.FindByType(MorphType.Sword);
+
+            originalMaterial = spriteRenderer.material;
             
             InitializeStateMachine(
                 new PlayerStateFactory(this), 
@@ -49,15 +56,35 @@ namespace Entities.Player
 
         protected override void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                morphKey = KeyCode.Alpha1;
+            }
+            
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                morphKey = KeyCode.Alpha2;
+            }
+            
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                morphKey = KeyCode.Alpha3;
+            }
+            
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                morphKey = KeyCode.Alpha4;
+            }
+            
             base.Update();
             Animator.UpdateBlendTree(morph.config.type);
-            Movement.Flip();
+
+           
         }
 
         protected override void FixedUpdate()
         {
             base.FixedUpdate();
-            Movement.Rotate();
         }
         
         protected override void SetGlobalTransitions()

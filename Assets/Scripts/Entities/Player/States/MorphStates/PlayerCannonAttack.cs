@@ -1,4 +1,5 @@
-﻿using Configs.Events;
+﻿using System.Collections;
+using Configs.Events;
 using Entities.Player.Factories;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ namespace Entities.Player.States.MorphStates
 {
     public class PlayerCannonAttack : MorphState
     {
+        private bool _playShoot = true;
+        
         public PlayerCannonAttack(PlayerController controller) : base(controller)
         {
         }
@@ -19,6 +22,13 @@ namespace Entities.Player.States.MorphStates
 
         public override void Update()
         {
+            if (_playShoot)
+            {
+                PlayerEventConfig.OnCannonShootSFX?.Invoke(Controller.stats.guid, 0.35f);
+                _playShoot = false;
+                Controller.StartCoroutine(EnableShootSFX());
+            }
+            
             Vector3 direction = Quaternion.Euler(0, 0, Controller.morph.pivotPoint.eulerAngles.z) * Vector3.right;
             Controller.morph.lineRenderer.SetPosition(0, Controller.morph.pivotPoint.position - direction * 0.15f);
             Controller.morph.lineRenderer.SetPosition(1, Controller.morph.pivotPoint.position + direction * Controller.morph.config.maxLength);
@@ -65,6 +75,12 @@ namespace Entities.Player.States.MorphStates
                 Controller.morph.config.collisionPointOffset = new Vector2(hit.distance / 2f, Controller.morph.config.collisionPointOffset.y);
                 Controller.morph.config.collisionBox = new Vector2(hit.distance, Controller.morph.config.collisionBox.y);
             }
+        }
+        
+        private IEnumerator EnableShootSFX()
+        {
+            yield return new WaitForSeconds(Controller.morph.config.fireRate);
+            _playShoot = true;
         }
     }
 }

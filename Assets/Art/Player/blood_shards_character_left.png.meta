@@ -1,0 +1,752 @@
+fileFormatVersion: 2
+guid: d959aff6fd938b54785beddecb55a90d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5213689242045372908
+    second: blood_shards_character_left_0
+  - first:
+      213: 1380983372256087469
+    second: blood_shards_character_left_1
+  - first:
+      213: -2500983028578050603
+    second: blood_shards_character_left_2
+  - first:
+      213: 5169882081295202154
+    second: blood_shards_character_left_3
+  - first:
+      213: 2347997858291635725
+    second: blood_shards_character_left_4
+  - first:
+      213: -256769081197129324
+    second: blood_shards_character_left_5
+  - first:
+      213: -8987458067020363653
+    second: blood_shards_character_left_6
+  - first:
+      213: -8784205775590375080
+    second: blood_shards_character_left_7
+  - first:
+      213: 2818195123738115530
+    second: blood_shards_character_left_8
+  - first:
+      213: -1215567157360842990
+    second: blood_shards_character_left_9
+  - first:
+      213: -179417858346287957
+    second: blood_shards_character_left_10
+  - first:
+      213: 5754688256588274425
+    second: blood_shards_character_left_11
+  - first:
+      213: 8675031024316493562
+    second: blood_shards_character_left_12
+  - first:
+      213: 3663378029849617842
+    second: blood_shards_character_left_13
+  - first:
+      213: 1603259997075602065
+    second: blood_shards_character_left_14
+  - first:
+      213: 4141540009536969727
+    second: blood_shards_character_left_15
+  - first:
+      213: -5517949407460417041
+    second: blood_shards_character_left_16
+  - first:
+      213: 7935828658294113553
+    second: blood_shards_character_left_17
+  - first:
+      213: 5802340196768294818
+    second: blood_shards_character_left_18
+  - first:
+      213: 5197266615981115792
+    second: blood_shards_character_left_19
+  - first:
+      213: -8963780116722887735
+    second: blood_shards_character_left_20
+  - first:
+      213: -3020196823329969085
+    second: blood_shards_character_left_21
+  - first:
+      213: -4263712290637535735
+    second: blood_shards_character_left_22
+  - first:
+      213: -8651243503915591359
+    second: blood_shards_character_left_23
+  - first:
+      213: 3327784350789948414
+    second: blood_shards_character_left_24
+  - first:
+      213: 2636914995253701888
+    second: blood_shards_character_left_25
+  - first:
+      213: 6481827581011303707
+    second: blood_shards_character_left_26
+  - first:
+      213: 2827335763976727200
+    second: blood_shards_character_left_27
+  - first:
+      213: 6581492856289116055
+    second: blood_shards_character_left_28
+  - first:
+      213: 3809159976720199685
+    second: blood_shards_character_left_29
+  - first:
+      213: 7060189507069081828
+    second: blood_shards_character_left_30
+  - first:
+      213: -8149053527060526024
+    second: blood_shards_character_left_31
+  - first:
+      213: -7678838037108863623
+    second: blood_shards_character_left_32
+  - first:
+      213: 2025285958506106998
+    second: blood_shards_character_left_33
+  - first:
+      213: -3608362927437027453
+    second: blood_shards_character_left_34
+  - first:
+      213: 5796010826264821506
+    second: blood_shards_character_left_35
+  - first:
+      213: 350043156039873553
+    second: blood_shards_character_left_36
+  - first:
+      213: 3188480453344364350
+    second: blood_shards_character_left_37
+  - first:
+      213: 1453940604503174174
+    second: blood_shards_character_left_38
+  - first:
+      213: -4038288031203812764
+    second: blood_shards_character_left_39
+  - first:
+      213: 594704895616978164
+    second: blood_shards_character_left_40
+  - first:
+      213: 5085092665274804131
+    second: blood_shards_character_left_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blood_shards_character_left_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce9d3690ebeba5840800000000000000
+      internalID: 5213689242045372908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dad8b007f0d3a2310800000000000000
+      internalID: 1380983372256087469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd1350bf29ba4dd0800000000000000
+      internalID: -2500983028578050603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a67f14a9c5c1fb740800000000000000
+      internalID: 5169882081295202154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d06d9d4ac93c59020800000000000000
+      internalID: 2347997858291635725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49111fd81e5cf6cf0800000000000000
+      internalID: -256769081197129324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7848817182264380800000000000000
+      internalID: -8987458067020363653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8514008436b381680800000000000000
+      internalID: -8784205775590375080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acdf52a988d3c1720800000000000000
+      internalID: 2818195123738115530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21720e85c10712fe0800000000000000
+      internalID: -1215567157360842990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac78ee8864928df0800000000000000
+      internalID: -179417858346287957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fa5e0fca72ccdf40800000000000000
+      internalID: 5754688256588274425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afea0eb11c6e36870800000000000000
+      internalID: 8675031024316493562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b52823a8eee6d230800000000000000
+      internalID: 3663378029849617842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19af840197cef3610800000000000000
+      internalID: 1603259997075602065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffbd48322b4b97930800000000000000
+      internalID: 4141540009536969727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe1aebfcf3e4c63b0800000000000000
+      internalID: -5517949407460417041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_17
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1154cff6e1ab12e60800000000000000
+      internalID: 7935828658294113553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_18
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a72856baad068050800000000000000
+      internalID: 5802340196768294818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_19
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0990d807376602840800000000000000
+      internalID: 5197266615981115792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blood_shards_character_left_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3d50ad9714a9380800000000000000
+      internalID: -8963780116722887735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 049837538efbb2845aadbdfa1f1a41c0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      blood_shards_character_left_0: 5213689242045372908
+      blood_shards_character_left_1: 1380983372256087469
+      blood_shards_character_left_10: -179417858346287957
+      blood_shards_character_left_11: 5754688256588274425
+      blood_shards_character_left_12: 8675031024316493562
+      blood_shards_character_left_13: 3663378029849617842
+      blood_shards_character_left_14: 1603259997075602065
+      blood_shards_character_left_15: 4141540009536969727
+      blood_shards_character_left_16: -5517949407460417041
+      blood_shards_character_left_17: 7935828658294113553
+      blood_shards_character_left_18: 5802340196768294818
+      blood_shards_character_left_19: 5197266615981115792
+      blood_shards_character_left_2: -2500983028578050603
+      blood_shards_character_left_20: -8963780116722887735
+      blood_shards_character_left_3: 5169882081295202154
+      blood_shards_character_left_4: 2347997858291635725
+      blood_shards_character_left_5: -256769081197129324
+      blood_shards_character_left_6: -8987458067020363653
+      blood_shards_character_left_7: -8784205775590375080
+      blood_shards_character_left_8: 2818195123738115530
+      blood_shards_character_left_9: -1215567157360842990
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

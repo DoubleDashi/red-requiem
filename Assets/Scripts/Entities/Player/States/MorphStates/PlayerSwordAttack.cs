@@ -1,4 +1,5 @@
 ﻿using Animations;
+using Configs.Events;
 using Entities.Player.Factories;
 using UnityEngine;
 using Utility;
@@ -26,6 +27,7 @@ namespace Entities.Player.States.MorphStates
         public override void Enter()
         {
             Controller.Animator.PlayAnimation(PlayerAnimationName.Attack);
+            PlayerEventConfig.OnSwordSwingSFX?.Invoke(Controller.stats.guid);
         }
 
         public override void Update()

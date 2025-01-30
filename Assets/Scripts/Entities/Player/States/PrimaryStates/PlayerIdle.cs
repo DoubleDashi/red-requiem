@@ -14,6 +14,14 @@ namespace Entities.Player.States.PrimaryStates
         {
             Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
         }
+
+        public override void Update()
+        {
+            if (Controller.Animator.GetCurrentAnimationHash() != Animator.StringToHash(PlayerAnimationName.Idle.ToString()))
+            {
+                Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
+            }
+        }
         
         public override void FixedUpdate()
         {
@@ -23,7 +31,7 @@ namespace Entities.Player.States.PrimaryStates
         protected override void SetTransitions()
         {
             AddTransition(PlayerStateType.Move, () => PlayerInput.movementDirection != Vector2.zero);
-            AddTransition(PlayerStateType.Morph, () => Input.GetKey(KeyCode.Mouse1));
+            AddTransition(PlayerStateType.Morph, () => Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4));
             AddTransition(PlayerStateType.Attack, () => Input.GetKeyDown(KeyCode.Mouse0));
         }
     }

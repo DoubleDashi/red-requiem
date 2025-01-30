@@ -54,21 +54,11 @@ namespace Entities.Player.States.PrimaryStates
 
         private IEnumerator HurtRoutine()
         {
+            Controller.spriteRenderer.material = Controller.originalMaterial;
+            
             yield return new WaitForSeconds(0.1f);
 
-            while (_elapsedTime < Duration)
-            {
-                Controller.spriteRenderer.color = Color.Lerp(
-                    a: Controller.spriteRenderer.color,
-                    b: _originalColor,
-                    t: _elapsedTime / Duration
-                );
-
-                _elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-
-            Controller.spriteRenderer.color = _originalColor;
+            Controller.spriteRenderer.material = Controller.whiteMaterial;
             Controller.isHurt = false;
         }
 

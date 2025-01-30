@@ -5,5 +5,6 @@
         Idle,
         Run,
         Attack,
+        Morph,
     }
 }

@@ -1,7 +1,9 @@
 ﻿using System.Collections;
+using Animations;
 using Configs.Events;
 using Entities.Player.Factories;
 using UnityEngine;
+using Utility;
 
 namespace Entities.Player.States.MorphStates
 {
@@ -12,13 +14,23 @@ namespace Entities.Player.States.MorphStates
         public PlayerHammerAttack(PlayerController controller) : base(controller)
         {
         }
+        
+        public override void Subscribe()
+        {
+            SimpleAnimationStateBehaviour.OnAnimationCompleted += HandleOnAnimationCompleted;
+            SimpleAnimationStateBehaviour.OnAnimationTriggerActivated += HandleOnAnimationTriggerActivated;
+        }
+        
+        public override void Unsubscribe()
+        {
+            SimpleAnimationStateBehaviour.OnAnimationCompleted -= HandleOnAnimationCompleted;
+            SimpleAnimationStateBehaviour.OnAnimationTriggerActivated -= HandleOnAnimationTriggerActivated;
+        }
 
         public override void Enter()
         {
-            CameraEventConfig.OnShake?.Invoke(Controller.morph.config.shakeIntensity);
-            PlayerEventConfig.OnHammerDownSFX?.Invoke(Controller.stats.guid);
-            
-            Controller.StartCoroutine(AttackRoutine());
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Attack);
+            PlayerEventConfig.OnHammerSwingSFX?.Invoke(Controller.stats.guid);
         }
 
         public override void Update()
@@ -43,12 +55,21 @@ namespace Entities.Player.States.MorphStates
             AddTransition(PlayerStateType.Move, () => _isComplete && Controller.body.linearVelocity != Vector2.zero);
         }
         
-        private IEnumerator AttackRoutine()
+        private void HandleOnAnimationCompleted(int shortNameHash)
         {
-            yield return new WaitForSeconds(0.15f);
-
-            _isComplete = true;
+            if (shortNameHash == Animator.StringToHash(PlayerAnimationName.Attack.ToString()))
+            {
+                _isComplete = true;
+            }
         }
-        
+
+        private void HandleOnAnimationTriggerActivated(int shortNameHash)
+        {
+            if (shortNameHash == Animator.StringToHash(PlayerAnimationName.Attack.ToString()) && Controller.morph.config.type == MorphType.Hammer)
+            {
+                PlayerEventConfig.OnHammerDownSFX?.Invoke(Controller.stats.guid);
+                CameraEventConfig.OnShake?.Invoke(Controller.morph.config.shakeIntensity);
+            }
+        }
     }
 }

@@ -9,6 +9,8 @@ namespace Entities.Player.States.MorphStates
     {
         private bool _isComplete;
         private float _length;
+        private float _volume;
+        private bool _playShoot = true;
         private Coroutine _chargeUpRoutine;
         
         public PlayerCannonCharge(PlayerController controller) : base(controller)
@@ -36,6 +38,13 @@ namespace Entities.Player.States.MorphStates
 
         public override void Update()
         {
+            if (_playShoot)
+            {
+                PlayerEventConfig.OnCannonShootSFX?.Invoke(Controller.stats.guid, _volume);
+                _playShoot = false;
+                Controller.StartCoroutine(EnableShootSFX());
+            }
+
             Vector3 direction = Quaternion.Euler(0, 0, Controller.morph.pivotPoint.eulerAngles.z) * Vector3.right;
             Controller.morph.lineRenderer.SetPosition(0, Controller.morph.pivotPoint.position - direction * 0.15f);
             Controller.morph.lineRenderer.SetPosition(1, Controller.morph.pivotPoint.position + direction * _length);
@@ -78,6 +87,7 @@ namespace Entities.Player.States.MorphStates
             {
                 elapsed += Time.deltaTime;
                 _length = Mathf.Lerp(0f, Controller.morph.config.maxLength, elapsed / duration);
+                _volume = Mathf.Lerp(0f, 0.35f, elapsed / duration);
                 
                 yield return null;
             }
@@ -100,6 +110,12 @@ namespace Entities.Player.States.MorphStates
                 Controller.morph.config.collisionPointOffset = new Vector2(hit.distance / 2f, Controller.morph.config.collisionPointOffset.y);
                 Controller.morph.config.collisionBox = new Vector2(hit.distance, Controller.morph.config.collisionBox.y);
             }
+        }
+
+        private IEnumerator EnableShootSFX()
+        {
+            yield return new WaitForSeconds(Controller.morph.config.fireRate);
+            _playShoot = true;
         }
     }
 }

@@ -15,21 +15,6 @@ namespace Entities.Player
             _controller = controller;
         }
         
-        public void Flip()
-        {
-            Vector3 localScale = _controller.transform.localScale;
-
-            localScale.x = _controller.body.linearVelocity.x switch
-            {
-                > 0.0f => Mathf.Abs(localScale.x),
-                < 0.0f => -Mathf.Abs(localScale.x),
-                _ => localScale.x
-                };
-
-            _controller.transform.localScale = localScale;
-        }
-
-        
         public void Accelerate()
         {
             if (PlayerInput.movementDirection.x != 0)
