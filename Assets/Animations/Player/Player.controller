@@ -1955,7 +1955,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
-  m_BlendParameter: AnimMoveX
+  m_BlendParameter: MorphType
   m_BlendParameterY: AnimMoveY
   m_MinThreshold: 0
   m_MaxThreshold: 3

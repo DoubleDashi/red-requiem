@@ -22,7 +22,7 @@ namespace Controllers
         private void HandleOnHurt(EntityController controller, float damage)
         {
             GameObject instance = Instantiate(floatingCombatTextPrefab, controller.transform.position, Quaternion.identity);
-            instance.GetComponent<TMP_Text>().text = $"{damage}";
+            instance.GetComponent<TMP_Text>().text = $"{Mathf.Round(damage)}";
         }
     }
 }

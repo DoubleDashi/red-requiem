@@ -50,6 +50,8 @@ namespace Entities.Enemies.KitingEnemy
         {
             base.Update();
             Animator.UpdateBlendTree(moveDir);
+            
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
         protected override void SetGlobalTransitions()
