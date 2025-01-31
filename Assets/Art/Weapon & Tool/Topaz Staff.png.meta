@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Topaz Staff_0: -4440257462606480245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
