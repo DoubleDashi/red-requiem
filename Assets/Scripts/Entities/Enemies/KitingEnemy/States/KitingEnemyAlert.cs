@@ -20,7 +20,6 @@ namespace Entities.Enemies.KitingEnemy.States
             Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
             _isComplete = false;
             
-            Controller.spriteRenderer.color = Color.magenta;
             Controller.StartCoroutine(AlertRoutine());
         }
         

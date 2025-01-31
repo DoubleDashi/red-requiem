@@ -17,7 +17,6 @@ namespace Entities.Enemies.StationaryEnemy.States
 
         public override void Enter()
         {
-            Controller.spriteRenderer.color = Color.blue;
             
             _isComplete = false;
             

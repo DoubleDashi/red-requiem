@@ -14,7 +14,6 @@ namespace Entities.Enemies.StationaryEnemy.States
         public override void Enter()
         {
             Controller.body.linearVelocity = Vector2.zero;
-            Controller.spriteRenderer.color = Color.yellow;
         }
         
         public override void Update()

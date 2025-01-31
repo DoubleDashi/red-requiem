@@ -370,7 +370,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   body: {fileID: 0}
   isHurt: 0
-  whiteMaterial: {fileID: 0}
+  whiteMaterial: {fileID: 2100000, guid: e62e9c7831c448b4a9557ba731887478, type: 2}
   originalMaterial: {fileID: 0}
   anim: {fileID: 6004669122303604250}
   moveDir: {x: 0, y: 0}

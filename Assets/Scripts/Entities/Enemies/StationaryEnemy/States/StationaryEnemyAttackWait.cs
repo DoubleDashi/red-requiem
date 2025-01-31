@@ -14,7 +14,6 @@ namespace Entities.Enemies.StationaryEnemy.States
         
         public override void Enter()
         {
-            Controller.spriteRenderer.color = Color.red;
             Controller.StartCoroutine(CooldownRoutine());
         }
 

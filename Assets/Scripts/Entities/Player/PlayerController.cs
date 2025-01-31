@@ -61,7 +61,7 @@ namespace Entities.Player
             mainCamera = Camera.main;
             body = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            Animator = new PlayerAnimator(anima, MorphType.Sword);
+            Animator = new PlayerAnimator(GetComponentInChildren<Animator>(), MorphType.Sword);
             morph.config = MorphFactory.FindByType(MorphType.Sword);
 
             originalMaterial = spriteRenderer.material;

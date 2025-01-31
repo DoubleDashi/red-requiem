@@ -20,7 +20,6 @@ namespace Entities.Enemies.MeleeEnemy.States
         {
             Controller.Animator.PlayAnimation(PlayerAnimationName.Attack);
             
-            Controller.spriteRenderer.color = Color.red;
             Controller.StartCoroutine(AttackRoutine());
         }
 

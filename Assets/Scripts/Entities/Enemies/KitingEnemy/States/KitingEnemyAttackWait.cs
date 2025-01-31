@@ -17,7 +17,6 @@ namespace Entities.Enemies.KitingEnemy.States
         public override void Enter()
         {
             Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
-            Controller.spriteRenderer.color = Color.red;
             Controller.StartCoroutine(CooldownRoutine());
         }
 

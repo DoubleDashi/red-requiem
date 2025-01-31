@@ -21,7 +21,6 @@ namespace Entities.Enemies.MeleeEnemy.States
             _isComplete = false;
             
             Controller.body.linearVelocity = Vector2.zero;
-            Controller.spriteRenderer.color = Color.yellow;
             
             Controller.StartCoroutine(IdleRoutine());
         }
