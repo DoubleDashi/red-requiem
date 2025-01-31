@@ -13,9 +13,10 @@ namespace Entities.Enemies.KitingEnemy.States
         public KitingEnemyAttackWait(KitingEnemyController controller) : base(controller)
         {
         }
-
+        
         public override void Enter()
         {
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
             Controller.spriteRenderer.color = Color.red;
             Controller.StartCoroutine(CooldownRoutine());
         }
@@ -26,7 +27,7 @@ namespace Entities.Enemies.KitingEnemy.States
             _inAttackRange = CollidersInAttackRange(UnityTag.Player);
             _inRunAwayRange = CollidersInRunAwayRange(UnityTag.Player);
             
-            RotateTowardsTarget();
+            //RotateTowardsTarget();
         }
 
         protected override void SetTransitions()

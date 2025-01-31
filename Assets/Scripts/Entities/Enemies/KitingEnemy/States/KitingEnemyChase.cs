@@ -12,9 +12,15 @@ namespace Entities.Enemies.KitingEnemy.States
         public KitingEnemyChase(KitingEnemyController controller) : base(controller)
         {
         }
+        
+        public override void Enter()
+        {
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
+        }
 
         public override void Update()
         {
+            
             _inAggroRange = CollidersInAggroRange(UnityTag.Player);
             _inAttackRange = CollidersInAttackRange(UnityTag.Player);
             _inRunAwayRange = CollidersInRunAwayRange(UnityTag.Player);
@@ -26,7 +32,9 @@ namespace Entities.Enemies.KitingEnemy.States
                     AggroTargetCollider.transform.position,
                     Controller.stats.movementSpeed * Time.deltaTime
                 );
-                RotateTowardsTarget();
+                Vector2 direction = (AggroTargetCollider.transform.position - Controller.weapon.pivotPoint.transform.position).normalized;
+                Controller.moveDir = new Vector2(Mathf.Sign(direction.x), Mathf.Sign(direction.y));
+                //RotateTowardsTarget();
             }
         }
 

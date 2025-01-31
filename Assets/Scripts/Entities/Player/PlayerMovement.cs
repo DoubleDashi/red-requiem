@@ -100,16 +100,36 @@ namespace Entities.Player
             {
                 return;
             }
-            
+
             Vector2 mousePosition = _controller.mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePosition - (Vector2)_controller.transform.position).normalized;
-            Vector2 position = direction.normalized * 0.25f;
-            
+
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion target = Quaternion.Euler(0f, 0f, angle);
+            Quaternion targetRotation = Quaternion.Euler(0f, 0f, angle);
+
+            // Rotate the parent object
+            _controller.transform.rotation = Quaternion.RotateTowards(_controller.transform.rotation, targetRotation, _controller.stats.rotationSpeed * Time.deltaTime);
+
+            // Counter-rotate the child object with the SpriteRenderer
+            if (_controller.spriteRenderer)
+            {
+                _controller.spriteRenderer.transform.rotation = Quaternion.identity;
+            }
             
-            _controller.morph.pivotPoint.rotation = Quaternion.RotateTowards(_controller.morph.pivotPoint.rotation, target, _controller.stats.rotationSpeed * Time.deltaTime);
-            _controller.morph.pivotPoint.position = _controller.transform.position + (Vector3)position;
+            // if (_controller.stats.disableRotation)
+            // {
+            //     return;
+            // }
+            //
+            // Vector2 mousePosition = _controller.mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            // Vector2 direction = (mousePosition - (Vector2)_controller.transform.position).normalized;
+            // Vector2 position = direction.normalized * 0.25f;
+            //
+            // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            // Quaternion target = Quaternion.Euler(0f, 0f, angle);
+            //
+            // _controller.morph.pivotPoint.rotation = Quaternion.RotateTowards(_controller.morph.pivotPoint.rotation, target, _controller.stats.rotationSpeed * Time.deltaTime);
+            // _controller.morph.pivotPoint.position = _controller.transform.position + (Vector3)position;
         }
     }
 }

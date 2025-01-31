@@ -12,6 +12,11 @@ namespace Entities.Enemies.MeleeEnemy.States
         {
         }
 
+        public override void Enter()
+        {
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Run);
+        }
+        
         public override void Update()
         {
             _inAggroRange = CollidersInAggroRange(UnityTag.Player);
@@ -24,7 +29,8 @@ namespace Entities.Enemies.MeleeEnemy.States
                     AggroTargetCollider.transform.position,
                     Controller.stats.movementSpeed * Time.deltaTime
                 );
-                RotateTowardsTarget();
+                Vector2 direction = (AggroTargetCollider.transform.position - Controller.weapon.pivotPoint.transform.position).normalized;
+                Controller.moveDir = new Vector2(Mathf.Sign(direction.x), Mathf.Sign(direction.y));
             }
         }
 

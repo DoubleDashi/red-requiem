@@ -17,6 +17,7 @@ namespace Entities.Enemies.KitingEnemy.States
         
         public override void Enter()
         {
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
             _inAggroRange = CollidersInAggroRange(UnityTag.Player);
             Vector2 directionToPlayer = (AggroTargetCollider.transform.position - Controller.transform.position).normalized;
             _direction = -directionToPlayer;
@@ -29,7 +30,8 @@ namespace Entities.Enemies.KitingEnemy.States
             _inRunAwayRange = CollidersInRunAwayRange(UnityTag.Player);
             
             Controller.transform.position += (Vector3)(_direction * Controller.stats.movementSpeed * Time.deltaTime);
-            RotateAway(_direction);
+            Controller.moveDir = new Vector2(Mathf.Sign(_direction.x), Mathf.Sign(_direction.y));
+            //RotateAway(_direction);
         }
 
         protected override void SetTransitions()
