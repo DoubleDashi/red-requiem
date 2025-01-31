@@ -17,6 +17,7 @@ namespace Entities.Enemies.KitingEnemy.States
         
         public override void Enter()
         {
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
             _targetPoint = GetRandomPointInPatrolArea();
         }
         
@@ -30,7 +31,9 @@ namespace Entities.Enemies.KitingEnemy.States
                 _targetPoint,
                 Controller.stats.movementSpeed * Time.deltaTime
                 );
-            RotateTowardsTargetPosition();
+            Vector2 direction = ((Vector3)_targetPoint - Controller.transform.position).normalized;
+            Controller.moveDir = new Vector2(Mathf.Sign(direction.x), Mathf.Sign(direction.y));
+            //RotateTowardsTargetPosition();
             
             _reachedTargetPoint = Vector2.Distance(Controller.transform.position, _targetPoint) < 0.1f;
         }

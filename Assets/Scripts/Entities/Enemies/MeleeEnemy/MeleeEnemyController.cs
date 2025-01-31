@@ -16,6 +16,12 @@ namespace Entities.Enemies.MeleeEnemy
         [HideInInspector] public Rigidbody2D body;
         [HideInInspector] public bool isHurt;
 
+        public Material whiteMaterial;
+        public Material originalMaterial;
+        public EnemyAnimator Animator;
+        public Animator anim;
+        public Vector2 moveDir;
+
         protected override void Subscribe()
         {
             MeleeEnemyEventConfig.OnDeath += HandleOnDeath;
@@ -30,13 +36,21 @@ namespace Entities.Enemies.MeleeEnemy
         {
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             body = GetComponent<Rigidbody2D>();
+            Animator = new EnemyAnimator(anim);
+            originalMaterial = spriteRenderer.material;
             
             InitializeStateMachine(
                 new MeleeEnemyStateFactory(this),
                 MeleeEnemyStateType.Idle
             );
         }
-        
+
+        protected override void Update()
+        {
+            base.Update();
+            Animator.UpdateBlendTree(moveDir);
+        }
+
         protected override void SetGlobalTransitions()
         {
             AddGlobalTransition(MeleeEnemyStateType.Hurt, () => isHurt);

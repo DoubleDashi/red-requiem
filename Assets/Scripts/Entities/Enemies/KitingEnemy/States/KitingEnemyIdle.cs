@@ -16,6 +16,7 @@ namespace Entities.Enemies.KitingEnemy.States
 
         public override void Enter()
         {
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
             _isComplete = false;
             
             Controller.body.linearVelocity = Vector2.zero;

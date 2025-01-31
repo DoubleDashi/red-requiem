@@ -14,6 +14,7 @@ namespace Entities.Enemies.MeleeEnemy.States
 
         public override void Enter()
         {
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
             Controller.spriteRenderer.color = Color.red;
             Controller.StartCoroutine(CooldownRoutine());
         }

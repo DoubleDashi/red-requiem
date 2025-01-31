@@ -16,6 +16,7 @@ namespace Entities.Enemies.KitingEnemy.States
 
         public override void Enter()
         {
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Idle);
             CollidersInAggroRange(UnityTag.Player);
             _playerTransform = AggroTargetCollider.gameObject.transform;
             _playerRigidbody = _playerTransform.GetComponentInParent<Rigidbody2D>();

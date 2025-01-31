@@ -1,6 +1,7 @@
 ﻿using System;
 using Configs.Events;
 using Data;
+using Entities.Enemies.MeleeEnemy;
 using FSM;
 using UnityEngine;
 
@@ -16,6 +17,12 @@ namespace Entities.Enemies.KitingEnemy
         [HideInInspector] public Rigidbody2D body;
         [HideInInspector] public bool isHurt;
         
+        public Material whiteMaterial;
+        public Material originalMaterial;
+        public EnemyAnimator Animator;
+        public Animator anim;
+        public Vector2 moveDir;
+        
         protected override void Subscribe()
         {
             KitingEnemyEventConfig.OnDeath += HandleOnDeath;
@@ -30,11 +37,19 @@ namespace Entities.Enemies.KitingEnemy
         {
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             body = GetComponent<Rigidbody2D>();
+            Animator = new EnemyAnimator(anim);
+            originalMaterial = spriteRenderer.material;
             
             InitializeStateMachine(
                 new KitingEnemyStateFactory(this),
                 KitingEnemyStateType.Idle
             );
+        }
+
+        protected override void Update()
+        {
+            base.Update();
+            Animator.UpdateBlendTree(moveDir);
         }
 
         protected override void SetGlobalTransitions()

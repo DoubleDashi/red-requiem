@@ -13,9 +13,13 @@ namespace Entities.Enemies.MeleeEnemy.States
         public MeleeEnemyAttack(MeleeEnemyController controller) : base(controller)
         {
         }
+        
+        
 
         public override void Enter()
         {
+            Controller.Animator.PlayAnimation(PlayerAnimationName.Attack);
+            
             Controller.spriteRenderer.color = Color.red;
             Controller.StartCoroutine(AttackRoutine());
         }
