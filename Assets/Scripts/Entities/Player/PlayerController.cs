@@ -23,7 +23,7 @@ namespace Entities.Player
 
         public Material whiteMaterial;
         public Material originalMaterial;
-        public Animator anim;
+        public Animator anima;
         
         [HideInInspector] public Camera mainCamera;
         [HideInInspector] public Rigidbody2D body;
@@ -61,7 +61,7 @@ namespace Entities.Player
             mainCamera = Camera.main;
             body = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-            Animator = new PlayerAnimator(anim, MorphType.Sword);
+            Animator = new PlayerAnimator(anima, MorphType.Sword);
             morph.config = MorphFactory.FindByType(MorphType.Sword);
 
             originalMaterial = spriteRenderer.material;

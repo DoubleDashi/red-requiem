@@ -4512,8 +4512,8 @@ MonoBehaviour:
 
     Cannon, go wild!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5bcaa5c195d51ad4f8139c27c54884fd, type: 2}
-  m_sharedMaterial: {fileID: 935836210294281641, guid: 5bcaa5c195d51ad4f8139c27c54884fd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15562,10 +15562,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8edaa20d9d894e84f86733b31b0e1d29, type: 2}
   - {fileID: 11400000, guid: a659365f0da0e0b4ca1b7969fd6750a0, type: 2}
   - {fileID: 11400000, guid: edef829804a07f144a2e367a7dd8ca0f, type: 2}
+  healthSlider: {fileID: 0}
+  bloodSlider: {fileID: 0}
+  whiteMaterial: {fileID: 0}
+  originalMaterial: {fileID: 0}
+  anim: {fileID: 0}
   mainCamera: {fileID: 0}
   body: {fileID: 0}
   spriteRenderer: {fileID: 0}
   isHurt: 0
+  morphKey: 0
+  originalMaxSpeed: 0
 --- !u!50 &2083405412
 Rigidbody2D:
   serializedVersion: 5
